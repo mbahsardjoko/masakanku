@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="_G9Evl4HWpuFk80Wn8g2RUHZUwawF3lZ1ic6OXIX0nM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masakanindo - Resep Masakan Indonesia Asli</title>
+    <meta name="description" content="Kumpulan resep masakan Indonesia asli. Resep ayam, ikan, sapi, sayur, nasi, kue tradisional, minuman, sambal. Lengkap dengan cara membuat mudah.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #333; }
+        .navbar-brand { font-weight: 700; font-size: 1.6rem; }
+        .navbar { background: #c0392b !important; box-shadow: 0 2px 15px rgba(0,0,0,0.15); }
+        .navbar a { color: #fff !important; }
+        .hero { background: linear-gradient(135deg, #c0392b, #e74c3c); color: #fff; padding: 50px 0; text-align: center; }
+        .hero h1 { font-weight: 800; font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 0; }
+        .section-title { font-weight: 800; color: #c0392b; margin-bottom: 24px; border-bottom: 3px solid #fdeaea; padding-bottom: 10px; }
+        .card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+        .card-body { padding: 20px; }
+        .card-title { font-weight: 700; font-size: 1.05rem; color: #2c3e50; }
+        .card-title a { color: #2c3e50; text-decoration: none; }
+        .card-title a:hover { color: #c0392b; }
+        .card-img-top { height: 200px; object-fit: cover; border-radius: 12px 12px 0 0; background: linear-gradient(135deg, #ffdab9, #ff6b6b); }
+        .badge-resep { background: #c0392b; color: #fff; font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; }
+        .sidebar-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 20px; margin-bottom: 20px; }
+        .sidebar-card h5 { color: #c0392b; font-weight: 700; border-bottom: 2px solid #fdeaea; padding-bottom: 10px; margin-bottom: 15px; }
+        .sidebar-card ul { list-style: none; padding: 0; }
+        .sidebar-card ul li { padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
+        .sidebar-card ul li a { color: #555; text-decoration: none; transition: all 0.3s; display: block; }
+        .sidebar-card ul li a:hover { color: #c0392b; padding-left: 5px; }
+        footer { background: #222; color: #ccc; padding: 30px 0; margin-top: 40px; }
+        footer a { color: #e74c3c; text-decoration: none; }
+        footer a:hover { color: #fff; }
+        .category-badge { display: inline-block; background: #fdeaea; color: #c0392b; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .card-text { font-size: 0.9rem; color: #777; margin-top: 8px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/"><i class="fas fa-utensils me-2"></i>Masakanindo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="/">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/privacy-policy">Privacy Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="/copyright">Copyright</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1><i class="fas fa-fire me-2"></i>Selamat Datang di Masakanindo</h1>
+        <p>Kumpulan resep masakan Indonesia asli. Dari Sabang sampai Merauke. <br>Semua ada di sini, lengkap dengan cara membuat yang mudah dipraktikkan.</p>
+    </div>
+</section>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="section-title"><i class="fas fa-newspaper me-2"></i>Resep Terbaru</h2>
+            <div class="row g-3">
+                <!-- NEW ARTICLES (8) -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href='/resep-opor-ayam'>Resep Opor Ayam Kampung: Gurih Santan, Empuk Lumer, Wajib Coba!</a></h5>
+                            <p class="card-text small">Resep opor ayam kampung kuah santan gurih khas Lebaran.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
+                            <i class="fas fa-utensils fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Nasi</span>
+                            <h5 class="card-title mt-2"><a href='/resep-nasi-uduk'>Resep Nasi Uduk: Aroma Rempah Semerbak, Cocok untuk Sarapan!</a></h5>
+                            <p class="card-text small">Nasi uduk dengan santan gurih dan rempah wangi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sapi</span>
+                            <h5 class="card-title mt-2"><a href='/resep-tongseng-sapi'>Resep Tongseng Sapi: Pedas Gurih dengan Potongan Kol Segar</a></h5>
+                            <p class="card-text small">Tongseng sapi pedas gurih dengan sayuran segar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8E44AD, #9B59B6);">
+                            <i class="fas fa-egg fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href='/resep-telur-balado'>Resep Telur Balado: Telur Ceplok dengan Sambal Balado Khas Padang</a></h5>
+                            <p class="card-text small">Telur ceplok dengan sambal balado pedas mantap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E67E22, #D35400);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href='/resep-kari-ayam'>Resep Kari Ayam: Kari Ayam Santan Kental, Rempah Medok</a></h5>
+                            <p class="card-text small">Kari ayam santan kental dengan rempah pilihan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2980B9, #1ABC9C);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sapi</span>
+                            <h5 class="card-title mt-2"><a href='/resep-sop-iga-sapi'>Resep Sop Iga Sapi: Kuah Bening Segar, Iga Empuk Bikin Nagih</a></h5>
+                            <p class="card-text small">Sop iga sapi kuah bening gurih dengan daging empuk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
+                            <i class="fas fa-carrot fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sayur</span>
+                            <h5 class="card-title mt-2"><a href='/resep-sayur-lodeh'>Resep Sayur Lodeh: Sayur Santan Lengkap, Teman Nasi Hangat</a></h5>
+                            <p class="card-text small">Sayur lodeh santan dengan aneka sayuran segar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #F39C12, #E67E22);">
+                            <i class="fas fa-utensils fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href='/resep-bubur-ayam'>Resep Bubur Ayam: Bubur Lembut dengan Topping Melimpah</a></h5>
+                            <p class="card-text small">Bubur ayam lembut dengan topping lengkap dan gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href='/resep-ayam-betutu'>Resep Ayam Betutu Khas Bali: Bumbu Base Genep Meresap, Daging Empuk Lumer!</a></h5>
+                            <p class="card-text small">Ayam betutu khas Bali dengan bumbu base genep, daging empuk bumbu meresap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #3498DB, #2980B9);">
+                            <i class="fas fa-fish fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ikan</span>
+                            <h5 class="card-title mt-2"><a href='/resep-ikan-bumbu-kuning'>Resep Ikan Bumbu Kuning: Gurih, Segar, dan Mudah Dibuat di Rumah</a></h5>
+                            <p class="card-text small">Ikan bumbu kuning gurih segar dengan kunyit dan rempah pilihan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #D2691E);">
+                            <i class="fas fa-cow fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sapi</span>
+                            <h5 class="card-title mt-2"><a href='/resep-empal-gepuk-sapi'>Resep Empal Gepuk Sapi: Daging Empuk Manis Gurih, Cocok untuk Lauk Sehari-hari</a></h5>
+                            <p class="card-text small">Empal gepuk sapi khas Sunda, daging empuk manis gurih bumbu meresap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
+                            <i class="fas fa-carrot fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sayur</span>
+                            <h5 class="card-title mt-2"><a href='/resep-tumis-kangkung-belacan'>Resep Tumis Kangkung Belacan: Pedas Gurih Wangi Terasi, Cocok Jadi Lauk Praktis</a></h5>
+                            <p class="card-text small">Tumis kangkung belacan pedas gurih wangi terasi, praktis 15 menit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #F1C40F, #F39C12);">
+                            <i class="fas fa-egg fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Nasi</span>
+                            <h5 class="card-title mt-2"><a href='/resep-nasi-liwet-solo'>Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga</a></h5>
+                            <p class="card-text small">Nasi liwet Solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
+                            <i class="fas fa-cookie fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Kue Tradisional</span>
+                            <h5 class="card-title mt-2"><a href='/resep-nagasari-pisang'>Resep Nagasari Pisang: Kue Tradisional Lembut, Wangi Pandan, Bikin Kangen Masa Kecil</a></h5>
+                            <p class="card-text small">Nagasari pisang lembut, kue tradisional bungkus daun pisang, wangi dan legit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #FF6B6B, #FFD93D);">
+                            <i class="fas fa-cocktail fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Minuman</span>
+                            <h5 class="card-title mt-2"><a href='/resep-es-teler'>Resep Es Teler Segar: Minuman Legendaris, Manis, Lengkap, Bikin Segar!</a></h5>
+                            <p class="card-text small">Es teler segar dengan alpukat, kelapa muda, nangka, dan cincau.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #F39C12);">
+                            <i class="fas fa-pepper-hot fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sambal</span>
+                            <h5 class="card-title mt-2"><a href='/resep-sambal-terasi'>Resep Sambal Terasi Pedas: Wangi, Mantap, Bikin Makan Jadi Lebih Lahap!</a></h5>
+                            <p class="card-text small">Sambal terasi pedas wangi, perpaduan cabai dan terasi bakar yang mantap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href='/resep-ayam-woku'>Resep Ayam Woku Khas Manado: Pedas Wangi Kemangi, Auto Nambah Nasi!</a></h5>
+                            <p class="card-text small">Masakan khas Manado dengan bumbu woku, wangi kemangi, pedas nampol.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #D2691E);">
+                            <i class="fas fa-cow fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sapi</span>
+                            <h5 class="card-title mt-2"><a href="/resep-rendang-sapi">Resep Rendang Sapi Empuk Khas Padang: Bumbu Meresap, Daging Lumer!</a></h5>
+                            <p class="card-text small">Rendang sapi autentik Minang, dimasak perlahan sampai empuk dan hitam pekat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #FF6B6B, #FFD93D);">
+                            <i class="fas fa-cocktail fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Minuman</span>
+                            <h5 class="card-title mt-2"><a href="/resep-es-campur-segar">Resep Es Campur Segar Khas Indonesia: Manis, Lengkap, Bikin Adem!</a></h5>
+                            <p class="card-text small">Es campur lengkap dengan sirup merah, santan, dan aneka topping segar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
+                            <i class="fas fa-cookie fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Kue Tradisional</span>
+                            <h5 class="card-title mt-2"><a href="/resep-klepon-kenyal-manis">Resep Klepon Kenyal Manis: Jajanan Pasar Tradisional yang Lumer di Mulut!</a></h5>
+                            <p class="card-text small">Klepon anti gagal, isian gula merah lumer, balutan kelapa parut gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #F39C12);">
+                            <i class="fas fa-pepper-hot fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sambal</span>
+                            <h5 class="card-title mt-2"><a href="/resep-sambal-matah">Resep Sambal Matah Asli Bali: Pedas Segar, Aroma Jeruk Limau Bikin Nagih!</a></h5>
+                            <p class="card-text small">Sambal khas Bali, segar dengan bawang merah, serai, cabai, dan minyak kelapa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #F1C40F, #F39C12);">
+                            <i class="fas fa-egg fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Nasi</span>
+                            <h5 class="card-title mt-2"><a href="/resep-nasi-goreng-kampung">Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen!</a></h5>
+                            <p class="card-text small">Nasi goreng kampung dengan terasi dan kencur, bumbu diulek manual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
+                            <i class="fas fa-carrot fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Sayur</span>
+                            <h5 class="card-title mt-2"><a href="/resep-sayur-asem-segar">Resep Sayur Asem Segar Khas Betawi: Kuah Asem Pedas Bikin Makan Bertambah!</a></h5>
+                            <p class="card-text small">Sayur asem Betawi dengan kacang tanah, kuah asam pedas yang segar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #3498DB, #2980B9);">
+                            <i class="fas fa-fish fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ikan</span>
+                            <h5 class="card-title mt-2"><a href="/resep-ikan-nila-bakar-sambal-matah">Resep Ikan Nila Bakar Sambal Matah: Pedas Segar Khas Bali, Dijamin Goyang Lidah!</a></h5>
+                            <p class="card-text small">Ikan nila bakar dengan sambal matah segar khas Bali — pedas, gurih, wangi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXISTING ARTICLES (15) -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/resep-ayam-bakar-bumbu-rujak">Resep Ayam Bakar Bumbu Rujak: Pedasnya Nampol, Dijamin Lidah Bergoyang!</a></h5>
+                            <p class="card-text small">Ayam bakar dengan bumbu rujak yang pedas manis gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/resep-ayam-goreng-kremes">Resep Ayam Goreng Kremes Renyah dan Gurih Ala Indonesia</a></h5>
+                            <p class="card-text small">Ayam goreng kremes dengan kremesan renyah yang gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/olahan-ayam-untuk-bekal">Olahan Ayam Goreng Crispy untuk Bekal Sekolah Anak yang Bikin Nagih</a></h5>
+                            <p class="card-text small">Ayam crispy praktis buat bekal sekolah anak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/olahan-ayam-masakan-nusantara">Resep Olahan Ayam Nusantara: Opor Ayam Kuning Klasik</a></h5>
+                            <p class="card-text small">Opor ayam kuning yang gurih dan lezat khas Nusantara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/cara-memasak-ayam-goreng-lengkuas">Cara Memasak Ayam Goreng Lengkuas yang Lezat dan Mudah</a></h5>
+                            <p class="card-text small">Ayam goreng lengkuas dengan bumbu rempah yang meresap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/resep-ayam-goreng-serundeng">Resep Ayam Goreng Serundeng yang Gurih dan Menggugah Selera</a></h5>
+                            <p class="card-text small">Ayam goreng serundeng dengan kelapa parut gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/ayam-goreng-mangga-besar">Ayam Goreng Mangga Besar: Resep Klasik dengan Sentuhan Modern</a></h5>
+                            <p class="card-text small">Perpaduan unik ayam goreng dengan saus mangga.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/olahan-ayam-kampung-agar-tidak-bosan">Olahan Ayam Kampung yang Bikin Nagih dan Gampang Dibuat</a></h5>
+                            <p class="card-text small">Kreasi olahan ayam kampung yang variatif.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
+                            <i class="fas fa-utensils fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Masakan Rumahan</span>
+                            <h5 class="card-title mt-2"><a href="/masakan-rumahan-sederhana-enak">Masakan Rumahan Sederhana Enak: Resep dan Cara Memasak yang Mudah</a></h5>
+                            <p class="card-text small">Koleksi masakan rumahan sederhana untuk sehari-hari.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #F39C12, #E67E22);">
+                            <i class="fas fa-book-open fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Pemula</span>
+                            <h5 class="card-title mt-2"><a href="/resep-masakan-sederhana-cepat-dan-mudah">Resep Masakan Sederhana Cepat dan Mudah untuk Pemula</a></h5>
+                            <p class="card-text small">Resep praktis buat yang baru belajar masak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #9B59B6, #8E44AD);">
+                            <i class="fas fa-utensils fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Masakan Padang</span>
+                            <h5 class="card-title mt-2"><a href="/masakan-padang-sederhana-jakarta">Resep Masakan Padang Sederhana Jakarta yang Menggugah Selera</a></h5>
+                            <p class="card-text small">Masakan Padang khas Jakarta yang praktis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
+                            <i class="fas fa-cookie-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Kue Tradisional</span>
+                            <h5 class="card-title mt-2"><a href="/cara-membuat-jenang-sumsum">Cara Membuat Jenang Sumsum yang Lezat dan Menggugah Selera</a></h5>
+                            <p class="card-text small">Jenang sumsum lembut manis gurih khas Jawa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/olahan-ayam-yang-sehat">Ayam Sehat Anti Drama Timbangan: Olahan Ayam Enak & Bikin Ngiler</a></h5>
+                            <p class="card-text small">Resep ayam sehat rendah lemak tetap enak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #3498DB, #2980B9);">
+                            <i class="fas fa-fish fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Resep Lain</span>
+                            <h5 class="card-title mt-2"><a href="/resep-sop-buntut-sapi">Resep Sop Buntut Sapi: Kuah Bening Gurih, Daging Empuk Lumer di Mulut</a></h5>
+                            <p class="card-text small">Sop buntut sapi bening gurih dengan daging super empuk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/resep-ayam-goreng-terasi-daun-jeruk">Resep Ayam Goreng Terasi Daun Jeruk yang Lezat dan Anti Gagal</a></h5>
+                            <p class="card-text small">Ayam goreng dengan terasi dan daun jeruk wangi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/olahan-ayam-kuah-pedas">Resep Ayam Kuah Pedas yang Menggugah Selera</a></h5>
+                            <p class="card-text small">Ayam kuah pedas hangat yang bikin nagih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/cara-buat-ayam-goreng-berempah">Cara Buat Ayam Goreng Berempah Sedap dan Lezat</a></h5>
+                            <p class="card-text small">Ayam goreng berempah dengan rempah pilihan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/tepung-ayam-goreng-sasa">Tepung Ayam Goreng Sasa: Resep Ayam Goreng Lezat dan Renyah</a></h5>
+                            <p class="card-text small">Tips membuat ayam goreng crispy pakai tepung Sasa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Ayam</span>
+                            <h5 class="card-title mt-2"><a href="/olahan-ayam-goreng-sisa">Olahan Ayam Goreng Sisa: Menghidupkan Kembali Sisa Makanan</a></h5>
+                            <p class="card-text small">Kreasi olahan dari sisa ayam goreng yang enak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                            <i class="fas fa-drumstick-bite fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Tips</span>
+                            <h5 class="card-title mt-2"><a href="/ayam-beku-tahan-berapa-lama">Ayam Beku Tahan Berapa Lama? Panduan Lengkap Menyimpan Aman</a></h5>
+                            <p class="card-text small">Tips menyimpan ayam beku yang aman dan anti busuk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #3498DB, #2980B9);">
+                            <i class="fas fa-glass-whiskey fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Minuman</span>
+                            <h5 class="card-title mt-2"><a href="/cara-membuat-yogurt-dari-susu-sapi">Cara Membuat Yogurt dari Susu Sapi di Rumah, Mudah dan Sehat!</a></h5>
+                            <p class="card-text small">Yogurt homemade segar dan sehat dari susu sapi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #F39C12, #E67E22);">
+                            <i class="fas fa-soup fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-badge">Resep Lain</span>
+                            <h5 class="card-title mt-2"><a href="/cara-membuat-zuppa-soup">Cara Membuat Zuppa Soup yang Lezat dan Menghangatkan</a></h5>
+                            <p class="card-text small">Zuppa soup creamy dengan pastry renyah di atasnya.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="sidebar-card">
+                <h5><i class="fas fa-th-list me-2"></i>Kategori</h5>
+                <ul>
+                    <li><a href="/"><i class="fas fa-drumstick-bite me-2" style="color:#c0392b;"></i>Resep Ayam</a></li>
+                    <li><a href="/resep-ikan-nila-bakar-sambal-matah"><i class="fas fa-fish me-2" style="color:#3498db;"></i>Resep Ikan</a></li>
+                    <li><a href="/resep-rendang-sapi"><i class="fas fa-cow me-2" style="color:#8B4513;"></i>Resep Sapi</a></li>
+                    <li><a href="/resep-sayur-asem-segar"><i class="fas fa-carrot me-2" style="color:#1abc9c;"></i>Resep Sayur</a></li>
+                    <li><a href='/resep-nasi-liwet-solo'><i class="fas fa-egg me-2" style="color:#F1C40F;"></i>Resep Nasi</a></li>
+                    <li><a href='/resep-sambal-terasi'><i class="fas fa-pepper-hot me-2" style="color:#E74C3C;"></i>Resep Sambal</a></li>
+                    <li><a href='/resep-nagasari-pisang'><i class="fas fa-cookie me-2" style="color:#27AE60;"></i>Kue Tradisional</a></li>
+                    <li><a href='/resep-es-teler'><i class="fas fa-cocktail me-2" style="color:#FF6B6B;"></i>Minuman</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h5><i class="fas fa-clock me-2"></i>Resep Terbaru</h5>
+                <ul>
+                        
+                        <li><a href='/resep-opor-ayam'>Opor Ayam Kampung</a></li>
+                        <li><a href='/resep-nasi-uduk'>Nasi Uduk</a></li>
+                        <li><a href='/resep-tongseng-sapi'>Tongseng Sapi</a></li>
+                        <li><a href='/resep-telur-balado'>Telur Balado</a></li>
+                        <li><a href='/resep-kari-ayam'>Kari Ayam</a></li>
+                        <li><a href='/resep-sop-iga-sapi'>Sop Iga Sapi</a></li>
+                        <li><a href='/resep-sayur-lodeh'>Sayur Lodeh</a></li>
+                        <li><a href='/resep-bubur-ayam'>Bubur Ayam</a></li>
+                        <li><a href='/resep-ayam-betutu'>Ayam Betutu Khas Bali</a></li>
+                    <li><a href='/resep-ikan-bumbu-kuning'>Ikan Bumbu Kuning</a></li>
+                    <li><a href='/resep-empal-gepuk-sapi'>Empal Gepuk Sapi</a></li>
+                    <li><a href='/resep-tumis-kangkung-belacan'>Tumis Kangkung Belacan</a></li>
+                    <li><a href='/resep-nasi-liwet-solo'>Nasi Liwet Solo</a></li>
+                    <li><a href='/resep-nagasari-pisang'>Nagasari Pisang</a></li>
+                    <li><a href='/resep-es-teler'>Es Teler Segar</a></li>
+                    <li><a href='/resep-sambal-terasi'>Sambal Terasi Pedas</a></li>
+                    <li><a href='/resep-ayam-woku'>Resep Ayam Woku Khas Manado</a></li>
+                    <li><a href='/resep-rendang-sapi'>Resep Rendang Sapi Empuk</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h5><i class="fas fa-share-alt me-2"></i>Ikuti Kami</h5>
+                <p class="small text-muted">Dapatkan resep terbaru setiap hari. Masak jadi lebih seru dengan Masakanindo!</p>
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h5><i class="fas fa-question-circle me-2"></i>Tentang Kami</h5>
+                <p class="small text-muted">Masakanindo adalah blog resep masakan Indonesia asli. Kami menyajikan resep autentik dari berbagai daerah yang mudah dipraktikkan di rumah.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2026 Masakanindo. Semua resep original dan bisa dicoba di rumah.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="/contact" class="me-3">Contact</a>
+                <a href="/privacy-policy" class="me-3">Privacy Policy</a>
+                <a href="/copyright" class="me-3">Copyright</a>
+                <a href="/dmca">DMCA</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('a[href^="http"]').forEach(el => el.setAttribute('target', '_blank'));
+</script>
+</body>
+</html>

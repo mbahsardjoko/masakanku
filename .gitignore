@@ -3,3 +3,4 @@ remote/
 .DS_Store
 *.swp
 *.swo
+!*.txt
