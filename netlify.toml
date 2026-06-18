@@ -1,0 +1,6 @@
+# Netlify configuration for masakanku.online
+# Published directory: repo root (all HTML files served directly)
+# Build command: none (static site, no build step)
+
+[build]
+  publish = "."
