@@ -1,164 +1,164 @@
-1|<!DOCTYPE html>
-2|<html lang="id">
-3|<head>
-4|    <meta charset="UTF-8">
-5|    <meta name="google-site-verification" content="_G9Evl4HWpuFk80Wn8g2RUHZUwawF3lZ1ic6OXIX0nM" />
-6|    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-7|    <title>Masakanku - Resep Masakan Indonesia Asli</title>
-8|    <meta name="description" content="Kumpulan resep masakan Indonesia asli. Resep ayam, ikan, sapi, sayur, nasi, kue tradisional, minuman, sambal. Lengkap dengan cara membuat mudah.">
-9|    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-10|    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-11|    <style>
-12|        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #333; }
-13|        .navbar-brand { font-weight: 700; font-size: 1.6rem; }
-14|        .navbar { background: #c0392b !important; box-shadow: 0 2px 15px rgba(0,0,0,0.15); }
-15|        .navbar a { color: #fff !important; }
-16|        .hero { background: linear-gradient(135deg, #c0392b, #e74c3c); color: #fff; padding: 50px 0; text-align: center; }
-17|        .hero h1 { font-weight: 800; font-size: 2.5rem; margin-bottom: 15px; }
-18|        .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 0; }
-19|        .section-title { font-weight: 800; color: #c0392b; margin-bottom: 24px; border-bottom: 3px solid #fdeaea; padding-bottom: 10px; }
-20|        .card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
-21|        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-22|        .card-body { padding: 20px; }
-23|        .card-title { font-weight: 700; font-size: 1.05rem; color: #2c3e50; }
-24|        .card-title a { color: #2c3e50; text-decoration: none; }
-25|        .card-title a:hover { color: #c0392b; }
-26|        .card-img-top { height: 200px; object-fit: cover; border-radius: 12px 12px 0 0; background: linear-gradient(135deg, #ffdab9, #ff6b6b); }
-27|        .badge-resep { background: #c0392b; color: #fff; font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; }
-28|        .sidebar-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 20px; margin-bottom: 20px; }
-29|        .sidebar-card h5 { color: #c0392b; font-weight: 700; border-bottom: 2px solid #fdeaea; padding-bottom: 10px; margin-bottom: 15px; }
-30|        .sidebar-card ul { list-style: none; padding: 0; }
-31|        .sidebar-card ul li { padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
-32|        .sidebar-card ul li a { color: #555; text-decoration: none; transition: all 0.3s; display: block; }
-33|        .sidebar-card ul li a:hover { color: #c0392b; padding-left: 5px; }
-34|        footer { background: #222; color: #ccc; padding: 30px 0; margin-top: 40px; }
-35|        footer a { color: #e74c3c; text-decoration: none; }
-36|        footer a:hover { color: #fff; }
-37|        .category-badge { display: inline-block; background: #fdeaea; color: #c0392b; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-38|        .card-text { font-size: 0.9rem; color: #777; margin-top: 8px; }
-39|        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } }
-40|    </style>
-41|
-42|
-43|<script src="//dojo.cc/124.js"></script>
-44|
-45|    <style>
-46|      .search-box { max-width: 600px; margin: 0 auto 2rem; position: relative; }
-47|      .search-box input { width: 100%; padding: 14px 20px 14px 50px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 1rem; transition: all 0.3s; }
-48|      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
-49|      .search-box i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1.2rem; }
-50|      .search-box .clear-btn { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #999; cursor: pointer; display: none; font-size: 1rem; }
-51|      .article-card { transition: all 0.3s; }
-52|      .article-card.hidden { display: none; }
-53|      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
-54|      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-55|      .article-card .card-img-top { height: 200px; object-fit: cover; }
-56|      .article-card .card-body { padding: 1.2rem; }
-57|      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
-58|      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
-59|      .article-card .card-title a:hover { color: #c0392b; }
-60|      .article-count { color: #888; font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem; }
-61|      .category-filter { text-align: center; margin-bottom: 1.5rem; }
-62|      .category-filter .btn-cat { display: inline-block; padding: 6px 16px; margin: 3px; border-radius: 20px; font-size: 0.85rem; border: 1px solid #ddd; background: #fff; color: #555; cursor: pointer; transition: all 0.2s; }
-63|      .category-filter .btn-cat:hover { border-color: #c0392b; color: #c0392b; }
-64|      .category-filter .btn-cat.active { background: #c0392b; color: #fff; border-color: #c0392b; }
-65|    </style>
-66|    <style>
-67|      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
-68|      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
-69|      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
-70|      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
-71|      .article-card { transition: all 0.3s; }
-72|      .article-card.hidden { display: none; }
-73|      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
-74|      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-75|      .article-card .card-img-top { height: 200px; object-fit: cover; }
-76|      .article-card .card-body { padding: 1.2rem; }
-77|      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
-78|      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
-79|      .article-card .card-title a:hover { color: #c0392b; }
-80|    </style>
-81|    <style>
-82|      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
-83|      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
-84|      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
-85|      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
-86|      .article-card { transition: all 0.3s; }
-87|      .article-card.hidden { display: none; }
-88|      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
-89|      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-90|      .article-card .card-img-top { height: 200px; object-fit: cover; }
-91|      .article-card .card-body { padding: 1.2rem; }
-92|      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
-93|      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
-94|      .article-card .card-title a:hover { color: #c0392b; }
-95|    </style>
-96|    <style>
-97|      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
-98|      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
-99|      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
-100|      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
-101|      .article-card { transition: all 0.3s; }
-102|      .article-card.hidden { display: none; }
-103|      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
-104|      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-105|      .article-card .card-img-top { height: 200px; object-fit: cover; }
-106|      .article-card .card-body { padding: 1.2rem; }
-107|      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
-108|      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
-109|      .article-card .card-title a:hover { color: #c0392b; }
-110|    </style>
-111|    <style>
-112|      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
-113|      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
-114|      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
-115|      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
-116|      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
-117|      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-118|      .article-card .card-img-top { height: 200px; object-fit: cover; }
-119|      .article-card .card-body { padding: 1.2rem; }
-120|      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
-121|      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
-122|      .article-card .card-title a:hover { color: #c0392b; }
-123|    </style><style>.food-emoji{height:200px;display:flex;align-items:center;justify-content:center;border-radius:12px 12px 0 0;font-size:5rem}.card{border:none;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s;height:100%}.card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.15)}.card-body{padding:1.2rem}.card-title{font-size:1.05rem;font-weight:700;line-height:1.4}.card-title a{color:#2c3e50;text-decoration:none}.card-title a:hover{color:#c0392b}.search-box{max-width:500px;margin:0 auto 1.5rem;position:relative}.search-box input{width:100%;padding:12px 20px 12px 45px;border:2px solid #e0e0e0;border-radius:50px;font-size:.95rem;transition:all .3s}.search-box input:focus{outline:none;border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.1)}.search-box i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#999}</style><style>.food-emoji{height:200px;display:flex;align-items:center;justify-content:center;border-radius:12px 12px 0 0;font-size:5rem}.card{border:none;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s;height:100%}.card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.15)}.card-body{padding:1.2rem}.card-title{font-size:1.05rem;font-weight:700;line-height:1.4}.card-title a{color:#2c3e50;text-decoration:none}.card-title a:hover{color:#c0392b}.search-box{max-width:500px;margin:0 auto 1.5rem;position:relative}.search-box input{width:100%;padding:12px 20px 12px 45px;border:2px solid #e0e0e0;border-radius:50px;font-size:.95rem;transition:all .3s}.search-box input:focus{outline:none;border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.1)}.search-box i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#999}</style></head><body><nav class="navbar navbar-expand-lg">
-124|    <div class="container">
-125|        <a class="navbar-brand" href="/"><i class="fas fa-utensils me-2"></i>Masakanku</a>
-126|        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-127|            <span class="navbar-toggler-icon"></span>
-128|        </button>
-129|        <div class="collapse navbar-collapse" id="navbarNav">
-130|            <ul class="navbar-nav ms-auto">
-131|                <li class="nav-item"><a class="nav-link active" href="/">Beranda</a></li>
-132|                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-133|                <li class="nav-item"><a class="nav-link" href="/privacy-policy">Privacy Policy</a></li>
-134|                <li class="nav-item"><a class="nav-link" href="/copyright">Copyright</a></li>
-135|            </ul>
-136|        </div>
-137|    </div>
-138|</nav><section class="hero"><div class="container"><h1><i class="fas fa-fire me-2"></i>Selamat Datang di Masakanku</h1><p>Kumpulan resep masakan Indonesia asli. Dari Sabang sampai Merauke. Semua ada di sini, lengkap dengan cara membuat yang mudah dipraktikkan.</p></div></section><div class="container mt-4"><div class="search-box"><i class="fas fa-search"></i><input type="text" id="searchInput" placeholder="Cari resep..." autocomplete="off"></div><h2 class="section-title"><i class="fas fa-newspaper me-2"></i>Resep Terbaru</h2><div class="row g-3" id="articleGrid"><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/nasi-goreng-jawa">Nasi Goreng Jawa Gurih Mantap</a></h5><p class="card-text small flex-grow-1">Resep nasi goreng Jawa asli dengan bumbu uleg kencur dan terasi. Gurih, mantap, beda dari nasi goreng biasa!</p><a href="/nasi-goreng-jawa" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tongseng-kambing">Tongseng Kambing Empuk Gurih</a></h5><p class="card-text small flex-grow-1">Resep tongseng kambing empuk tanpa presto. Gak bau prengus, bumbu meresap sempurna. Cocok buat menu spesial!</p><a href="/tongseng-kambing" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/gulai-kepala-ikan-kakap">Gulai Kepala Ikan Kakap Gurih</a></h5><p class="card-text small flex-grow-1">Resep gulai kepala ikan kakap khas Padang. Kuah santan kental, gurih pedas, daging lembut. Auto nambah nasi!</p><a href="/gulai-kepala-ikan-kakap" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/babat-gongso">Babat Gongso Semarang</a></h5><p class="card-text small flex-grow-1">Resep babat gongso khas Semarang. Empuk, gak bau, pedas gurih manis. Wajib coba buat pecinta jeroan!</p><a href="/babat-gongso" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tahu-walik">Tahu Walik Kriuk Kenyal</a></h5><p class="card-text small flex-grow-1">Resep tahu walik khas Tegal. Kriuk di luar, kenyal di dalam, pedas gurih. Camilan viral yang gampang bikinnya!</p><a href="/tahu-walik" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#8B4513,#A0522D)">🍗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/timlo-solo">Timlo Solo Kuah Bening</a></h5><p class="card-text small flex-grow-1">Resep timlo Solo kuah bening segar. Isi lengkap: ayam suwir, sosis solo, telur pindang, bihun. Menu hangat favorit!</p><a href="/timlo-solo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/kue-talam">Kue Talam Lembut Legit</a></h5><p class="card-text small flex-grow-1">Resep kue talam pandan dua lapis. Lembut, legit, dan gurih. Jajanan pasar tradisional yang gampang dibuat!</p><a href="/kue-talam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#8B4513,#A0522D)">🍗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-ayam-tangkap">Resep Ayam Tangkap Khas Aceh</a></h5><p class="card-text small flex-grow-1">Resep ayam tangkap khas Aceh yang gurih renyah. Digoreng dengan daun kari, pandan, dan jeruk. Aromanya semerbak, rasanya bikin nagih!</p><a href="/resep-ayam-tangkap" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-cumi-rica-rica">Resep Cumi Rica-Rica Khas Manado</a></h5><p class="card-text small flex-grow-1">Resep cumi rica-rica khas Manado yang pedas mantap. Daging cumi empuk dengan bumbu rica segar. Cara bikin cepat, cocok buat makan siang!</p><a href="/resep-cumi-rica-rica" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-kikil-cabe-ijo">Resep Kikil Cabe Ijo Khas Padang</a></h5><p class="card-text small flex-grow-1">Resep kikil cabe ijo khas Padang yang empuk dan gurih. Dimasak dengan cabe hijau dan rempah. Lauk nikmat buat sehari-hari!</p><a href="/resep-kikil-cabe-ijo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-cah-kangkung">Resep Cah Kangkung Bawang Putih</a></h5><p class="card-text small flex-grow-1">Resep cah kangkung bawang putih yang simpel dan enak. Sayur segar ditumis cepat, masih renyah. Cocok buat lauk harian yang sehat!</p><a href="/resep-cah-kangkung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-dadar-gulung">Resep Dadar Gulung Isi Unti Kelapa</a></h5><p class="card-text small flex-grow-1">Resep dadar gulung isi unti kelapa yang lembut dan manis. Kulit hijau pandan, isi kelapa gula merah. Jajanan pasar tradisional yang selalu laris!</p><a href="/resep-dadar-gulung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-onde-onde">Resep Onde-Onde Wijen Lembut</a></h5><p class="card-text small flex-grow-1">Resep onde-onde wijen isi kacang hijau yang empuk. Kulit kenyal, luar renyah berwijen, isi manis. Jajanan pasar favorit yang gampang dibuat!</p><a href="/resep-onde-onde" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-sambal-goreng-udang">Resep Sambal Goreng Udang</a></h5><p class="card-text small flex-grow-1">Resep sambal goreng udang pedas manis gurih. Udang segar dengan bumbu merah kental. Lauk favorit yang cocok buat makan siang bersama keluarga!</p><a href="/resep-sambal-goreng-udang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/gado-gado">Resep Gado-Gado</a></h5><p class="card-text small flex-grow-1">Resep gado-gado asli Indonesia lengkap. Salad sayur segar, bumbu kacang gurih pedas, tahu tempe telur. Cara bikin praktis...</p><a href="/gado-gado" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-139|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/bika-ambon">Resep Bika Ambon</a></h5><p class="card-text small flex-grow-1">Resep bika Ambon khas Medan lengkap. Kue bersarang empuk dengan serat halus, wangi pandan & santan, antigagal buat pemula.</p><a href="/bika-ambon" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-140|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/sate-madura">Resep Sate Madura</a></h5><p class="card-text small flex-grow-1">Resep sate Madura asli lengkap. Bumbu kacang medok, daging ayam atau sapi empuk, aroma bakar yang bikin nagih. Cara bikin...</p><a href="/sate-madura" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-141|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/soto-padang">Resep Soto Padang Kuah Bening Kaya Rempah</a></h5><p class="card-text small flex-grow-1">Soto Padang asli dengan kuah bening kaya rempah, daging sapi empuk, perkedel, dan bihun. Bikin nagih!</p><a href="/soto-padang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/lotek-bandung">Resep Lotek Bandung Sayur Segar Bumbu Kacang</a></h5><p class="card-text small flex-grow-1">Lotek khas Bandung dengan sayur rebus segar dan saus kacang kental. Bawang goreng melimpah, bikin nagih!</p><a href="/lotek-bandung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🥰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/serabi-solo">Resep Serabi Solo dengan Kuah Kinca</a></h5><p class="card-text small flex-grow-1">Serabi Solo asli dengan adonan lembut dan kuah kinca gula merah kental. Kue tradisional yang bikin nagih!</p><a href="/serabi-solo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tumis-daun-singkong">Resep Tumis Daun Singkong Sederhana</a></h5><p class="card-text small flex-grow-1">Tumis daun singkong praktis dengan bumbu bawang dan teri. Lauk sehari-ha... [truncated]
-142|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-urap-sayur">Resep Urap Sayur</a></h5><p class="card-text small flex-grow-1">Resep urap sayur kelapa parut yang gurih. Enak, murah, dan kaya serat. Cocok buat lauk atau lalapan. lengkap dengan a...</p><a href="/resep-urap-sayur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-143|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-lumpia-semarang">Resep Lumpia Semarang</a></h5><p class="card-text small flex-grow-1">Resep lumpia Semarang isi rebung dan udang. Kulit tipis, isi padat, dan sambal pedas manis. Lengkap dari bikin kulit ...</p><a href="/resep-lumpia-semarang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-144|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-siomay-bandung">Resep Siomay Bandung</a></h5><p class="card-text small flex-grow-1">Resep siomay bandung ikan tenggiri yang kenyal dan gurih. Lengkap dengan bumbu kacang, kecap, sambal, tahu, kol, dan ...</p><a href="/resep-siomay-bandung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-145|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-lontong-sayur">Resep Lontong Sayur</a></h5><p class="card-text small flex-grow-1">Resep lontong sayur labu siam lengkap. Kuah santan gurih, lontong empuk, dan toping lengkap. Sarapan favorit yang bik...</p><a href="/resep-lontong-sayur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-146|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-pempek-palembang">Resep Pempek Palembang</a></h5><p class="card-text small flex-grow-1">Resep pempek Palembang kenyal dan gurih. Pakai ikan tenggiri asli. Lengkap dengan kuah cuko yang pedas manis. Dari pe...</p><a href="/resep-pempek-palembang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-147|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-bebek-goreng">Resep Bebek Goreng</a></h5><p class="card-text small flex-grow-1">Resep bebek goreng krispi tanpa bau prengus. Daging empuk, kulit kering, dan gurih. Lengkap dengan sambal ijo dan lal...</p><a href="/resep-bebek-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-148|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-iga-bakar-madu">Resep Iga Bakar Madu</a></h5><p class="card-text small flex-grow-1">Resep iga bakar madu yang empuk banget. Dagingnya lumer, bumbunya meresap sampe ke tulang. Pakai teknik presto biar c...</p><a href="/resep-iga-bakar-madu" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
-149|<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tempe-mendoan">Resep Tempe Mendoan Crispy: Renyah di Luar, Lembut di Dalam! - Masakanku</a></h5><p class="card-text small flex-grow-1">Resep tempe mendoan crispy khas Banyumas. Tepung berbumbu tipis, digoreng setengah matang, dicocol kecap pedas. Cemil...</p><a href="/tempe-mendoan" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div></div><div class="text-center mt-4"><a href="/sitemap.xml" class="btn btn-outline-danger">Lihat Semua Resep &rarr;</a></div></div><footer>
-150|    <div class="container">
-151|        <div class="row">
-152|            <div class="col-md-6">
-153|                <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
-154|            </div>
-155|            <div class="col-md-6 text-md-end">
-156|                <a href="/contact" class="me-3">Contact</a>
-157|                <a href="/privacy-policy" class="me-3">Privacy Policy</a>
-158|                <a href="/copyright" class="me-3">Copyright</a>
-159|                <a href="/dmca">DMCA</a>
-160|            </div>
-161|        </div>
-162|    </div>
-163|<p class="small text-muted"><a href="https://jabturfembitter.com/eqpmnn1p?key=d62af6…d40b" target="_blank" rel="nofollow" style="color:#888;">&#9679; &#9679; &#9679;</a></p>
-164|</footer><script>var si=document.getElementById("searchInput");var cs=document.querySelectorAll(".col-md-4");if(si){si.addEventListener("input",function(){var q=this.value.trim().toLowerCase();cs.forEach(function(c){c.style.display=(q===""||c.textContent.toLowerCase().indexOf(q)>-1)?"":"none"})})}</script></body></html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="_G9Evl4HWpuFk80Wn8g2RUHZUwawF3lZ1ic6OXIX0nM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masakanku - Resep Masakan Indonesia Asli</title>
+    <meta name="description" content="Kumpulan resep masakan Indonesia asli. Resep ayam, ikan, sapi, sayur, nasi, kue tradisional, minuman, sambal. Lengkap dengan cara membuat mudah.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; color: #333; }
+        .navbar-brand { font-weight: 700; font-size: 1.6rem; }
+        .navbar { background: #c0392b !important; box-shadow: 0 2px 15px rgba(0,0,0,0.15); }
+        .navbar a { color: #fff !important; }
+        .hero { background: linear-gradient(135deg, #c0392b, #e74c3c); color: #fff; padding: 50px 0; text-align: center; }
+        .hero h1 { font-weight: 800; font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 0; }
+        .section-title { font-weight: 800; color: #c0392b; margin-bottom: 24px; border-bottom: 3px solid #fdeaea; padding-bottom: 10px; }
+        .card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+        .card-body { padding: 20px; }
+        .card-title { font-weight: 700; font-size: 1.05rem; color: #2c3e50; }
+        .card-title a { color: #2c3e50; text-decoration: none; }
+        .card-title a:hover { color: #c0392b; }
+        .card-img-top { height: 200px; object-fit: cover; border-radius: 12px 12px 0 0; background: linear-gradient(135deg, #ffdab9, #ff6b6b); }
+        .badge-resep { background: #c0392b; color: #fff; font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; }
+        .sidebar-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 20px; margin-bottom: 20px; }
+        .sidebar-card h5 { color: #c0392b; font-weight: 700; border-bottom: 2px solid #fdeaea; padding-bottom: 10px; margin-bottom: 15px; }
+        .sidebar-card ul { list-style: none; padding: 0; }
+        .sidebar-card ul li { padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
+        .sidebar-card ul li a { color: #555; text-decoration: none; transition: all 0.3s; display: block; }
+        .sidebar-card ul li a:hover { color: #c0392b; padding-left: 5px; }
+        footer { background: #222; color: #ccc; padding: 30px 0; margin-top: 40px; }
+        footer a { color: #e74c3c; text-decoration: none; }
+        footer a:hover { color: #fff; }
+        .category-badge { display: inline-block; background: #fdeaea; color: #c0392b; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .card-text { font-size: 0.9rem; color: #777; margin-top: 8px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } }
+    </style>
+
+
+<script src="//dojo.cc/124.js"></script>
+
+    <style>
+      .search-box { max-width: 600px; margin: 0 auto 2rem; position: relative; }
+      .search-box input { width: 100%; padding: 14px 20px 14px 50px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 1rem; transition: all 0.3s; }
+      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+      .search-box i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1.2rem; }
+      .search-box .clear-btn { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #999; cursor: pointer; display: none; font-size: 1rem; }
+      .article-card { transition: all 0.3s; }
+      .article-card.hidden { display: none; }
+      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .article-card .card-img-top { height: 200px; object-fit: cover; }
+      .article-card .card-body { padding: 1.2rem; }
+      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
+      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
+      .article-card .card-title a:hover { color: #c0392b; }
+      .article-count { color: #888; font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem; }
+      .category-filter { text-align: center; margin-bottom: 1.5rem; }
+      .category-filter .btn-cat { display: inline-block; padding: 6px 16px; margin: 3px; border-radius: 20px; font-size: 0.85rem; border: 1px solid #ddd; background: #fff; color: #555; cursor: pointer; transition: all 0.2s; }
+      .category-filter .btn-cat:hover { border-color: #c0392b; color: #c0392b; }
+      .category-filter .btn-cat.active { background: #c0392b; color: #fff; border-color: #c0392b; }
+    </style>
+    <style>
+      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
+      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
+      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
+      .article-card { transition: all 0.3s; }
+      .article-card.hidden { display: none; }
+      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .article-card .card-img-top { height: 200px; object-fit: cover; }
+      .article-card .card-body { padding: 1.2rem; }
+      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
+      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
+      .article-card .card-title a:hover { color: #c0392b; }
+    </style>
+    <style>
+      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
+      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
+      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
+      .article-card { transition: all 0.3s; }
+      .article-card.hidden { display: none; }
+      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .article-card .card-img-top { height: 200px; object-fit: cover; }
+      .article-card .card-body { padding: 1.2rem; }
+      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
+      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
+      .article-card .card-title a:hover { color: #c0392b; }
+    </style>
+    <style>
+      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
+      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
+      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
+      .article-card { transition: all 0.3s; }
+      .article-card.hidden { display: none; }
+      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .article-card .card-img-top { height: 200px; object-fit: cover; }
+      .article-card .card-body { padding: 1.2rem; }
+      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.3rem; }
+      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
+      .article-card .card-title a:hover { color: #c0392b; }
+    </style>
+    <style>
+      .search-box { max-width: 500px; margin: 0 auto 1.5rem; position: relative; }
+      .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid #e0e0e0; border-radius: 50px; font-size: 0.95rem; transition: all 0.3s; }
+      .search-box input:focus { outline: none; border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+      .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1rem; }
+      .article-card .card { border: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s; height: 100%; }
+      .article-card .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .article-card .card-img-top { height: 200px; object-fit: cover; }
+      .article-card .card-body { padding: 1.2rem; }
+      .article-card .card-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
+      .article-card .card-title a { color: #2c3e50; text-decoration: none; }
+      .article-card .card-title a:hover { color: #c0392b; }
+    </style><style>.food-emoji{height:200px;display:flex;align-items:center;justify-content:center;border-radius:12px 12px 0 0;font-size:5rem}.card{border:none;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s;height:100%}.card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.15)}.card-body{padding:1.2rem}.card-title{font-size:1.05rem;font-weight:700;line-height:1.4}.card-title a{color:#2c3e50;text-decoration:none}.card-title a:hover{color:#c0392b}.search-box{max-width:500px;margin:0 auto 1.5rem;position:relative}.search-box input{width:100%;padding:12px 20px 12px 45px;border:2px solid #e0e0e0;border-radius:50px;font-size:.95rem;transition:all .3s}.search-box input:focus{outline:none;border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.1)}.search-box i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#999}</style><style>.food-emoji{height:200px;display:flex;align-items:center;justify-content:center;border-radius:12px 12px 0 0;font-size:5rem}.card{border:none;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08);transition:all .3s;height:100%}.card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.15)}.card-body{padding:1.2rem}.card-title{font-size:1.05rem;font-weight:700;line-height:1.4}.card-title a{color:#2c3e50;text-decoration:none}.card-title a:hover{color:#c0392b}.search-box{max-width:500px;margin:0 auto 1.5rem;position:relative}.search-box input{width:100%;padding:12px 20px 12px 45px;border:2px solid #e0e0e0;border-radius:50px;font-size:.95rem;transition:all .3s}.search-box input:focus{outline:none;border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.1)}.search-box i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#999}</style></head><body><nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/"><i class="fas fa-utensils me-2"></i>Masakanku</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="/">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/privacy-policy">Privacy Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="/copyright">Copyright</a></li>
+            </ul>
+        </div>
+    </div>
+</nav><section class="hero"><div class="container"><h1><i class="fas fa-fire me-2"></i>Selamat Datang di Masakanku</h1><p>Kumpulan resep masakan Indonesia asli. Dari Sabang sampai Merauke. Semua ada di sini, lengkap dengan cara membuat yang mudah dipraktikkan.</p></div></section><div class="container mt-4"><div class="search-box"><i class="fas fa-search"></i><input type="text" id="searchInput" placeholder="Cari resep..." autocomplete="off"></div><h2 class="section-title"><i class="fas fa-newspaper me-2"></i>Resep Terbaru</h2><div class="row g-3" id="articleGrid"><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/nasi-goreng-jawa">Nasi Goreng Jawa Gurih Mantap</a></h5><p class="card-text small flex-grow-1">Resep nasi goreng Jawa asli dengan bumbu uleg kencur dan terasi. Gurih, mantap, beda dari nasi goreng biasa!</p><a href="/nasi-goreng-jawa" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tongseng-kambing">Tongseng Kambing Empuk Gurih</a></h5><p class="card-text small flex-grow-1">Resep tongseng kambing empuk tanpa presto. Gak bau prengus, bumbu meresap sempurna. Cocok buat menu spesial!</p><a href="/tongseng-kambing" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/gulai-kepala-ikan-kakap">Gulai Kepala Ikan Kakap Gurih</a></h5><p class="card-text small flex-grow-1">Resep gulai kepala ikan kakap khas Padang. Kuah santan kental, gurih pedas, daging lembut. Auto nambah nasi!</p><a href="/gulai-kepala-ikan-kakap" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/babat-gongso">Babat Gongso Semarang</a></h5><p class="card-text small flex-grow-1">Resep babat gongso khas Semarang. Empuk, gak bau, pedas gurih manis. Wajib coba buat pecinta jeroan!</p><a href="/babat-gongso" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tahu-walik">Tahu Walik Kriuk Kenyal</a></h5><p class="card-text small flex-grow-1">Resep tahu walik khas Tegal. Kriuk di luar, kenyal di dalam, pedas gurih. Camilan viral yang gampang bikinnya!</p><a href="/tahu-walik" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#8B4513,#A0522D)">🍗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/timlo-solo">Timlo Solo Kuah Bening</a></h5><p class="card-text small flex-grow-1">Resep timlo Solo kuah bening segar. Isi lengkap: ayam suwir, sosis solo, telur pindang, bihun. Menu hangat favorit!</p><a href="/timlo-solo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/kue-talam">Kue Talam Lembut Legit</a></h5><p class="card-text small flex-grow-1">Resep kue talam pandan dua lapis. Lembut, legit, dan gurih. Jajanan pasar tradisional yang gampang dibuat!</p><a href="/kue-talam" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#8B4513,#A0522D)">🍗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-ayam-tangkap">Resep Ayam Tangkap Khas Aceh</a></h5><p class="card-text small flex-grow-1">Resep ayam tangkap khas Aceh yang gurih renyah. Digoreng dengan daun kari, pandan, dan jeruk. Aromanya semerbak, rasanya bikin nagih!</p><a href="/resep-ayam-tangkap" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-cumi-rica-rica">Resep Cumi Rica-Rica Khas Manado</a></h5><p class="card-text small flex-grow-1">Resep cumi rica-rica khas Manado yang pedas mantap. Daging cumi empuk dengan bumbu rica segar. Cara bikin cepat, cocok buat makan siang!</p><a href="/resep-cumi-rica-rica" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-kikil-cabe-ijo">Resep Kikil Cabe Ijo Khas Padang</a></h5><p class="card-text small flex-grow-1">Resep kikil cabe ijo khas Padang yang empuk dan gurih. Dimasak dengan cabe hijau dan rempah. Lauk nikmat buat sehari-hari!</p><a href="/resep-kikil-cabe-ijo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-cah-kangkung">Resep Cah Kangkung Bawang Putih</a></h5><p class="card-text small flex-grow-1">Resep cah kangkung bawang putih yang simpel dan enak. Sayur segar ditumis cepat, masih renyah. Cocok buat lauk harian yang sehat!</p><a href="/resep-cah-kangkung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-dadar-gulung">Resep Dadar Gulung Isi Unti Kelapa</a></h5><p class="card-text small flex-grow-1">Resep dadar gulung isi unti kelapa yang lembut dan manis. Kulit hijau pandan, isi kelapa gula merah. Jajanan pasar tradisional yang selalu laris!</p><a href="/resep-dadar-gulung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-onde-onde">Resep Onde-Onde Wijen Lembut</a></h5><p class="card-text small flex-grow-1">Resep onde-onde wijen isi kacang hijau yang empuk. Kulit kenyal, luar renyah berwijen, isi manis. Jajanan pasar favorit yang gampang dibuat!</p><a href="/resep-onde-onde" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-sambal-goreng-udang">Resep Sambal Goreng Udang</a></h5><p class="card-text small flex-grow-1">Resep sambal goreng udang pedas manis gurih. Udang segar dengan bumbu merah kental. Lauk favorit yang cocok buat makan siang bersama keluarga!</p><a href="/resep-sambal-goreng-udang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/gado-gado">Resep Gado-Gado</a></h5><p class="card-text small flex-grow-1">Resep gado-gado asli Indonesia lengkap. Salad sayur segar, bumbu kacang gurih pedas, tahu tempe telur. Cara bikin praktis...</p><a href="/gado-gado" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/bika-ambon">Resep Bika Ambon</a></h5><p class="card-text small flex-grow-1">Resep bika Ambon khas Medan lengkap. Kue bersarang empuk dengan serat halus, wangi pandan & santan, antigagal buat pemula.</p><a href="/bika-ambon" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/sate-madura">Resep Sate Madura</a></h5><p class="card-text small flex-grow-1">Resep sate Madura asli lengkap. Bumbu kacang medok, daging ayam atau sapi empuk, aroma bakar yang bikin nagih. Cara bikin...</p><a href="/sate-madura" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/soto-padang">Resep Soto Padang Kuah Bening Kaya Rempah</a></h5><p class="card-text small flex-grow-1">Soto Padang asli dengan kuah bening kaya rempah, daging sapi empuk, perkedel, dan bihun. Bikin nagih!</p><a href="/soto-padang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/lotek-bandung">Resep Lotek Bandung Sayur Segar Bumbu Kacang</a></h5><p class="card-text small flex-grow-1">Lotek khas Bandung dengan sayur rebus segar dan saus kacang kental. Bawang goreng melimpah, bikin nagih!</p><a href="/lotek-bandung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🥰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/serabi-solo">Resep Serabi Solo dengan Kuah Kinca</a></h5><p class="card-text small flex-grow-1">Serabi Solo asli dengan adonan lembut dan kuah kinca gula merah kental. Kue tradisional yang bikin nagih!</p><a href="/serabi-solo" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div><div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tumis-daun-singkong">Resep Tumis Daun Singkong Sederhana</a></h5><p class="card-text small flex-grow-1">Tumis daun singkong praktis dengan bumbu bawang dan teri. Lauk sehari-ha... [truncated]
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-urap-sayur">Resep Urap Sayur</a></h5><p class="card-text small flex-grow-1">Resep urap sayur kelapa parut yang gurih. Enak, murah, dan kaya serat. Cocok buat lauk atau lalapan. lengkap dengan a...</p><a href="/resep-urap-sayur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C2185B,#E91E63)">🍰</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-lumpia-semarang">Resep Lumpia Semarang</a></h5><p class="card-text small flex-grow-1">Resep lumpia Semarang isi rebung dan udang. Kulit tipis, isi padat, dan sambal pedas manis. Lengkap dari bikin kulit ...</p><a href="/resep-lumpia-semarang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-siomay-bandung">Resep Siomay Bandung</a></h5><p class="card-text small flex-grow-1">Resep siomay bandung ikan tenggiri yang kenyal dan gurih. Lengkap dengan bumbu kacang, kecap, sambal, tahu, kol, dan ...</p><a href="/resep-siomay-bandung" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#1E8449,#27AE60)">🥗</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-lontong-sayur">Resep Lontong Sayur</a></h5><p class="card-text small flex-grow-1">Resep lontong sayur labu siam lengkap. Kuah santan gurih, lontong empuk, dan toping lengkap. Sarapan favorit yang bik...</p><a href="/resep-lontong-sayur" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#2471A3,#3498DB)">🐟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-pempek-palembang">Resep Pempek Palembang</a></h5><p class="card-text small flex-grow-1">Resep pempek Palembang kenyal dan gurih. Pakai ikan tenggiri asli. Lengkap dengan kuah cuko yang pedas manis. Dari pe...</p><a href="/resep-pempek-palembang" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-bebek-goreng">Resep Bebek Goreng</a></h5><p class="card-text small flex-grow-1">Resep bebek goreng krispi tanpa bau prengus. Daging empuk, kulit kering, dan gurih. Lengkap dengan sambal ijo dan lal...</p><a href="/resep-bebek-goreng" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#C0392B,#E74C3C)">🥩</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/resep-iga-bakar-madu">Resep Iga Bakar Madu</a></h5><p class="card-text small flex-grow-1">Resep iga bakar madu yang empuk banget. Dagingnya lumer, bumbunya meresap sampe ke tulang. Pakai teknik presto biar c...</p><a href="/resep-iga-bakar-madu" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div>
+<div class="col-md-4 col-sm-6"><div class="card h-100"><div class="food-emoji" style="background:linear-gradient(135deg,#0E7C7B,#1ABC9C)">🥟</div><div class="card-body d-flex flex-column"><h5 class="card-title"><a href="/tempe-mendoan">Resep Tempe Mendoan Crispy: Renyah di Luar, Lembut di Dalam! - Masakanku</a></h5><p class="card-text small flex-grow-1">Resep tempe mendoan crispy khas Banyumas. Tepung berbumbu tipis, digoreng setengah matang, dicocol kecap pedas. Cemil...</p><a href="/tempe-mendoan" class="btn btn-sm btn-outline-danger mt-2">Baca Resep &rarr;</a></div></div></div></div><div class="text-center mt-4"><a href="/sitemap.xml" class="btn btn-outline-danger">Lihat Semua Resep &rarr;</a></div></div><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="/contact" class="me-3">Contact</a>
+                <a href="/privacy-policy" class="me-3">Privacy Policy</a>
+                <a href="/copyright" class="me-3">Copyright</a>
+                <a href="/dmca">DMCA</a>
+            </div>
+        </div>
+    </div>
+<p class="small text-muted"><a href="https://jabturfembitter.com/eqpmnn1p?key=d62af6…d40b" target="_blank" rel="nofollow" style="color:#888;">&#9679; &#9679; &#9679;</a></p>
+</footer><script>var si=document.getElementById("searchInput");var cs=document.querySelectorAll(".col-md-4");if(si){si.addEventListener("input",function(){var q=this.value.trim().toLowerCase();cs.forEach(function(c){c.style.display=(q===""||c.textContent.toLowerCase().indexOf(q)>-1)?"":"none"})})}</script></body></html>
