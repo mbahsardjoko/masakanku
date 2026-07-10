@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Nasi Goreng Kuning — Masakanku</title>
+    <meta name="description" content="Resep nasi goreng kuning khas Indonesia. Gurih harum kuning telur, pake ayam, telur, dan sayuran. Lauk komplit bikin kenyang seharian.">
+    <link rel="canonical" href="https://masakanku.online/resep-nasi-goreng-kuning">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; color: #333; background: #fef9f4; }
+        nav { background: #8B4513; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; flex-wrap: wrap; }
+        nav .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        nav .logo span { color: #fdd835; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fdd835; }
+        .container { max-width: 800px; margin: auto; padding: 2rem 1.5rem; }
+        .breadcrumb { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #8B4513; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .category-badge { display: inline-block; background: #A0522D; color: #fff; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #222; margin-bottom: 0.5rem; line-height: 1.3; }
+        .meta-desc { font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; border-left: 4px solid #A0522D; padding-left: 1rem; }
+        .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .intro { font-size: 1.05rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: #A0522D; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f5edd0; }
+        .ingredients, .steps { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .ingredients li, .steps li { margin-bottom: 0.6rem; padding-left: 0.5rem; }
+        .ingredients ul, .steps ol { padding-left: 1.5rem; }
+        .ingredients h3 { color: #8B4513; margin-bottom: 0.8rem; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .tips-box { background: #fff8e1; border-left: 4px solid #fdd835; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .tips-box h3 { color: #f57f17; margin-bottom: 0.8rem; }
+        .tips-box li { margin-bottom: 0.5rem; }
+        .cta { text-align: center; background: #A0522D; color: #fff; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .cta p { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .related { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 2rem 0; }
+        .related h3 { color: #A0522D; margin-bottom: 1rem; }
+        .related a { color: #A0522D; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .related a:hover { text-decoration: underline; }
+        .steps-summary { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee; }
+        .step-badge { background: #8B4513; color: #fff; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
+        .secrets { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .secrets h2 { color: #A0522D; }
+        .secrets ul { padding-left: 1.5rem; }
+        .secrets li { margin-bottom: 0.8rem; }
+        .variations { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .variations h2 { color: #A0522D; }
+        .variations ul { padding-left: 1.5rem; }
+        .variations li { margin-bottom: 0.8rem; }
+        .why-try { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .why-try h2 { color: #A0522D; }
+        .faq { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .faq h2 { color: #A0522D; }
+        .faq-item { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .faq-question { font-weight: 600; color: #8B4513; margin-bottom: 0.4rem; }
+        .faq-answer { color: #555; }
+        footer { background: #2c2c2c; color: #ccc; padding: 2rem 0; text-align: center; margin-top: 3rem; }
+        .ad-container { margin: 1.5rem 0; text-align: center; }
+    </style>
+</head>
+<body>
+    <script async src="https://dojo.cc/dojo.js" data-dojo-config="async: true"></script>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Masakanku<span>.</span></a>
+            <div>
+                <a href="/">Beranda</a>
+                <a href="/kategori/nusantara">Nusantara</a>
+                <a href="/kategori/jawa">Jawa</a>
+                <a href="/kategori/sumatera">Sumatera</a>
+                <a href="/kategori/sulawesi">Sulawesi</a>
+                <a href="/kategori/kalimantan">Kalimantan</a>
+                <a href="/kategori/bali-nusa">Bali & Nusa</a>
+                <a href="/kategori/madura">Madura</a>
+                <a href="/kategori/sunda">Sunda</a>
+                <a href="/kategori/padang">Padang</a>
+                <a href="/kategori/manado">Manado</a>
+                <a href="/kategori/betawi">Betawi</a>
+                <a href="/kategori/aceh">Aceh</a>
+                <a href="/kategori/maluku-papua">Maluku & Papua</a>
+                <a href="/kategori/lainnya">Lainnya</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/">Beranda</a> / <a href="/kategori/nusantara">Masakan Nusantara</a> / Resep Nasi Goreng Kuning
+        </nav>
+
+        <span class="category-badge">🍗 Masakan Nusantara</span>
+        <h1>Resep Nasi Goreng Kuning: Gurih Harum Kuning Telur, Lauk Komplit Bikin Kenyang</h1>
+        <p class="meta-desc">Resep nasi goreng kuning khas Indonesia. Gurih harum kuning telur, pake ayam, telur, dan sayuran. Lauk komplit bikin kenyang seharian.</p>
+
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800&auto=format&fit=crop" alt="Nasi Goreng Kuning Gurih Harum" class="article-img" loading="lazy">
+
+        <div class="intro">
+            <p>"Nasi goreng itu cuma nasi digoreng pake kecap." Banyak yang kira begitu. Tapi coba deh makan nasi goreng kuning yang beneran. Warnanya kuning cerah dari telur, aromanya harum rempah, tiap suapan gurih banget. Bedanya jauh sama nasi goreng biasa.</p>
+            <p>Saya pertama kali makan nasi goreng kuning di warung pinggir jalan pas malam minggu. Pak bosenya masak pake wajan besi tua, api besar, nasi diaduk-aduk sampe wangi keluar. Sebentar aja udah jadi. Rasa? Gurih, harum, dan bikin nambah terus.</p>
+            <p>Rahasianya simpel: telur dikocok dulu baru dimasukin nasi. Biar kuningnya merata dan nasi nggak gumpal. Ditambah ayam suwir, wortel, buncis — jadi lauk komplit satu piring.</p>
+        </div>
+
+        <h2>Apa Itu Nasi Goreng Kuning?</h2>
+        <div class="intro">
+            <p>Nasi goreng kuning adalah varian nasi goreng yang pakai telur ayam dikocok sama nasi sebelum digoreng. Warnanya kuning cerah, beda sama nasi goreng kecap yang coklat. Rempahnya biasanya bawang putih, bawang merah, merica, dan kunyit bubuk biar warna makin kuning.</p>
+            <p>Khasnya: nasi digoreng sama telur, bukan nasi digoreng baru ditambah telur di atasnya. Teknik ini bikin tiap butir nasi kelapusi telur. Rasanya lebih gurih, teksturnya lebih ringan, dan warnanya cantik banget.</p>
+            <p>Di Indonesia, nasi goreng kuning sering dijual di warung makan malam sampai pagi. Temennya biasa telur ceplok, kerupuk, sama acar timun. Simpel tapi memuaskan.</p>
+        </div>
+
+        <div class="ingredients">
+            <h2>Bahan-Bahan Nasi Goreng Kuning</h2>
+            <h3>Bahan Utama</h3>
+            <ul>
+                <li>3 piring nasi putih dingin (semaleman lebih bagus)</li>
+                <li>2 butir telur ayam</li>
+                <li>200 gram ayam fillet (suwir kecil)</li>
+                <li>1 buah wortel (potong dadu kecil)</li>
+                <li>50 gram buncis (potong kecil)</li>
+                <li>3 siung bawang putih</li>
+                <li>4 siung bawang merah</li>
+                <li>2 batang daun bawang (iris)</li>
+                <li>2 sdm minyak goreng</li>
+            </ul>
+            <h3>Bumbu Halus</h3>
+            <ul>
+                <li>3 siung bawang putih</li>
+                <li>4 siung bawang merah</li>
+                <li>1 sdt merica bubuk</li>
+                <li>1 sdt kunyit bubuk</li>
+                <li>1 sdt garam</li>
+                <li>1/2 sdt kaldu bubuk</li>
+                <li>1 sdm kecap manis</li>
+            </ul>
+            <h3>Pelengkap</h3>
+            <ul>
+                <li>Telur ceplok</li>
+                <li>Kerupuk udang</li>
+                <li>Acar timun</li>
+                <li>Bawang goreng</li>
+            </ul>
+        </div>
+
+        <div class="ad-container">
+            <script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script>
+            <script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script>
+        </div>
+
+        <div class="steps">
+            <h2>Cara Membuat Nasi Goreng Kuning</h2>
+            <ol>
+                <li>Haluskan bawang putih, bawang merah, merica, kunyit, garam, dan kaldu bubuk. Bisa pake blender atau ulekan.</li>
+                <li>Kocok lepas 2 butir telur di mangkuk. Masukkan bumbu halus, aduk rata.</li>
+                <li>Panaskan minyak di wajan api besar. Masukkan ayam suwir, tumis sebentar sampe berubah warna.</li>
+                <li>Masukkan wortel dan buncis. Tumis 2 menit sampe setengah matang.</li>
+                <li>Masukkan nasi putih. Aduk rata sama ayam sayuran.</li>
+                <li>Tuang kocokan telur bumbu ke atas nasi. Aduk cepat dan terus menerus sampe nasi terpisah butiran dan warna kuning merata.</li>
+                <li>Masukkan daun bawang dan kecap manis. Aduk lagi sebentar. Koreksi rasa.</li>
+                <li>Angkat. Sajikan hangat dengan telur ceplok, kerupuk, acar, dan taburan bawang goreng.</li>
+            </ol>
+            <div class="steps-summary">
+                <span class="step-badge">Langkah 1: Siapkan Bumbu dan Telur</span>
+                <span class="step-badge">Langkah 2: Tumis Ayam dan Sayuran</span>
+                <span class="step-badge">Langkah 3: Goreng Nasi dengan Telur</span>
+                <span class="step-badge">Langkah 4: Sajikan</span>
+            </div>
+        </div>
+
+        <div class="secrets">
+            <h2>🔒 Rahasia Nasi Goreng Kuning Anti Gagal</h2>
+            <ul>
+                <li><strong>Nasi Semaleman Wajib:</strong> Nasi baru masak terlalu lembek, goreng jadi gumpal. Nasi semaleman butirannya terpisah, cocok buat nasi goreng.</li>
+                <li><strong>Telur Dikocok Dulu:</strong> Jangan pecah telur langsung di wajan. Kocok sama bumbu dulu baru tuang ke nasi. Biar kuningnya merata dan nasi nggak gumpal.</li>
+                <li><strong>Api Harus Besar:</strong> Nasi goreng kudu masak cepat api besar. Api kecil bikin nasi jadi lembek dan nggak wangi. Wajan besi/kuasuk kayu paling bagus.</li>
+                <li><strong>Kunyit Bubuk Bukan Kuning Telur:</strong> Kuning telur aja warna nya kurang cerah. Tambahin 1 sdt kunyit bubuk biar kuningnya menggiurkan dan ada aroma rempah.</li>
+            </ul>
+        </div>
+
+        <div class="variations">
+            <h2>🔄 Variasi Nasi Goreng Kuning</h2>
+            <ul>
+                <li><strong>Nasi Goreng Kuning Seafood:</strong> Ganti ayam dengan udang, cumi, dan ikan. Tambahin saus tiram buat rasa gurih laut.</li>
+                <li><strong>Nasi Goreng Kuning Vegetarian:</strong> Skip ayam. Tambah jamur tiram, tahu, dan sayuran lebih banyak. Tetep gurih dari telur dan bumbu.</li>
+                <li><strong>Nasi Goreng Kuning Pedas:</strong> Tambah cabe rawit di bumbu halus. Cocok buat yang suka pedas banget.</li>
+            </ul>
+        </div>
+
+        <div class="tips-box">
+            <h3>🔥 Tips Biar Nasi Goreng Kuning Sempurna</h3>
+            <ul>
+                <li>Gunakan nasi dingin semalaman — butiran terpisah, nggak lengket</li>
+                <li>Kocok telur dan bumbu halus SEBELUM masuk wajan — biar merata</li>
+                <li>Api besar, aduk cepat — nasi goreng kudu masak cepat biar wangi</li>
+                <li>Jangan terlalu banyak kecap — nanti warna jadi coklat, kuning hilang</li>
+                <li>Tabur bawang goreng di atasnya — aroma dan kriuknya beda banget</li>
+            </ul>
+        </div>
+
+        <div class="why-try">
+            <h2>💡 Kenapa Harus Coba Resep Ini?</h2>
+            <p>Nasi goreng kuning itu comfort food paling juara. Bikinnya cepet, bahan murah, tapi rasanya mewah. Cocok banget buat sarapan, makan siang, atau makan malam.</p>
+            <p>Bedanya sama nasi goreng biasa: warnanya cantik kuning cerah, rasanya gurih meresap ke tiap butir nasi, dan teksturnya ringan nggak enek. Anak-anak suka, orang tua pun doyan.</p>
+            <p>Bisa dikreasikan mau mau. Mau pake ayam, seafood, sayuran, atau cuma telur aja — tetep enak. Itu kelebihan nasi goreng kuning: fleksibel, praktis, dan selalu bikin kenyang puas.</p>
+        </div>
+
+        <div class="faq">
+            <h2>❓ Pertanyaan Sering Ditanya</h2>
+            <div class="faq-item">
+                <div class="faq-question">Nasi goreng kuning beda sama nasi goreng biasa di mana?</div>
+                <div class="faq-answer">Nasi goreng kuning pakai telur dikocok sama nasi SEBELUM digoreng. Nasi goreng biasa: nasi digoreng dulu, telur ceplok di atasnya. Warna, rasa, dan tekstur beda jauh.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Kunyit bubuk bisa diskip?</div>
+                <div class="faq-answer">Bisa, tapi warna jadi kuning pucat (cuma dari telur). Kunyit bubuk kasih warna kuning cerah + aroma rempah khas. Cuma 1 sdt, nggak bikin pahit.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Bisa pake nasi baru masak?</div>
+                <div class="faq-answer">Bisa tapi hasilnya kurang bagus. Nasi baru masak terlalu lembek, pas digoreng jadi gumpal. Kalau terpaksa, sebar nasi di nampan, dinginkan 30 menit kipas angin baru digoreng.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Ayam bisa diganti apa aja?</div>
+                <div class="faq-answer">Bisa. Udang, cumi, sosis, bakso, jamur, tahu, tempe, atau cuma sayuran aja. Nasi goreng kuning fleksibel banget.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Bisa disimpan buat besok?</div>
+                <div class="faq-answer">Bisa, taruh wadah tertutup di kulkas maksimal 1 hari. Panaskan di wajan api kecil tambahin sedikit air, aduk rata. Atau microwave 2 menit.</div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <p>Sekarang giliran kamu. Siapin nasi semalaman, telur, dan bumbu. 15 menit lagi nasi goreng kuning siap di meja makan.</p>
+            <p>Jangan lupa tabur bawang goreng biar wangi keluar sampai ke tetangga! 🍗</p>
+        </div>
+
+        <div class="related">
+            <h3>Baca Juga</h3>
+            <a href="/resep-nasi-goreng-kampung">Resep Nasi Goreng Kampung Khas Jawa</a>
+            <a href="/resep-nasi-goreng-seafood">Resep Nasi Goreng Seafood Gurih</a>
+            <a href="/resep-nasi-goreng-jawa">Resep Nasi Goreng Jawa Manis Gurih</a>
+            <a href="/resep-nasi-kebuli">Resep Nasi Kebuli Khas Nusantara</a>
+        </div>
+    </div>
+
+    <div class="ad-container" style="margin:1.5rem 0;text-align:center">
+        <script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script>
+        <script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div>
+                <a href="/contact" style="color:#ccc;margin:0 1rem;">Contact</a>
+                <a href="/privacy-policy" style="color:#ccc;margin:0 1rem;">Privacy Policy</a>
+                <a href="/copyright" style="color:#ccc;margin:0 1rem;">Copyright</a>
+                <a href="/dmca" style="color:#ccc;margin:0 1rem;">DMCA</a>
+            </div>
+            <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
+        </div>
+
+        <div class="container mt-3" style="border-top:1px solid #444;padding-top:1rem">
+            <p style="font-size:0.8rem;opacity:0.7">
+                <strong>Jelajahi Juga:</strong>
+                <a href="https://remoteproduktif.online" target="_blank" style="color:#fdd835;">RemoteProduktif</a> — Tips kerja remote untuk Indonesia
+                &nbsp;|&nbsp;
+                <a href="https://fattan.my.id" target="_blank" style="color:#fdd835;">My Fattan</a> — Pengembangan diri anak muda
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
