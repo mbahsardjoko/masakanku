@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+    <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://masakanku.online/ayam-beku-tahan-berapa-lama</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-goreng-mangga-besar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-penyet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -177,9 +177,6 @@
   <url><loc>https://masakanku.online/lemper-ayam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/bika-ambon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/sate-madura</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <url><loc>https://masakanku.online/gado-gado</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/gado-gado</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-ayam-tangkap</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-cumi-rica-rica</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-kikil-cabe-ijo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -195,11 +192,7 @@
   <url><loc>https://masakanku.online/timlo-solo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/kue-talam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-gudeg-jogja</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-ayam-rica-rica</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-rawon-daging</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-pecel-lele</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-nasi-goreng-kampung</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-soto-betawi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-rendang-daging</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-sayur-asem-jakarta</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-ayam-rica-rica-manado</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -220,4 +213,11 @@
   <url><loc>https://masakanku.online/pepes-ikan-patin</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/klepon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/bihun-goreng</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/semur-daging-sapi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/nasi-goreng-aceh</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/sate-sapi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/soto-madura</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/bebek-betutu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/ikan-bakar-rica-rica</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/ayam-goreng-kuning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
