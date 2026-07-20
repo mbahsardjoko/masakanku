@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+      <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://masakanku.online/ayam-beku-tahan-berapa-lama</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-goreng-mangga-besar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-penyet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -220,9 +220,6 @@
   <url><loc>https://masakanku.online/bebek-betutu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ikan-bakar-rica-rica</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-goreng-kuning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-pempek-palembang</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-martabak-telur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-nasi-uduk</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-pecel-ayam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-sop-buntut</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-bubur-sumsum</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -241,4 +238,11 @@
   <url><loc>https://masakanku.online/tahu-isi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/es-cendol-dawet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/oseng-oseng-mercon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-empal-gentong</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-lontong-cap-go-meh</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-soto-banjar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-brengkesan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-soto-medan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-ayam-serundeng</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-bihun-kuah</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
