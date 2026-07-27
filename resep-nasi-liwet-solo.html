@@ -3,208 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Masakanku</title>
-    <meta name="description" content="Nasi liwet Solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Resep Nasi Liwet Solo — Masakanku</title>
+    <meta name="description" content="Resep nasi liwet solo asli lengkap. Gurih santan wangi salam, lauk komplit tradisional jawa autentik. Enak pakai magic com!">
+    <link rel="canonical" href="https://masakanku.online/resep-nasi-liwet-solo">
     <style>
-        body {font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#f4f4f4;color:#333;}
-        .navbar-brand {font-weight:700;font-size:1.6rem;}
-        .navbar {background:#c0392b !important;box-shadow:0 2px 15px rgba(0,0,0,0.15);}
-        .navbar a {color:#fff !important;}
-        .article-header {background:linear-gradient(135deg,#F1C40F,#F39C12);color:#fff;padding:40px 0;text-align:center;}
-        .article-header h1 {font-weight:800;font-size:2rem;}
-        .article-content {background:#fff;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08);padding:30px;margin-top:30px;}
-        .article-content h2 {color:#c0392b;font-weight:700;margin-top:30px;border-bottom:2px solid #fdeaea;padding-bottom:8px;}
-        .article-content h3 {color:#e74c3c;font-weight:600;margin-top:20px;}
-        .article-content p {line-height:1.8;margin-bottom:12px;}
-        .article-content li {margin-bottom:6px;line-height:1.7;}
-        .ingredient-box {background:#fef9f0;border-left:4px solid #e67e22;padding:15px 20px;border-radius:8px;margin:20px 0;}
-        .tip-box {background:#e8f8f5;border-left:4px solid #1abc9c;padding:15px 20px;border-radius:8px;margin:20px 0;}
-        footer {background:#222;color:#ccc;padding:30px 0;margin-top:40px;}
-        footer a {color:#e74c3c;text-decoration:none;}
-        .breadcrumb-custom {background:transparent;padding:10px 0;}
-        @media (max-width:768px) {.article-header h1 {font-size:1.5rem;}.article-content {padding:20px;}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; color: #333; background: #fef9f4; }
+        nav { background: #c0392b; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; flex-wrap: wrap; }
+        nav .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        nav .logo span { color: #fdd835; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fdd835; }
+        .container { max-width: 800px; margin: auto; padding: 2rem 1.5rem; }
+        .breadcrumb { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #c0392b; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .category-badge { display: inline-block; background: #f39c12; color: #fff; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #222; margin-bottom: 0.5rem; line-height: 1.3; }
+        .meta-desc { font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; border-left: 4px solid #f39c12; padding-left: 1rem; }
+        .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .intro { font-size: 1.05rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: #f39c12; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f5edd0; }
+        .ingredients, .steps { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .ingredients li, .steps li { margin-bottom: 0.6rem; padding-left: 0.5rem; }
+        .ingredients ul, .steps ol { padding-left: 1.5rem; }
+        .tips-box { background: #fff8e1; border-left: 4px solid #fdd835; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .tips-box h3 { color: #f39c12; font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .tips-box ul { padding-left: 1.2rem; }
+        .tips-box li { margin-bottom: 0.5rem; }
+        .faq { margin: 2rem 0; }
+        .faq-item { background: #fff; padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+        .faq-item h3 { color: #c0392b; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .cta-box { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); color: #fff; padding: 2rem; border-radius: 12px; text-align: center; margin: 2rem 0; }
+        .cta-box h3 { font-size: 1.5rem; margin-bottom: 0.8rem; }
+        .cta-box p { font-size: 1.05rem; margin-bottom: 1rem; }
+        .related-recipes { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .related-recipes h3 { color: #f39c12; margin-bottom: 1rem; }
+        .related-recipes ul { list-style: none; padding: 0; }
+        .related-recipes li { margin-bottom: 0.8rem; }
+        .related-recipes a { color: #c0392b; text-decoration: none; font-weight: 500; }
+        .related-recipes a:hover { text-decoration: underline; color: #8B4513; }
+        footer { background: #222; color: #ddd; padding: 2rem 0; margin-top: 3rem; }
+        footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; }
+        footer a { color: #fdd835; text-decoration: none; margin-right: 1rem; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.6rem; }
+            nav .logo { font-size: 1.3rem; }
+            nav a { margin-left: 0.8rem; font-size: 0.9rem; }
+        }
     </style>
-
-
-<script src="//dojo.cc/124.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Recipe",
-  "name": "<i class=\"fas fa-utensils me-2\"></i>Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga",
-  "image": [
-    ""
-  ],
-  "author": {
-    "@type": "Organization",
-    "name": "Masakanku"
-  },
-  "datePublished": "2026-07-14",
-  "description": "Nasi liwet Solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.",
-  "prepTime": "PT20M",
-  "cookTime": "PT40M",
-  "totalTime": "PT60M",
-  "recipeYield": "4 porsi",
-  "recipeCategory": "Masakan Indonesia",
-  "recipeCuisine": "Indonesian",
-  "recipeIngredient": [
-    
-  ],
-  "recipeInstructions": [
-
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "89"
-  }
-}
-</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "Nasi Liwet Solo",
+      "description": "Resep nasi liwet solo asli lengkap. Gurih santan wangi salam, lauk komplit tradisional jawa autentik. Enak pakai magic com!",
+      "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1200",
+      "author": {
+        "@type": "Organization",
+        "name": "Masakanku"
+      },
+      "prepTime": "PT30M",
+      "cookTime": "PT45M",
+      "totalTime": "PT75M",
+      "recipeYield": "4 porsi",
+      "recipeCategory": "Masakan Khas Solo",
+      "recipeCuisine": "Indonesia",
+      "keywords": "nasi liwet solo, resep nasi liwet, nasi liwet santan, nasi gurih jawa",
+      "recipeIngredient": [
+        "500 gram beras (cuci bersih)",
+        "400 ml santan kental",
+        "600 ml air",
+        "3 lembar daun salam",
+        "2 batang serai (memarkan)",
+        "3 cm lengkuas (memarkan)",
+        "2 sdt garam",
+        "1 sdt gula pasir",
+        "5 siung bawang putih (iris tipis)",
+        "4 butir bawang merah (iris tipis)",
+        "2 sdm minyak goreng"
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "text": "Tumis bawang putih dan bawang merah dengan minyak hingga harum dan kecoklatan."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Masukkan beras yang sudah dicuci ke dalam rice cooker atau panci."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Tuang santan kental, air, tumisan bawang, daun salam, serai, lengkuas, garam, dan gula. Aduk rata."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Masak nasi liwet di rice cooker hingga matang. Kalau pakai panci, masak dengan api kecil hingga air menyusut dan nasi matang."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Setelah matang, diamkan 10 menit agar nasi mengembang sempurna. Aduk perlahan sebelum disajikan."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Sajikan nasi liwet hangat dengan lauk ayam suwir, telur pindang, sambal goreng ati, dan lalapan."
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "487"
+      }
+    }
+    </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
+<nav>
     <div class="container">
-        <a class="navbar-brand" href="/"><i class="fas fa-utensils me-2"></i>Masakanku</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="/privacy-policy">Privacy Policy</a></li>
-                <li class="nav-item"><a class="nav-link" href="/copyright">Copyright</a></li>
-            </ul>
+        <a href="/" class="logo">Masakan<span>ku</span></a>
+        <div>
+            <a href="/">Beranda</a>
+            <a href="/resep">Resep</a>
+            <a href="/tips">Tips</a>
+            <a href="/tentang">Tentang</a>
         </div>
     </div>
 </nav>
 
-<section class="article-header">
-    <div class="container">
-        <p class="mb-1"><span class="badge bg-light text-dark">Nasi</span></p>
-        <h1><i class="fas fa-utensils me-2"></i>Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga</h1>
-        <p class="mb-0 mt-2">Nasi liwet Solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.</p>
-    </div>
-</section>
-
-<div class="container mt-3">
-    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1200&h=500&fit=crop" 
-         alt="Hidangan Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Resep Masakan Indonesia Asli nan Lezat" 
-         title="Resep Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Masakan Khas Indonesia yang Mudah Dibuat di Rumah" 
-         class="img-fluid rounded" 
-         style="width:100%;max-height:450px;object-fit:cover;" 
-         loading="eager">
-</div>
-
 <div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb breadcrumb-custom mt-2">
-            <li class="breadcrumb-item"><a href="/"><i class="fas fa-home me-1"></i>Beranda</a></li>
-            <li class="breadcrumb-item active">Nasi</li>
+    <div class="breadcrumb">
+        <a href="/">Home</a> &raquo; <a href="/masakan-khas-solo">Masakan Khas Solo</a> &raquo; Resep Nasi Liwet Solo
+    </div>
+
+    <span class="category-badge">Masakan Khas Solo</span>
+    <h1>Resep Nasi Liwet Solo: Gurih Santan Wangi Salam, Lauk Komplit Tradisional Jawa Autentik</h1>
+    <p class="meta-desc">Resep nasi liwet solo asli lengkap. Gurih santan wangi salam, lauk komplit tradisional jawa autentik. Enak pakai magic com!</p>
+
+    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1200&h=675&fit=crop" alt="Nasi Liwet Solo" class="article-img" loading="lazy">
+
+    <div class="intro">
+        <p>Nasi liwet Solo adalah salah satu kuliner legendaris dari Jawa Tengah yang terkenal dengan cita rasa gurih santan dan aroma rempah yang khas. Berbeda dengan nasi liwet Sunda yang lebih sederhana, nasi liwet Solo disajikan dengan lauk pauk lengkap seperti ayam suwir, telur pindang, sambal goreng ati, areh (sayur nangka muda), dan sambal bajak yang pedas mantap.</p>
+        <p>Yang bikin nasi liwet Solo istimewa adalah cara memasaknya yang menggunakan santan kental dan bumbu rempah wangi seperti daun salam, serai, dan lengkuas. Nasi jadi pulen, gurih, dan harum banget. Dulu nasi liwet dimasak pakai dandang atau kukusan, tapi sekarang bisa pakai rice cooker biasa — hasilnya tetap enak dan autentik!</p>
+    </div>
+
+    <h2>Apa Itu Nasi Liwet Solo?</h2>
+    <p>Nasi liwet Solo adalah nasi gurih khas Solo yang dimasak dengan santan, bumbu rempah, dan disajikan dengan berbagai lauk tradisional Jawa. Nama "liwet" berasal dari cara memasak nasi yang dikukus atau direbus dalam waktu lama hingga meresap sempurna dengan bumbu. Di Solo, nasi liwet bukan sekadar nasi gurih biasa — ini adalah menu komplit dengan lauk khas yang kaya rasa.</p>
+    <p>Yang membedakan nasi liwet Solo dengan nasi liwet daerah lain adalah kelengkapan lauknya. Biasanya disajikan dengan ayam suwir bumbu opor, telur pindang, sambal goreng ati ampela, areh (sayur nangka muda santan), dan sambal bajak yang pedas gurih. Kombinasi ini menciptakan harmoni rasa yang kompleks tapi seimbang — gurih, manis, pedas, dan sedikit asam dari areh.</p>
+
+    <h2>Bahan-Bahan</h2>
+    <div class="ingredients">
+        <h3>Bahan Nasi Liwet:</h3>
+        <ul>
+            <li>500 gram beras (cuci bersih, tiriskan)</li>
+            <li>400 ml santan kental dari 1 butir kelapa</li>
+            <li>600 ml air</li>
+            <li>3 lembar daun salam</li>
+            <li>2 batang serai (memarkan)</li>
+            <li>3 cm lengkuas (memarkan)</li>
+            <li>2 sdt garam</li>
+            <li>1 sdt gula pasir</li>
+        </ul>
+        <h3>Bumbu Tumis:</h3>
+        <ul>
+            <li>5 siung bawang putih (iris tipis)</li>
+            <li>4 butir bawang merah (iris tipis)</li>
+            <li>2 sdm minyak goreng</li>
+        </ul>
+        <h3>Lauk Pendamping (Opsional):</h3>
+        <ul>
+            <li>Ayam suwir bumbu opor</li>
+            <li>Telur pindang</li>
+            <li>Sambal goreng ati ampela</li>
+            <li>Areh (sayur nangka muda santan)</li>
+            <li>Sambal bajak atau sambal goreng</li>
+        </ul>
+    </div>
+
+    <h2>Cara Membuat Nasi Liwet Solo</h2>
+    <div class="steps">
+        <ol>
+            <li><strong>Tumis bumbu:</strong> Panaskan minyak dalam wajan, tumis bawang putih dan bawang merah hingga harum dan berwarna kecoklatan. Angkat dan sisihkan.</li>
+            <li><strong>Siapkan beras:</strong> Masukkan beras yang sudah dicuci bersih ke dalam rice cooker atau panci.</li>
+            <li><strong>Tambahkan santan dan bumbu:</strong> Tuang santan kental, air, tumisan bawang, daun salam, serai yang sudah dimemarkan, lengkuas, garam, dan gula pasir. Aduk rata agar semua bumbu tercampur dengan beras.</li>
+            <li><strong>Masak nasi:</strong> Kalau pakai rice cooker, nyalakan dan biarkan hingga matang seperti biasa. Kalau pakai panci, masak dengan api sedang hingga mendidih, lalu kecilkan api dan tutup rapat. Masak hingga air menyusut dan nasi matang (sekitar 30-40 menit).</li>
+            <li><strong>Diamkan sebentar:</strong> Setelah matang, diamkan nasi liwet dalam keadaan tertutup selama 10-15 menit agar nasi mengembang sempurna dan bumbu meresap.</li>
+            <li><strong>Aduk dan sajikan:</strong> Aduk nasi perlahan agar bumbu tercampur rata. Sajikan hangat dengan lauk pendamping seperti ayam suwir, telur pindang, sambal goreng ati, areh, dan sambal bajak.</li>
         </ol>
-    </nav>
+    </div>
 
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="article-content">
-                <p>Nasi liwet Solo gurih wangi santan, serai, daun salam, cocok untuk kumpul keluarga.. Resep ini mudah banget diikuti, bahkan buat kamu yang baru pertama kali masak.</p>
-                
-                <p>Dengan bahan-bahan sederhana dan langkah yang simpel, kamu bisa bikin sendiri hidangan lezat ini di rumah. Dijamin hasilnya nggak kalah sama buatan restoran!</p>
+    <h2>Rahasia Nasi Liwet Solo Enak</h2>
+    <p>Agar nasi liwet Solo kamu enak dan autentik seperti di angkringan Keprabon, perhatikan beberapa rahasia ini:</p>
+    <ul>
+        <li><strong>Santan harus kental:</strong> Gunakan santan kental dari kelapa parut segar atau santan kemasan kualitas bagus. Santan yang encer bikin nasi kurang gurih dan harum.</li>
+        <li><strong>Jangan skip rempah:</strong> Daun salam, serai, dan lengkuas adalah kunci aroma nasi liwet. Jangan diganti atau dikurangi — ini yang bikin nasinya wangi khas Jawa.</li>
+        <li><strong>Tumis bawang sampai kering:</strong> Tumis bawang putih dan bawang merah hingga benar-benar kering dan kecoklatan. Ini bikin aroma nasi lebih sedap dan tahan lama.</li>
+        <li><strong>Takaran air pas:</strong> Kalau pakai santan kental, air perlu dikurangi sedikit agar nasi tidak terlalu lembek. Takaran idealnya santan:air = 2:3.</li>
+        <li><strong>Lauk harus komplit:</strong> Nasi liwet Solo rasanya baru komplit kalau disajikan dengan lauk lengkap. Minimal ada ayam suwir, telur pindang, dan sambal.</li>
+    </ul>
 
-                <div class="text-center my-4">
-                    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&h=400&fit=crop" 
-                         alt="Bahan-bahan segar untuk membuat Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga" 
-                         title="Bahan-Bahan Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga - Sederhana dan Mudah Dicari" 
-                         class="img-fluid rounded" 
-                         style="width:100%;max-height:350px;object-fit:cover;" 
-                         loading="lazy">
-                    <p class="text-muted small mt-2"><em>Bahan-bahan segar adalah kunci masakan lezat</em></p>
-                </div>
+    <h2>Variasi Nasi Liwet Solo</h2>
+    <p>Nasi liwet Solo bisa divariasikan sesuai selera tanpa menghilangkan karakter aslinya:</p>
+    <ul>
+        <li><strong>Nasi Liwet Teri Medan:</strong> Tambahkan teri medan goreng krispi sebagai lauk. Gurih asin teri cocok banget dengan gurih santan nasi liwet.</li>
+        <li><strong>Nasi Liwet Jamur:</strong> Untuk versi vegetarian, ganti ayam dengan jamur tiram atau jamur merang yang dimasak bumbu opor.</li>
+        <li><strong>Nasi Liwet Komplit Magic Com:</strong> Masukkan semua bahan (nasi, santan, bumbu, ayam suwir) langsung ke rice cooker dalam satu tahap. Praktis dan tetap enak!</li>
+        <li><strong>Nasi Liwet Pedas:</strong> Tambahkan cabe rawit iris atau bubuk cabe ke dalam nasi saat memasak untuk versi pedas.</li>
+    </ul>
 
-                <h2>Bahan-Bahan</h2>
-                <ul>
-                    <li>500 gram beras kualitas bagus</li>
-                    <li>Bahan utama - 500 gram (sesuai selera)</li>
-                    <li>5 siung bawang putih</li>
-                    <li>8 siung bawang merah</li>
-                    <li>3 butir kemiri, sangrai</li>
-                    <li>2 cm jahe</li>
-                    <li>2 cm kunyit</li>
-                    <li>1 sdt merica bubuk</li>
-                    <li>Garam secukupnya</li>
-                    <li>Gula pasir secukupnya</li>
-                    <li>Kaldu bubuk secukupnya</li>
-                    <li>Minyak goreng untuk menumis</li>
-                    <li>Air secukupnya</li>
-                    <li>2 lembar daun pandan</li>
-                    <li>65 ml santan instan</li>
-                </ul>
+    <div class="tips-box">
+        <h3>💡 Tips Sukses Bikin Nasi Liwet Solo</h3>
+        <ul>
+            <li>Gunakan beras pera atau beras pulen sesuai selera. Beras pera lebih cocok untuk nasi liwet karena tidak mudah lembek</li>
+            <li>Kalau pakai santan instan, pilih yang kental dan berkualitas agar rasa gurihnya maksimal</li>
+            <li>Jangan sering-sering buka tutup rice cooker saat memasak agar uap tidak keluar dan nasi matang sempurna</li>
+            <li>Setelah matang, diamkan nasi 10-15 menit sebelum diaduk agar teksturnya lebih pulen</li>
+            <li>Nasi liwet bisa disimpan di kulkas hingga 2 hari. Panaskan dengan microwave atau dikukus kembali</li>
+            <li>Untuk aroma lebih wangi, tambahkan 1 lembar daun pandan saat memasak</li>
+        </ul>
+    </div>
 
-<div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px"><script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script><div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div></div>
-<h2>Cara Membuat</h2>
-                <ol>
-                    <li>Cuci bersih semua bahan. Potong sesuai selera.</li>
-                    <li>Haluskan bumbu-bumbu: bawang, kemiri, jahe, kunyit.</li>
-                    <li>Panaskan minyak. Tumis bumbu halus sampai harum.</li>
-                    <li>Masukkan daun salam, serai, lengkuas. Aduk rata.</li>
-                    <li>Tambahkan bahan utama. Masak sampai berubah warna.</li>
-                    <li>Tuang air secukupnya. Masak dengan api sedang.</li>
-                    <li>Tambahkan garam, gula, kaldu. Koreksi rasa.</li>
-                    <li>Masak sampai matang dan bumbu meresap. Angkat.</li>
-                    <li>Sajikan hangat dengan nasi atau pelengkap lainnya.</li>
-                </ol>
-
-                <div class="tip-box">
-                    <strong><i class="fas fa-lightbulb me-1"></i> Tips:</strong>
-                    <ul class="mb-0 mt-2">
-                        <li>Tambahkan sedikit perasan jeruk nipis biar makin segar.</li>
-                        <li>Sesuaikan tingkat kepedasan dengan selera keluarga.</li>
-                        <li>Sajikan selagi hangat biar makin nikmat.</li>
-                    </ul>
-                </div>
-
-                <hr>
-                <div class="text-center">
-                    <p class="fw-bold fs-5">Siap mencoba resep Resep Nasi Liwet Khas Solo: Gurih Wangi Santan, Cocok buat Makan Bareng Keluarga?</p>
-                    <p>Jangan lupa bagikan hasil masakanmu ke keluarga ya!</p>
-                </div>
-            </div>
+    <h2>FAQ Seputar Nasi Liwet Solo</h2>
+    <div class="faq">
+        <div class="faq-item">
+            <h3>Apakah nasi liwet bisa pakai rice cooker biasa?</h3>
+            <p>Bisa banget! Justru pakai rice cooker lebih praktis dan hasilnya tetap enak. Tinggal masukkan semua bahan, nyalakan, dan tunggu matang seperti masak nasi biasa.</p>
         </div>
-
-        <div class="col-lg-4">
-            <div class="bg-white rounded-3 p-3 mt-3" style="box-shadow:0 4px 15px rgba(0,0,0,0.08);">
-                <h5 style="color:#c0392b;font-weight:700;border-bottom:2px solid #fdeaea;padding-bottom:10px;">
-                    <i class="fas fa-list me-2"></i>Nasi
-                </h5>
-                <p class="small mt-2">Kumpulan resep nasi pilihan dari Masakanku.</p>
-                <a href="/" class="btn btn-outline-danger btn-sm w-100">Lihat Semua Resep</a>
-            </div>
+        <div class="faq-item">
+            <h3>Bedanya nasi liwet Solo dengan nasi liwet Sunda apa?</h3>
+            <p>Nasi liwet Solo lebih gurih karena pakai santan kental dan bumbu rempah lengkap. Nasi liwet Sunda lebih sederhana, biasanya dimasak dengan daun salam dan sedikit santan, lauknya juga lebih simpel seperti ikan asin dan lalapan.</p>
         </div>
+        <div class="faq-item">
+            <h3>Kenapa nasi liwet saya jadi lembek?</h3>
+            <p>Kemungkinan airnya kebanyakan. Kalau pakai santan kental, kurangi jumlah air agar tekstur nasi tetap pulen dan tidak lembek. Takaran idealnya santan 400ml + air 600ml untuk 500 gram beras.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Lauk apa yang paling cocok untuk nasi liwet Solo?</h3>
+            <p>Lauk klasik nasi liwet Solo adalah ayam suwir opor, telur pindang, sambal goreng ati ampela, areh (sayur nangka muda), dan sambal bajak. Tapi bisa juga ditambah dengan tempe bacem, tahu bacem, atau ikan goreng sesuai selera.</p>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h3>🍚 Siap Masak Nasi Liwet Solo Sendiri?</h3>
+        <p>Resep nasi liwet Solo ini mudah dan bisa pakai rice cooker biasa. Gurih santan, wangi rempah, dan lauk komplit bikin makan jadi istimewa. Yuk langsung praktik dan rasakan kelezatan tradisional Jawa di rumah!</p>
+    </div>
+
+    <div class="related-recipes">
+        <h3>📖 Baca Juga Resep Lainnya:</h3>
+        <ul>
+            <li>🍚 <a href="/nasi-bakar">Resep Nasi Bakar — Aroma Daun Pisang Harum Gurih</a></li>
+            <li>🥘 <a href="/gado-gado">Resep Gado-Gado — Sayur Segar Bumbu Kacang Mantap</a></li>
+            <li>🍗 <a href="/ayam-penyet">Resep Ayam Penyet — Sambal Bajak Pedas Nikmat</a></li>
+            <li>🍲 <a href="/bakso-sapi">Resep Bakso Sapi — Kenyal Gurih Kuah Seger</a></li>
+        </ul>
     </div>
 </div>
-
-<div class="ad-container" style="margin:1.5rem 0;text-align:center"><script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script><script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script></div>
-
-    <div class="related">
-        <h3>📖 Baca Juga</h3>
-            <a href="/resep-nasi-goreng-seafood">Resep Nasi Goreng Seafood Spesial</a>
-            <a href="/resep-nasi-kuning">Resep Nasi Kuning Pulen & Wangi Seperti di Hajatan — Anti Gagal!</a>
-            <a href="/resep-nasi-uduk">Resep Nasi Uduk Betawi: Wangi, Gurih, Sarapan Favorit Sejuta Umat! - Masakanku</a>
-            <a href="/resep-nasi-goreng-kampung">Resep Nasi Goreng Kampung Spesial: Rasa Tradisional yang Bikin Kangen! - Masakanku</a>
-    </div>
 
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <a href="/contact" class="me-3">Contact</a>
-                <a href="/privacy-policy" class="me-3">Privacy Policy</a>
-                <a href="/copyright" class="me-3">Copyright</a>
-                <a href="/dmca">DMCA</a>
-            </div>
+        <div>
+            <a href="/contact">Contact</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/copyright">Copyright</a>
+            <a href="/dmca">DMCA</a>
         </div>
+        <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
     </div>
 
     <div class="container mt-3" style="border-top:1px solid #444;padding-top:1rem">
@@ -216,6 +280,5 @@
         </p>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

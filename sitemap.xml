@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+          <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://masakanku.online/ayam-beku-tahan-berapa-lama</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-goreng-mangga-besar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-penyet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -260,4 +260,10 @@
   <url><loc>https://masakanku.online/resep-ayam-woku-belanga</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-sambal-goreng-ati-ampela</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-telur-pindang-jawa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-soto-mie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-gulai-kambing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-bolu-kukus-mekar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-sate-taichan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-serabi-notosuman</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>
