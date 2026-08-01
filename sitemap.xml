@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-          <url><loc>https://masakanku.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://masakanku.online/ayam-beku-tahan-berapa-lama</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+              <url><loc>https://masakanku.online/ayam-beku-tahan-berapa-lama</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-goreng-mangga-besar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/ayam-penyet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/bakso-sapi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -265,7 +264,6 @@
   <url><loc>https://masakanku.online/resep-bolu-kukus-mekar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-sate-taichan</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-serabi-notosuman</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
   <url><loc>https://masakanku.online/resep-sop-buntut-bakar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-ayam-kecap-sederhana</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-nasi-goreng-pete</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -274,17 +272,8 @@
   <url><loc>https://masakanku.online/resep-pepes-tahu-teri</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-capcay-seafood</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-pindang-bandeng</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-sop-konro</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-gulai-kambing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-nasi-kuning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-sate-kambing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-ikan-pindang-palembang</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-nasi-uduk</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-pempek-palembang</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-nasi-liwet-solo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-martabak-telor</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-sop-konro</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://masakanku.online/resep-dadar-gulung</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-gulai-nangka-muda</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/resep-ayam-bumbu-bali</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/paru-goreng-tepung</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -294,4 +283,5 @@
   <url><loc>https://masakanku.online/pempek-kapal-selam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/sop-sumsum</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://masakanku.online/sop-kaki-kambing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://masakanku.online/resep-ikan-patin-bakar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
