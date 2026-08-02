@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Sayur Bobor — Masakanku</title>
+    <meta name="description" content="Sayur bobor berkuah santan dengan labu siam, jagung manis, dan daun melinjo. Segar, hangat, bikin nyaman!">
+    <link rel="canonical" href="https://masakanku.online/sayur-bobor">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; color: #333; background: #fef9f4; }
+        nav { background: #c0392b; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; flex-wrap: wrap; }
+        nav .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        nav .logo span { color: #fdd835; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fdd835; }
+        .container { max-width: 800px; margin: auto; padding: 2rem 1.5rem; }
+        .breadcrumb { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #c0392b; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .category-badge { display: inline-block; background: #1E8449; color: #fff; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #222; margin-bottom: 0.5rem; line-height: 1.3; }
+        .meta-desc { font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; border-left: 4px solid #27AE60; padding-left: 1rem; }
+        .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .intro { font-size: 1.05rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: #1E8449; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #d5f4e6; }
+        .ingredients, .steps { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .ingredients li, .steps li { margin-bottom: 0.6rem; padding-left: 0.5rem; }
+        .ingredients ul, .steps ol { padding-left: 1.5rem; }
+        .tips-box { background: #e8f8f5; border-left: 4px solid #27AE60; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .tips-box h3 { color: #117a65; margin-bottom: 0.8rem; }
+        .tips-box li { margin-bottom: 0.5rem; }
+        .cta { text-align: center; background: #1E8449; color: #fff; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .cta p { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .related { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 2rem 0; }
+        .related h3 { color: #1E8449; margin-bottom: 1rem; }
+        .related a { color: #1E8449; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .related a:hover { text-decoration: underline; }
+        footer { background: #2c2c2c; color: #ccc; padding: 2rem 0; text-align: center; margin-top: 3rem; }
+        footer .container { max-width: 800px; margin: auto; padding: 0 1.5rem; }
+        footer a { color: #fdd835; text-decoration: none; margin: 0 0.8rem; }
+        footer a:hover { text-decoration: underline; }
+        footer p { margin-top: 1rem; font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            nav .container { flex-direction: column; gap: 0.5rem; }
+            nav a { margin: 0 0.6rem; font-size: 0.85rem; }
+        }
+    </style>
+    <script src="//dojo.cc/124.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Resep Sayur Bobor: Sayur Berkuah Santan Segar, Cocok Segala Suasana",
+  "image": [
+    "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=500&fit=crop"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Masakanku"
+  },
+  "datePublished": "2026-08-03",
+  "description": "Sayur bobor berkuah santan dengan labu siam, jagung manis, dan daun melinjo. Segar, hangat, bikin nyaman!",
+  "prepTime": "PT15M",
+  "cookTime": "PT25M",
+  "totalTime": "PT40M",
+  "recipeYield": "5 porsi",
+  "recipeCategory": "Sayur & Sop",
+  "recipeCuisine": "Indonesian",
+  "recipeIngredient": [
+    "1 buah labu siam ukuran sedang (potong dadu)",
+    "1 tongkol jagung manis (pipil atau potong bulat)",
+    "100 gram kacang panjang (potong 3 cm)",
+    "5 lembar daun melinjo muda (atau daun singkong)",
+    "2 buah labu kuning (potong dadu kecil)",
+    "500 ml santan sedang (dari 1/2 kelapa)",
+    "300 ml air",
+    "3 lembar daun salam",
+    "2 batang sereh (geprek)",
+    "2 cm lengkuas (geprek)",
+    "5 siung bawang merah (iris tipis)",
+    "3 siung bawang putih (iris tipis)",
+    "4 buah cabe rawit utuh (opsional)",
+    "2 cm kunyit segar",
+    "3 butir kemiri",
+    "1 sdt terasi bakar",
+    "1 sdm garam",
+    "1 sdt gula pasir",
+    "1/2 sdt merica bubuk"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 1",
+      "text": "Haluskan kunyit, kemiri, dan terasi. Bisa pakai cobek atau blender dengan sedikit air."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 2",
+      "text": "Panaskan sedikit minyak, tumis bawang merah dan bawang putih hingga harum."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 3",
+      "text": "Masukkan bumbu halus, daun salam, sereh, dan lengkuas. Tumis sampai harum dan matang."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 4",
+      "text": "Tuang air ke dalam tumisan. Aduk rata dan biarkan mendidih."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 5",
+      "text": "Masukkan jagung manis dan labu kuning. Masak hingga setengah empuk, sekitar 10 menit."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 6",
+      "text": "Tambahkan labu siam. Masak 5 menit sampai mulai empuk tapi masih renyah."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 7",
+      "text": "Tuang santan secara perlahan sambil diaduk agar tidak pecah."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 8",
+      "text": "Bumbui dengan garam, gula, dan merica. Aduk rata dan koreksi rasa."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 9",
+      "text": "Masukkan kacang panjang dan daun melinjo. Masak 3-4 menit saja agar sayuran tetap hijau."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 10",
+      "text": "Tambahkan cabe rawit utuh kalau suka pedas."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 11",
+      "text": "Masak dengan api kecil sampai santan mendidih perlahan. Jangan sampai santan pecah."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Langkah 12",
+      "text": "Angkat dan sajikan sayur bobor selagi hangat dengan nasi putih dan lauk favorit."
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "ratingCount": "94"
+  }
+}
+</script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Masakan<span>ku</span></a>
+            <div>
+                <a href="/">Beranda</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/copyright">Copyright</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Beranda</a> &raquo; <span>Sayur & Sop</span>
+        </div>
+
+        <span class="category-badge">Sayur & Sop</span>
+        <h1>Resep Sayur Bobor: Sayur Berkuah Santan Segar, Cocok Segala Suasana</h1>
+        <p class="meta-desc">Sayur bobor berkuah santan dengan labu siam, jagung manis, dan daun melinjo. Segar, hangat, bikin nyaman!</p>
+
+        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=500&fit=crop" alt="Sayur Bobor Santan" title="Sayur Bobor" class="article-img" loading="lazy">
+
+        <div class="intro">
+            <p>Ada kalanya kita butuh makanan yang sederhana tapi bikin hati tenang. Bukan yang ribet, bukan yang fancy. Cukup semangkuk sayur hangat yang kuahnya gurih, sayurannya segar, dan rasanya pas di lidah. 🥗</p>
+            <p>Sayur bobor adalah jawaban untuk momen-momen seperti itu. Sayur berkuah santan yang lembut, tidak terlalu kental, tidak terlalu encer. Isinya beragam: labu siam renyah, jagung manis, kacang panjang, dan daun melinjo yang bikin kuah jadi lebih segar.</p>
+            <p>Ini bukan sayur yang heboh. Tapi justru kesederhanaannya itulah yang bikin sayur bobor istimewa. Enak disantap kapan saja, cocok dengan lauk apa saja, dan yang paling penting: mudah banget dibikin.</p>
+            <p>Kalau ada sisa sayuran di kulkas dan santan di dapur, itu sudah cukup untuk bikin sayur bobor yang nikmat.</p>
+        </div>
+
+        <h2>Apa Itu Sayur Bobor?</h2>
+        <p>Sayur bobor adalah masakan tradisional Jawa yang terdiri dari berbagai sayuran rebus dengan kuah santan. Berbeda dari sayur lodeh, bobor punya kuah yang lebih encer dan rasa yang lebih ringan.</p>
+        <p>Nama "bobor" konon berasal dari kata "bobok" yang artinya lembut atau hancur. Tapi jangan salah paham — sayurannya tetap utuh dan renyah, bukan dihaluskan. Yang lembut adalah tekstur kuahnya yang creamy tanpa terlalu kental.</p>
+        <p>Yang membuat bobor istimewa adalah fleksibilitasnya. Bisa pakai sayuran apa saja yang ada. Labu siam, jagung, kacang panjang, daun singkong, labu kuning, bahkan nangka muda. Semuanya cocok.</p>
+        <p>Sayur bobor juga masakan yang sangat ekonomis. Bahan-bahannya sederhana, prosesnya cepat, tapi hasilnya memuaskan. Cocok untuk masakan sehari-hari yang tidak bikin kantong jebol.</p>
+
+        <h2>Bahan-Bahan Sayur Bobor</h2>
+
+        <div class="ingredients">
+            <h3>Bahan Utama:</h3>
+            <ul>
+                <li>1 buah labu siam ukuran sedang (potong dadu)</li>
+                <li>1 tongkol jagung manis (pipil atau potong bulat)</li>
+                <li>100 gram kacang panjang (potong 3 cm)</li>
+                <li>5 lembar daun melinjo muda (atau daun singkong)</li>
+                <li>2 buah labu kuning (potong dadu kecil)</li>
+                <li>500 ml santan sedang (dari 1/2 kelapa)</li>
+                <li>300 ml air</li>
+            </ul>
+            <h3>Bumbu Pelengkap:</h3>
+            <ul>
+                <li>3 lembar daun salam</li>
+                <li>2 batang sereh (geprek)</li>
+                <li>2 cm lengkuas (geprek)</li>
+                <li>5 siung bawang merah (iris tipis)</li>
+                <li>3 siung bawang putih (iris tipis)</li>
+                <li>4 buah cabe rawit utuh (opsional)</li>
+            </ul>
+            <h3>Bumbu Halus:</h3>
+            <ul>
+                <li>2 cm kunyit segar</li>
+                <li>3 butir kemiri</li>
+                <li>1 sdt terasi bakar</li>
+                <li>1 sdm garam</li>
+                <li>1 sdt gula pasir</li>
+                <li>1/2 sdt merica bubuk</li>
+            </ul>
+        </div>
+
+        <div class="ad-container" style="margin:1.5rem 0;text-align:center;min-height:90px"><script async="async" data-cfasync="false" src="https://jabturfembitter.com/fbf97f8372ae4f56ef2fbb64a6663968/invoke.js"></script><div id="container-fbf97f8372ae4f56ef2fbb64a6663968"></div></div>
+
+        <h2>Cara Membuat Sayur Bobor</h2>
+
+        <div class="steps">
+            <h3>Langkah 1: Persiapan Bumbu</h3>
+            <ol>
+                <li>Haluskan kunyit, kemiri, dan terasi. Bisa pakai cobek atau blender dengan sedikit air.</li>
+                <li>Iris bawang merah dan bawang putih tipis-tipis agar lebih cepat matang.</li>
+                <li>Geprek sereh dan lengkuas agar aromanya keluar maksimal.</li>
+            </ol>
+
+            <h3>Langkah 2: Menumis Bumbu</h3>
+            <ol>
+                <li>Panaskan sedikit minyak, tumis bawang merah dan bawang putih hingga harum.</li>
+                <li>Masukkan bumbu halus, daun salam, sereh, dan lengkuas. Tumis sampai harum dan matang.</li>
+                <li>Pastikan bumbu tidak gosong. Api sedang saja sudah cukup.</li>
+            </ol>
+
+            <h3>Langkah 3: Memasak Sayuran</h3>
+            <ol>
+                <li>Tuang air ke dalam tumisan. Aduk rata dan biarkan mendidih.</li>
+                <li>Masukkan jagung manis dan labu kuning. Masak hingga setengah empuk, sekitar 10 menit.</li>
+                <li>Tambahkan labu siam. Masak 5 menit sampai mulai empuk tapi masih renyah.</li>
+            </ol>
+
+            <h3>Langkah 4: Menambahkan Santan</h3>
+            <ol>
+                <li>Tuang santan secara perlahan sambil diaduk agar tidak pecah.</li>
+                <li>Bumbui dengan garam, gula, dan merica. Aduk rata dan koreksi rasa.</li>
+                <li>Masak dengan api kecil sampai santan mendidih perlahan. Jangan sampai santan pecah.</li>
+            </ol>
+
+            <h3>Langkah 5: Finishing</h3>
+            <ol>
+                <li>Masukkan kacang panjang dan daun melinjo. Masak 3-4 menit saja agar sayuran tetap hijau.</li>
+                <li>Tambahkan cabe rawit utuh kalau suka pedas.</li>
+                <li>Angkat dan sajikan sayur bobor selagi hangat dengan nasi putih dan lauk favorit.</li>
+            </ol>
+        </div>
+
+        <h2>Rahasia Sayur Bobor yang Enak</h2>
+
+        <p><strong>Santan Jangan Sampai Pecah</strong></p>
+        <p>Kunci sayur bobor yang sempurna adalah santan yang tidak pecah. Tuang santan saat sayuran sudah setengah matang, aduk terus saat santan mulai panas, dan jangan pakai api besar. Api kecil lebih aman.</p>
+
+        <p><strong>Jangan Terlalu Lama Masak Sayuran Hijau</strong></p>
+        <p>Kacang panjang dan daun melinjo cukup dimasak 3-4 menit saja. Kalau terlalu lama, warna hijaunya pudar dan teksturnya jadi lembek. Sayuran yang masih renyah bikin bobor lebih enak.</p>
+
+        <p><strong>Terasi Bakar Bikin Gurih Alami</strong></p>
+        <p>Terasi bakar adalah rahasia rasa gurih sayur bobor. Bakar terasi sebentar sampai harum, lalu haluskan. Ini yang membuat kuah bobor punya depth of flavor yang tidak bisa digantikan penyedap.</p>
+
+        <h2>Variasi Sayur Bobor</h2>
+
+        <h3>Bobor Nangka Muda</h3>
+        <p>Ganti labu siam dengan nangka muda yang sudah direbus. Teksturnya lebih kenyal dan kuahnya lebih kaya rasa.</p>
+
+        <h3>Bobor Bayam</h3>
+        <p>Tambahkan bayam hijau di akhir masakan. Bobor jadi lebih segar dan warnanya lebih cantik.</p>
+
+        <h3>Bobor Tanpa Santan</h3>
+        <p>Untuk versi yang lebih ringan, ganti santan dengan kaldu ayam atau sayuran. Tetap enak, lebih sehat, cocok untuk yang sedang diet.</p>
+
+        <h2>Tips Biar Sayur Bobor Sempurna</h2>
+
+        <div class="tips-box">
+            <h3>🥗 Tips Jitu Sayur Bobor</h3>
+            <ul>
+                <li><strong>Pilih sayuran yang segar.</strong> Labu siam yang masih muda lebih renyah. Jagung manis yang manis alami bikin kuah lebih sedap.</li>
+                <li><strong>Potong sayuran dengan ukuran sama.</strong> Biar matangnya merata. Jangan ada yang terlalu besar atau terlalu kecil.</li>
+                <li><strong>Aduk santan dengan api kecil.</strong> Jangan biarkan santan mendidih terlalu lama. Cukup sampai matang dan harum.</li>
+                <li><strong>Masak sayuran sesuai tingkat kekerasannya.</strong> Jagung dan labu kuning duluan karena lebih keras, baru kacang panjang dan daun di akhir.</li>
+                <li><strong>Jangan terlalu banyak garam.</strong> Terasi sudah memberi rasa asin. Cicipi dulu sebelum menambahkan garam lebih banyak.</li>
+            </ul>
+        </div>
+
+        <h2>Kenapa Sayur Bobor Layak Dicoba?</h2>
+        <p>Sayur bobor adalah bukti bahwa makanan enak tidak harus rumit. Cukup tumis bumbu, rebus sayuran, tambah santan. Selesai. Tidak ada teknik memasak yang sulit atau bahan yang susah dicari.</p>
+        <p>Dari segi nutrisi, sayur bobor sangat seimbang. Ada karbohidrat dari jagung dan labu, serat dari sayuran hijau, dan protein nabati dari santan. Cocok untuk menu harian keluarga.</p>
+        <p>Sayur bobor juga sangat fleksibel. Bisa disesuaikan dengan sayuran yang ada di kulkas. Tidak ada aturan baku. Yang penting: sayuran segar, bumbu pas, dan santan yang creamy.</p>
+        <p>Dan yang paling penting: sayur bobor adalah comfort food yang sesungguhnya. Hangat, lembut, dan bikin perut kenyang tanpa bikin enek.</p>
+
+        <h2>FAQ Sayur Bobor</h2>
+
+        <p><strong>Sayur bobor bisa tahan berapa lama?</strong></p>
+        <p>Di kulkas tahan 1-2 hari. Panaskan kembali dengan api kecil dan tambahkan sedikit air kalau kuahnya mengental. Jangan panaskan berkali-kali karena santan bisa pecah.</p>
+
+        <p><strong>Santan pecah, masih bisa dimakan?</strong></p>
+        <p>Masih bisa, tapi tampilannya kurang menarik dan teksturnya berminyak. Untuk mencegah, selalu masak santan dengan api kecil dan aduk terus.</p>
+
+        <p><strong>Bisa pakai santan instan atau santan kara?</strong></p>
+        <p>Bisa. Santan instan lebih praktis dan tidak mudah pecah. Tapi rasa santan kelapa segar memang lebih harum dan gurih.</p>
+
+        <p><strong>Tidak punya daun melinjo, pakai apa?</strong></p>
+        <p>Bisa pakai daun singkong muda, daun katuk, atau bayam hijau. Semuanya cocok untuk bobor dan tetap bikin kuah segar.</p>
+
+        <p><strong>Bobor terlalu encer, gimana?</strong></p>
+        <p>Masak lebih lama dengan api kecil sampai kuahnya sedikit menyusut. Atau tambahkan santan kental sedikit untuk bikin kuah lebih creamy.</p>
+
+        <div class="cta">
+            <p>Yuk bikin sayur bobor untuk makan siang hari ini!</p>
+            <p>Siapkan sayuran segar, santan, dan bumbu sederhana. 30 menit lagi, semangkuk sayur hangat yang bikin nyaman sudah siap dinikmati! 🥗</p>
+        </div>
+
+        <div class="related">
+            <h3>Baca Juga</h3>
+            <a href="/sayur-lodeh">Resep Sayur Lodeh Santan Gurih</a>
+            <a href="/soto-ayam">Resep Soto Ayam Kuah Bening Segar</a>
+            <a href="/gado-gado">Resep Gado-Gado Bumbu Kacang Kental</a>
+            <a href="/capcay-goreng">Resep Capcay Goreng Sayuran Renyah</a>
+        </div>
+    </div>
+
+    <div class="ad-container" style="margin:1.5rem 0;text-align:center"><script>atOptions={"key":"7f4bd95b8fb4ff051d5837b9e935f6b8","format":"iframe","height":90,"width":728,"params":{}};</script><script src="https://jabturfembitter.com/7f4bd95b8fb4ff051d5837b9e935f6b8/invoke.js"></script></div>
+
+    <footer>
+        <div class="container">
+            <div>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/copyright">Copyright</a>
+                <a href="/dmca">DMCA</a>
+            </div>
+            <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
+        </div>
+    
+    <div class="container mt-3" style="border-top:1px solid #444;padding-top:1rem">
+        <p style="font-size:0.8rem;opacity:0.7">
+            <strong>Jelajahi Juga:</strong> 
+            <a href="https://remoteproduktif.online" target="_blank" style="color:#fdd835;">RemoteProduktif</a> — Tips kerja remote untuk Indonesia
+            &nbsp;|&nbsp; 
+            <a href="https://fattan.my.id" target="_blank" style="color:#fdd835;">My Fattan</a> — Pengembangan diri anak muda
+        </p>
+    </div>
+</footer>
+</body>
+</html>

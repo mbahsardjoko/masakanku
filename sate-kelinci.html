@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Sate Kelinci: Empuk Gurih, Bumbu Kecap Meresap Sempurna — Masakanku</title>
+    <meta name="description" content="Sate kelinci bumbu kecap yang empuk dan harum. Teksturnya lembut, rasanya beda dari sate ayam atau sapi!">
+    <link rel="canonical" href="https://masakanku.online/sate-kelinci">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; color: #333; background: #fef9f4; }
+        nav { background: #c0392b; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1.5rem; flex-wrap: wrap; }
+        nav .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+        nav .logo span { color: #fdd835; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: #fdd835; }
+        .container { max-width: 800px; margin: auto; padding: 2rem 1.5rem; }
+        .breadcrumb { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #c0392b; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .category-badge { display: inline-block; background: #f39c12; color: #fff; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #222; margin-bottom: 0.5rem; line-height: 1.3; }
+        .meta-desc { font-size: 1.1rem; color: #666; margin-bottom: 1.5rem; border-left: 4px solid #f39c12; padding-left: 1rem; }
+        .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .intro { font-size: 1.05rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: #f39c12; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #f5edd0; }
+        .ingredients, .steps { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .ingredients li, .steps li { margin-bottom: 0.6rem; padding-left: 0.5rem; }
+        .ingredients ul, .steps ol { padding-left: 1.5rem; }
+        .tips-box { background: #fff8e1; border-left: 4px solid #fdd835; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .tips-box h3 { font-size: 1.2rem; color: #f39c12; margin-bottom: 0.8rem; }
+        .tips-box ul { padding-left: 1.5rem; }
+        .tips-box li { margin-bottom: 0.5rem; }
+        .faq { margin: 2rem 0; }
+        .faq-item { background: #fff; padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .faq-item h3 { font-size: 1.1rem; color: #c0392b; margin-bottom: 0.5rem; }
+        .cta-box { background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); color: #fff; padding: 2rem; border-radius: 12px; text-align: center; margin: 2rem 0; }
+        .cta-box h3 { font-size: 1.5rem; margin-bottom: 0.8rem; }
+        .cta-box p { margin-bottom: 1.2rem; opacity: 0.95; }
+        .cta-btn { display: inline-block; background: #fdd835; color: #333; padding: 0.8rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .cta-btn:hover { background: #f9ca24; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .related { margin: 3rem 0; }
+        .related h2 { color: #c0392b; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .related-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: 0.3s; text-decoration: none; color: inherit; display: block; }
+        .related-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+        .related-card-img { width: 100%; height: 180px; object-fit: cover; background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .related-card-body { padding: 1.2rem; }
+        .related-card-body h3 { font-size: 1.1rem; color: #222; margin-bottom: 0.5rem; }
+        .related-card-body p { font-size: 0.9rem; color: #666; line-height: 1.6; }
+        footer { background: #222; color: #fff; padding: 2rem 0 1rem; margin-top: 4rem; }
+        footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        footer a { color: #f39c12; text-decoration: none; margin: 0 0.8rem; }
+        footer a:hover { color: #fdd835; }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            nav .container { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.8rem; }
+            .related-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "Sate Kelinci Bumbu Kecap",
+      "image": "https://masakanku.online/images/sate-kelinci.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Masakanku"
+      },
+      "datePublished": "2026-01-15",
+      "description": "Sate kelinci bumbu kecap yang empuk dan harum. Teksturnya lembut, rasanya beda dari sate ayam atau sapi!",
+      "recipeYield": "4 porsi",
+      "prepTime": "PT45M",
+      "cookTime": "PT20M",
+      "totalTime": "PT1H5M",
+      "recipeIngredient": [
+        "500 gram daging kelinci",
+        "4 sendok makan kecap manis",
+        "2 sendok makan kecap asin",
+        "3 siung bawang putih",
+        "5 butir bawang merah",
+        "2 cm lengkuas",
+        "1 sendok teh ketumbar bubuk",
+        "1 sendok teh merica bubuk",
+        "2 sendok makan minyak goreng",
+        "1 sendok makan air jeruk nipis",
+        "Garam secukupnya",
+        "Tusuk sate"
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "text": "Potong daging kelinci menjadi dadu kecil ukuran 2x2 cm. Cuci bersih dan tiriskan."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Haluskan bawang putih, bawang merah, lengkuas, ketumbar, merica, dan garam."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Campurkan bumbu halus dengan kecap manis, kecap asin, minyak, dan air jeruk nipis. Aduk rata."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Lumuri daging kelinci dengan bumbu hingga merata. Diamkan minimal 1 jam di kulkas agar bumbu meresap."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Tusuk daging kelinci dengan tusuk sate, isi 4-5 potong per tusuk."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Bakar sate di atas bara api sambil diolesi sisa bumbu marinasi. Bakar hingga matang dan berwarna kecokelatan."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Sajikan sate kelinci hangat dengan sambal kecap, irisan tomat, dan bawang merah."
+        }
+      ],
+      "keywords": "sate kelinci, resep kelinci, sate bumbu kecap, masakan daging",
+      "recipeCategory": "Masakan Daging",
+      "recipeCuisine": "Indonesia",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "89"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="/" class="logo">Masakan<span>ku</span></a>
+        <div>
+            <a href="/">Beranda</a>
+            <a href="/resep">Resep</a>
+            <a href="/kategori">Kategori</a>
+            <a href="/about">Tentang</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="breadcrumb">
+        <a href="/">Home</a> / <a href="/kategori/masakan-daging">Masakan Daging</a> / Sate Kelinci
+    </div>
+
+    <span class="category-badge">🥩 Masakan Daging</span>
+    <h1>Resep Sate Kelinci: Empuk Gurih, Bumbu Kecap Meresap Sempurna</h1>
+    
+    <p class="meta-desc">Sate kelinci bumbu kecap yang empuk dan harum. Teksturnya lembut, rasanya beda dari sate ayam atau sapi!</p>
+
+    <img src="https://placehold.co/800x450/c0392b/white?text=🥩+Sate+Kelinci" alt="Sate Kelinci Bumbu Kecap" class="article-img">
+
+    <div class="intro">
+        <p>Sate kelinci mungkin terdengar unik, tapi percaya deh, rasanya juara! Daging kelinci punya tekstur yang lembut, lebih empuk dari ayam, dan rendah lemak jadi lebih sehat. Kalau dibumbuin dengan bumbu kecap yang meresap sempurna, terus dibakar dengan bara api... wah, aromanya bikin ngiler! 🤤</p>
+        
+        <p>Sate kelinci ini cocok banget buat kamu yang pengen coba sesuatu yang beda dari sate-sate biasa. Dagingnya nggak bau prengus, justru harum dan gurih. Bumbu kecap manis yang meresap bikin setiap gigitan terasa mantap. Cocok buat acara BBQ atau santapan spesial buat keluarga!</p>
+    </div>
+
+    <h2>Apa Itu Sate Kelinci?</h2>
+    <p>Sate kelinci adalah olahan daging kelinci yang dipotong dadu, dibumbui, lalu ditusuk dan dibakar seperti sate pada umumnya. Daging kelinci sendiri sudah lama dikonsumsi di berbagai negara, termasuk Indonesia, terutama di daerah Jawa Barat dan Yogyakarta.</p>
+    
+    <p>Kelinci punya kandungan protein tinggi tapi rendah lemak dan kolesterol, jadi lebih sehat dibanding daging merah lainnya. Teksturnya lembut seperti ayam, tapi lebih padat dan punya rasa tersendiri yang khas. Kalau dimasak dengan benar, daging kelinci bisa sangat empuk dan juicy! 😋</p>
+
+    <h2>Bahan-Bahan</h2>
+    
+    <div class="ingredients">
+        <h3>Bahan Utama:</h3>
+        <ul>
+            <li>500 gram daging kelinci (potong dadu 2x2 cm)</li>
+            <li>Tusuk sate secukupnya (rendam air agar tidak gosong)</li>
+        </ul>
+
+        <h3>Bumbu Marinasi:</h3>
+        <ul>
+            <li>4 sendok makan kecap manis</li>
+            <li>2 sendok makan kecap asin</li>
+            <li>5 siung bawang merah (haluskan)</li>
+            <li>3 siung bawang putih (haluskan)</li>
+            <li>2 cm lengkuas (memarkan dan haluskan)</li>
+            <li>1 sendok teh ketumbar bubuk</li>
+            <li>1 sendok teh merica bubuk</li>
+            <li>½ sendok teh pala bubuk (opsional)</li>
+            <li>2 sendok makan minyak goreng</li>
+            <li>1 sendok makan air jeruk nipis</li>
+            <li>1 sendok teh garam</li>
+            <li>1 sendok teh gula pasir</li>
+        </ul>
+
+        <h3>Pelengkap:</h3>
+        <ul>
+            <li>Sambal kecap (kecap manis + cabai rawit + jeruk limau)</li>
+            <li>Irisan tomat segar</li>
+            <li>Irisan bawang merah</li>
+            <li>Irisan mentimun (opsional)</li>
+            <li>Nasi hangat</li>
+        </ul>
+    </div>
+
+    <h2>Cara Membuat Sate Kelinci</h2>
+    
+    <div class="steps">
+        <ol>
+            <li><strong>Persiapan Daging:</strong> Cuci bersih daging kelinci, potong menjadi dadu ukuran 2x2 cm. Usahakan potongan sama besar agar matangnya merata. Tiriskan air.</li>
+            
+            <li><strong>Buat Bumbu Marinasi:</strong> Haluskan bawang merah, bawang putih, dan lengkuas menggunakan blender atau ulekan. Dalam wadah besar, campurkan bumbu halus dengan kecap manis, kecap asin, ketumbar, merica, pala, minyak, air jeruk nipis, garam, dan gula. Aduk hingga rata.</li>
+            
+            <li><strong>Marinasi Daging:</strong> Masukkan potongan daging kelinci ke dalam bumbu marinasi. Aduk hingga semua daging terlumuri bumbu dengan rata. Tutup wadah dengan plastik wrap dan simpan di kulkas minimal 1 jam (idealnya 3-4 jam atau semalaman) agar bumbu meresap sempurna.</li>
+            
+            <li><strong>Tusuk Sate:</strong> Setelah proses marinasi, tusuk daging kelinci dengan tusuk sate. Isi sekitar 4-5 potong daging per tusuk. Sisihkan sisa bumbu marinasi untuk olesan saat membakar.</li>
+            
+            <li><strong>Bakar Sate:</strong> Panaskan panggangan atau grill. Bakar sate kelinci di atas bara api sambil sesekali dibolak-balik agar matang merata. Olesi sate dengan sisa bumbu marinasi setiap kali dibalik. Bakar hingga daging matang sempurna dan berwarna kecokelatan (sekitar 15-20 menit).</li>
+            
+            <li><strong>Buat Sambal Kecap:</strong> Campurkan kecap manis dengan cabai rawit iris, bawang merah iris, tomat iris, dan perasan jeruk limau. Aduk rata.</li>
+            
+            <li><strong>Sajikan:</strong> Tata sate kelinci di piring saji. Sajikan dengan nasi hangat, sambal kecap, irisan tomat, dan bawang merah. Siap dinikmati! 🥩🔥</li>
+        </ol>
+    </div>
+
+    <h2>Rahasia Sate Kelinci yang Empuk</h2>
+    <p>Agar sate kelinci kamu empuk dan tidak alot, perhatikan tips berikut:</p>
+    <ul>
+        <li><strong>Pilih daging kelinci muda:</strong> Kelinci muda dagingnya lebih empuk. Hindari kelinci tua yang teksturnya lebih keras.</li>
+        <li><strong>Marinasi yang cukup lama:</strong> Minimal 1 jam, idealnya 3-4 jam atau semalaman. Bumbu akan meresap dan enzim dari jeruk nipis membantu melunakkan daging.</li>
+        <li><strong>Jangan membakar terlalu lama:</strong> Daging kelinci cepat matang. Kalau terlalu lama dibakar, dagingnya akan kering dan alot.</li>
+        <li><strong>Gunakan api sedang:</strong> Jangan terlalu besar apinya. Api sedang membuat daging matang merata tanpa gosong di luar tapi mentah di dalam.</li>
+    </ul>
+
+    <h2>Variasi Sate Kelinci</h2>
+    <p>Selain bumbu kecap, kamu bisa coba variasi lain:</p>
+    <ul>
+        <li><strong>Sate Kelinci Bumbu Kuning:</strong> Gunakan bumbu kunyit, kunyit, jahe, dan santan. Rasanya lebih gurih dan aromanya harum.</li>
+        <li><strong>Sate Kelinci Pedas:</strong> Tambahkan cabai rawit atau cabai merah ke bumbu marinasi untuk sensasi pedas yang bikin nampol.</li>
+        <li><strong>Sate Kelinci Madura:</strong> Pakai bumbu kacang kental seperti sate Madura, rasanya lebih kaya dan creamy.</li>
+        <li><strong>Sate Kelinci Bumbu Rempah:</strong> Tambahkan jintan, adas, dan kayu manis ke marinasi untuk aroma spiced yang unik.</li>
+    </ul>
+
+    <div class="tips-box">
+        <h3>💡 Tips Praktis</h3>
+        <ul>
+            <li>Beli daging kelinci di pasar tradisional atau toko daging khusus. Pastikan kelincinya fresh dan sudah dibersihkan.</li>
+            <li>Kalau nggak punya panggangan arang, bisa pakai teflon atau grill pan. Tapi memang hasil terbaik dari bara api karena ada aroma smoky.</li>
+            <li>Rendam tusuk sate bambu dalam air minimal 30 menit sebelum dipakai agar tidak mudah terbakar.</li>
+            <li>Sisihkan sebagian bumbu marinasi sebelum dipakai merendam daging, gunakan untuk olesan saat bakar agar lebih higienis.</li>
+            <li>Sate kelinci bisa disimpan di kulkas (sudah ditusuk tapi belum dibakar) sampai 1 hari. Bakar saat mau disajikan.</li>
+            <li>Tambahkan sedikit margarin atau mentega saat membakar agar sate lebih glossy dan harum.</li>
+        </ul>
+    </div>
+
+    <h2>FAQ: Pertanyaan Seputar Sate Kelinci</h2>
+    <div class="faq">
+        <div class="faq-item">
+            <h3>Apa daging kelinci halal?</h3>
+            <p>Ya, daging kelinci halal menurut mayoritas ulama Islam karena termasuk hewan yang tidak dilarang dalam Al-Qur'an dan Hadis. Pastikan disembelih dengan cara yang halal.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Bagaimana menghilangkan bau prengus daging kelinci?</h3>
+            <p>Rendam daging kelinci dengan air jeruk nipis atau air perasan jeruk lemon selama 15-20 menit sebelum dibumbui. Lengkuas dan jahe dalam bumbu marinasi juga membantu menghilangkan bau.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Berapa lama waktu bakar sate kelinci?</h3>
+            <p>Sekitar 15-20 menit dengan api sedang. Daging kelinci lebih cepat matang dibanding daging sapi atau kambing. Cek dengan menusuk daging, kalau cairannya sudah jernih (tidak pink), berarti sudah matang.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Bisa pakai daging kelinci beku?</h3>
+            <p>Bisa, tapi harus dicairkan dulu sempurna di kulkas (jangan di suhu ruang). Setelah cair, cuci bersih dan langsung proses marinasi.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Apa perbedaan rasa daging kelinci dengan ayam?</h3>
+            <p>Daging kelinci teksturnya lebih padat dari ayam tapi tetap lembut. Rasanya lebih mild dan sedikit manis alami. Rendah lemak tapi tetap juicy kalau dimasak dengan benar.</p>
+        </div>
+    </div>
+
+    <h2>Kenapa Sate Kelinci Layak Dicoba?</h2>
+    <p>Sate kelinci adalah pilihan yang sempurna kalau kamu bosan dengan sate ayam atau sapi yang itu-itu aja. Rasanya yang unik, tekstur yang lembut, plus kandungan protein tinggi dan rendah lemak bikin sate kelinci jadi alternatif yang lebih sehat tanpa mengorbankan kelezatan. 🔥</p>
+
+    <p>Selain itu, proses memasaknya nggak jauh beda dari sate biasa, jadi mudah untuk dicoba. Bumbu kecap yang manis gurih, aroma smoky dari bara api, dan daging yang empuk juicy—kombinasi sempurna buat acara kumpul keluarga atau BBQ weekend. Dijamin semua yang nyobain bakal bilang, "Enak banget, beda dari biasanya!" 😋</p>
+
+    <div class="cta-box">
+        <h3>Siap Bikin Sate Kelinci di Rumah?</h3>
+        <p>Yuk coba resep sate kelinci ini! Rasanya unik, empuk, dan pastinya bikin ketagihan. Jangan lupa siapkan sambal kecapnya yang seger! 🥩🔥</p>
+        <a href="/" class="cta-btn">Jelajahi Resep Lainnya</a>
+    </div>
+
+    <section class="related">
+        <h2>Baca Juga Resep Lainnya</h2>
+        <div class="related-grid">
+            <a href="/sate-ayam" class="related-card">
+                <div class="related-card-img">🍢</div>
+                <div class="related-card-body">
+                    <h3>Sate Ayam Bumbu Kecap</h3>
+                    <p>Sate ayam klasik dengan bumbu kecap manis. Cocok buat segala acara!</p>
+                </div>
+            </a>
+
+            <a href="/sate-madura" class="related-card">
+                <div class="related-card-img">🥜</div>
+                <div class="related-card-body">
+                    <h3>Sate Madura Bumbu Kacang</h3>
+                    <p>Sate kambing khas Madura dengan bumbu kacang yang kental dan gurih.</p>
+                </div>
+            </a>
+
+            <a href="/sate-lilit" class="related-card">
+                <div class="related-card-img">🌿</div>
+                <div class="related-card-body">
+                    <h3>Sate Lilit Bali</h3>
+                    <p>Sate ikan cincang dililitkan di bambu. Harum rempah khas Bali!</p>
+                </div>
+            </a>
+
+            <a href="/ayam-penyet" class="related-card">
+                <div class="related-card-img">🔥</div>
+                <div class="related-card-body">
+                    <h3>Ayam Penyet Sambal Uleg</h3>
+                    <p>Ayam goreng geprek dengan sambal ulek yang bikin nagih!</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div>
+            <a href="/contact">Contact</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/copyright">Copyright</a>
+            <a href="/dmca">DMCA</a>
+        </div>
+        <p>&copy; 2026 Masakanku. Semua resep original dan bisa dicoba di rumah.</p>
+    </div>
+    
+    <div class="container mt-3" style="border-top:1px solid #444;padding-top:1rem">
+        <p style="font-size:0.8rem;opacity:0.7">
+            <strong>Jelajahi Juga:</strong> 
+            <a href="https://remoteproduktif.online" target="_blank" style="color:#fdd835;">RemoteProduktif</a> — Tips kerja remote untuk Indonesia
+            &nbsp;|&nbsp; 
+            <a href="https://fattan.my.id" target="_blank" style="color:#fdd835;">My Fattan</a> — Pengembangan diri anak muda
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
