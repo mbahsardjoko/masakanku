@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "resep-nasi-uduk",
+    "recipe_name": "Nasi Uduk",
+    "h1": "Resep Nasi Uduk Jakarta: Gurih Wangi Santan, Lauk Komplit, Sarapan Legendaris",
+    "meta_desc": "Resep nasi uduk Jakarta lengkap dengan lauk komplit. Nasi gurih santan, wangi sereh dan daun salam. Cara bikin praktis, cocok buat sarapan.",
+    "category": "Masakan Khas Jakarta",
+    "breadcrumb": "Masakan Khas Jakarta",
+    "emoji": "🍚",
+    "color1": "F39C12",
+    "color2": "E67E22",
+    "photo_url": "https://images.unsplash.com/photo-1596040033229-a0b55b90d883?w=800&h=500&fit=crop",
+    "card_title": "Nasi Uduk Jakarta",
+    "card_desc": "Nasi gurih santan wangi sereh, lauk komplit, sarapan legendaris Jakarta.",
+    "intro": "Pagi-pagi buru-buru ke kantor, perut kosong, tapi males masak ribet. Itu rutinitas jutaan orang Jakarta setiap hari. Solusinya? Nasi uduk. Nasi gurih santan yang bisa dimakan kapan aja, di mana aja. Praktis, kenyang, dan rasanya bikin semangat. Nasi uduk bukan cuma soal nasi. Ini soal kombinasi: nasi gurih, tempe orek, telur, ayam goreng, dan sambal kacang. Semua dalam satu bungkus. Simple tapi lengkap. Dan yang paling penting: enak banget.",
+    "what_title": "Apa Itu Nasi Uduk?",
+    "what_paragraphs": [
+      "Nasi uduk adalah nasi yang dimasak dengan santan, sereh, daun salam, dan lengkuas. Hasilnya nasi gurih dan wangi.",
+      "Berbeda dengan nasi putih biasa yang hambar, nasi uduk punya rasa sendiri. Gurih dari santan, harum dari sereh.",
+      "Biasanya disajikan dengan lauk pelengkap: tempe orek, telur dadar iris, ayam goreng, bihun goreng, dan sambal kacang. Kadang ditambah kerupuk dan acar timun."
+    ],
+    "baca_juga": [
+      "/resep-nasi-kuning",
+      "/resep-nasi-liwet-solo",
+      "/nasi-goreng-jawa",
+      "/resep-bubur-ayam"
+    ]
+  },
+  {
+    "slug": "resep-bakso-ikan",
+    "recipe_name": "Bakso Ikan",
+    "h1": "Resep Bakso Ikan Tenggiri: Kenyal Alami, Gurih Segar, Bebas MSG Tetap Enak",
+    "meta_desc": "Resep bakso ikan tenggiri tanpa MSG. Kenyal alami, gurih segar, cocok untuk anak-anak. Cara bikin praktis, bisa disimpan freezer.",
+    "category": "Olahan Seafood",
+    "breadcrumb": "Olahan Seafood",
+    "emoji": "🐟",
+    "color1": "2471A3",
+    "color2": "3498DB",
+    "photo_url": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&h=500&fit=crop",
+    "card_title": "Bakso Ikan Tenggiri",
+    "card_desc": "Kenyal alami tanpa MSG, gurih segar, cocok untuk anak-anak.",
+    "intro": "Bakso daging mahal. Anak-anak suka bakso tapi kamu khawatir MSG-nya kebanyakan. Solusinya? Bakso ikan. Bikin sendiri di rumah, kontrol bahan, dijamin sehat. Bakso ikan beda dari bakso daging. Teksturnya lebih halus, rasanya lebih segar. Kenyalnya alami karena dari ikan, bukan dari tepung atau baking powder. Dan yang paling penting: murah. Ikan tenggiri harganya jauh lebih terjangkau dibanding daging sapi premium.",
+    "what_title": "Kenapa Bakso Ikan Layak Jadi Andalan?",
+    "what_paragraphs": [
+      "Bakso ikan adalah bakso yang terbuat dari daging ikan giling, biasanya tenggiri atau kakap. Teksturnya kenyal tapi lembut.",
+      "Kelebihan bakso ikan: protein tinggi, lemak rendah, omega-3 dari ikan tetap ada. Cocok buat anak-anak yang lagi masa pertumbuhan.",
+      "Bisa disimpan di freezer sampai 2 bulan. Jadi bisa bikin banyak sekaligus, tinggal rebus kalau mau makan."
+    ],
+    "baca_juga": [
+      "/bakso-sapi",
+      "/bakso-malang",
+      "/bakso-bakar",
+      "/resep-bakso-urat"
+    ]
+  },
+  {
+    "slug": "resep-sambal-terasi",
+    "recipe_name": "Sambal Terasi",
+    "h1": "Resep Sambal Terasi Mentah: Pedas Segar, Wangi Menggoda, Teman Setia Lalapan",
+    "meta_desc": "Resep sambal terasi mentah khas Sunda. Pedas seger, wangi terasi bakar, cocok untuk lalapan. Cara bikin cepat, tahan lama.",
+    "category": "Sambal Nusantara",
+    "breadcrumb": "Sambal Nusantara",
+    "emoji": "🌶️",
+    "color1": "C0392B",
+    "color2": "E74C3C",
+    "photo_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&h=500&fit=crop",
+    "card_title": "Sambal Terasi Mentah",
+    "card_desc": "Pedas seger wangi terasi bakar, teman setia lalapan dan gorengan.",
+    "intro": "Makan tanpa sambal rasanya ada yang kurang. Tapi sambal botolan itu-itu aja. Rasanya terlalu manis atau terlalu asam. Bikin sendiri lebih puas. Dan yang paling gampang: sambal terasi mentah. Cukup 5 menit, udah jadi. Sambal terasi mentah itu sambal yang nggak dimasak. Cabe, bawang, terasi, garam, dan jeruk nipis. Ulek, selesai. Simple banget tapi rasanya bikin nagih. Pedasnya seger, bukan pedas yang bikin mual.",
+    "what_title": "Apa Itu Sambal Terasi?",
+    "what_paragraphs": [
+      "Sambal terasi adalah sambal dari cabe rawit, bawang, terasi bakar, dan jeruk nipis. Teksturnya kasar, rasanya pedas segar.",
+      "Terasi yang dibakar mengeluarkan aroma khas yang bikin selera makan langsung naik. Ini yang bikin sambal terasi beda dari sambal biasa.",
+      "Versi mentah lebih seger dibanding versi masak. Cocok buat lalapan, ayam goreng, ikan bakar, dan pecel lele."
+    ],
+    "baca_juga": [
+      "/sambal-bawang",
+      "/resep-sambal-matah",
+      "/resep-sambal-ijo-padang",
+      "/resep-sambel-pecel"
+    ]
+  },
+  {
+    "slug": "resep-perkedel-kentang",
+    "recipe_name": "Perkedel Kentang",
+    "h1": "Resep Perkedel Kentang Kroket: Renyah Luar, Lembut Dalam, Cocok Buat Teman Sop",
+    "meta_desc": "Resep perkedel kentang kroket renyah di luar lembut di dalam. Cara bikin praktis, tahan lama, cocok buat teman sop atau lauk.",
+    "category": "Camilan Nusantara",
+    "breadcrumb": "Camilan Nusantara",
+    "emoji": "🥟",
+    "color1": "0E7C7B",
+    "color2": "1ABC9C",
+    "photo_url": "https://images.unsplash.com/photo-1599599810694-53ef46e726ea?w=800&h=500&fit=crop",
+    "card_title": "Perkedel Kentang Kroket",
+    "card_desc": "Renyah luar lembut dalam, teman sop dan lauk favorit keluarga.",
+    "intro": "Sop tanpa perkedel rasanya ada yang hilang. Tapi perkedel yang dijual di warung sering terlalu keras atau terlalu lembek. Bikin sendiri lebih puas. Perkedel kentang itu gorengan yang terbuat dari kentang tumbuk, dicampur bumbu, dibentuk pipih, digoreng sampai kecoklatan. Teksturnya renyah di luar, lembut di dalam. Dan yang paling penting: rasanya bisa disesuaikan selera.",
+    "what_title": "Kenapa Perkedel Kentang Layak Jadi Andalan?",
+    "what_paragraphs": [
+      "Perkedel kentang adalah gorengan dari kentang tumbuk yang dibumbui, dibentuk pipih, lalu digoreng. Teksturnya padat tapi lembut.",
+      "Bisa dimakan sebagai lauk, camilan, atau pelengkap sop. Sangat serbaguna dan disukai semua kalangan.",
+      "Bisa disimpan di freezer sebelum digoreng. Jadi bisa bikin banyak, goreng sesuai kebutuhan."
+    ],
+    "baca_juga": [
+      "/perkedel-jagung",
+      "/perkedel-tahu",
+      "/resep-kroket-kentang",
+      "/resep-risoles"
+    ]
+  },
+  {
+    "slug": "resep-sop-daging-sapi",
+    "recipe_name": "Sop Daging Sapi",
+    "h1": "Resep Sop Daging Sapi Bening: Kuah Jernih, Daging Empuk, Hangat di Perut",
+    "meta_desc": "Resep sop daging sapi bening kuah jernih. Daging empuk, sayuran seger, cocok untuk cuaca dingin. Cara bikin praktis, enak buat keluarga.",
+    "category": "Sup & Soto",
+    "breadcrumb": "Sup & Soto",
+    "emoji": "🥩",
+    "color1": "C0392B",
+    "color2": "E74C3C",
+    "photo_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=500&fit=crop",
+    "card_title": "Sop Daging Sapi Bening",
+    "card_desc": "Kuah jernih hangat, daging empuk, sayuran seger, comfort food sejati.",
+    "intro": "Hujan deres, cuaca dingin, badan pegel. Yang dibutuhkan cuma satu: semangkuk sop hangat. Kuah jernih, daging empuk, sayuran segar. Simple tapi menenangkan. Sop daging sapi bening itu comfort food sejati. Nggak pakai santan, nggak pakai bumbu ribet. Cuma kaldu daging yang direbus lama sampai keluar semua sarinya. Hasilnya kuah yang bening tapi kaya rasa.",
+    "what_title": "Apa Itu Sop Daging Sapi?",
+    "what_paragraphs": [
+      "Sop daging sapi adalah sup dengan kuah bening dari kaldu tulang dan daging sapi. Dilengkapi sayuran seperti wortel, kentang, dan kol.",
+      "Bedanya dengan soto: sop kuahnya bening dan rasanya lebih netral. Soto biasanya pakai santan atau kunyit.",
+      "Cocok dimakan kapan saja, terutama saat cuaca dingin atau badan lagi nggak enak."
+    ],
+    "baca_juga": [
+      "/sop-kaki-kambing",
+      "/sop-sumsum",
+      "/sop-bola-daging",
+      "/resep-sop-iga"
+    ]
+  },
+  {
+    "slug": "resep-capcay-sayuran",
+    "recipe_name": "Capcay Sayuran",
+    "h1": "Resep Capcay Sayuran Saus Tiram: Seger, Renyah, Sehat, Praktis Sehari-hari",
+    "meta_desc": "Resep capcay sayuran saus tiram. Sayuran renyah, kuah gurih, sehat dan mengenyangkan. Cara bikin praktis, cocok untuk menu harian.",
+    "category": "Tumisan Sayur",
+    "breadcrumb": "Tumisan Sayur",
+    "emoji": "🥗",
+    "color1": "1E8449",
+    "color2": "27AE60",
+    "photo_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=500&fit=crop",
+    "card_title": "Capcay Sayuran Saus Tiram",
+    "card_desc": "Sayuran renyah seger, kuah gurih, sehat dan praktis untuk sehari-hari.",
+    "intro": "Pengen makan sehat tapi males ribet? Capcay jawabannya. Sayuran macam-macam, ditumis sebentar, dikasih saus tiram, selesai. Cepat, enak, dan bikin kenyang. Capcay itu tumisan sayuran aneka warna: wortel, brokoli, kembang kol, sawi, jagung muda. Semuanya renyah, kuahnya gurih, dan yang penting: nggak butuh banyak minyak. Lebih sehat dibanding gorengan.",
+    "what_title": "Kenapa Capcay Layak Jadi Andalan?",
+    "what_paragraphs": [
+      "Capcay adalah tumisan sayuran berbagai jenis dengan saus tiram atau saus tomat. Tekstur sayurannya tetap renyah, tidak lembek.",
+      "Kelebihan capcay: bisa pakai sayuran apa aja yang ada di kulkas. Fleksibel dan nggak boros.",
+      "Cocok untuk yang lagi diet atau pengen makan lebih banyak sayur. Bisa ditambah bakso atau ayam kalau mau lebih mengenyangkan."
+    ],
+    "baca_juga": [
+      "/capcay-goreng",
+      "/capcay-kuah",
+      "/resep-capcay-seafood",
+      "/resep-tumis-brokoli-jamur"
+    ]
+  },
+  {
+    "slug": "resep-kolak-pisang",
+    "recipe_name": "Kolak Pisang",
+    "h1": "Resep Kolak Pisang Ubi: Manis Legit, Kuah Santan Hangat, Takjil Favorit Buka Puasa",
+    "meta_desc": "Resep kolak pisang ubi manis legit. Kuah santan hangat, gula merah wangi, cocok untuk takjil. Cara bikin praktis, enak disajikan dingin atau hangat.",
+    "category": "Minuman & Kolak",
+    "breadcrumb": "Minuman & Kolak",
+    "emoji": "🍌",
+    "color1": "D68910",
+    "color2": "F39C12",
+    "photo_url": "https://images.unsplash.com/photo-1587334207988-c6f0b6df5bf0?w=800&h=500&fit=crop",
+    "card_title": "Kolak Pisang Ubi",
+    "card_desc": "Manis legit kuah santan hangat, takjil favorit buka puasa sejak dulu.",
+    "intro": "Buka puasa tanpa kolak rasanya kurang afdol. Manis, hangat, bikin perut nyaman setelah seharian puasa. Dan yang paling gampang dibikin: kolak pisang ubi. Kolak pisang ubi itu makanan penutup dari pisang kepok dan ubi direbus dengan kuah santan gula merah. Manis, legit, dan wangi pandan. Bisa dimakan hangat atau dingin. Dua-duanya enak.",
+    "what_title": "Apa Itu Kolak Pisang?",
+    "what_paragraphs": [
+      "Kolak pisang adalah minuman/makanan manis dari pisang kepok dan ubi yang direbus dengan santan, gula merah, dan daun pandan.",
+      "Biasanya disajikan saat bulan Ramadan sebagai takjil berbuka puasa. Tapi sebenarnya enak dimakan kapan aja.",
+      "Bisa ditambah bahan lain seperti kolang-kaling, ubi ungu, atau labu kuning. Makin banyak isinya makin meriah."
+    ],
+    "baca_juga": [
+      "/es-cendol-dawet",
+      "/es-doger",
+      "/resep-bubur-sumsum",
+      "/resep-bubur-kacang-ijo"
+    ]
+  }
+]
