@@ -14,7 +14,7 @@ Why this exists:
     Run --check BEFORE generating any new article.
 
 Also fixes: the fragile regex approach to rebuilding articleGrid (the old
-`re.sub(r'(<div class="row g-3" id="articleGrid">).*?(</div>\s*</div>\s*<script)')`
+`re.sub(r'(<div class="row g-3" id="articleGrid\">).*?(</div>\s*</div>\s*<script)')`
 boundary fails to match on minified HTML). This uses split() on the grid marker
 which is robust against minified layout.
 
